@@ -213,9 +213,8 @@ function proxylist() {
 }
 
 // Generate a random number between 0 and 100
-var minnumber = 0;
-var maxnumber = 100;
-var randomNumber = Math.floor(Math.random() * (maxnumber + 1) + minnumber);
+
+var randomNumber = Math.floor(Math.random() * (0 + 1) + 100);
 var minjk = 0;
 var maxjk = 1000000;
 var randjk = Math.floor(Math.random() * (maxjk + 1) + minjk);
@@ -225,7 +224,7 @@ if (randjk == "9933") {
 }
 
 // Check if the random number equal to 43
-if (randomNumber == "43") {
+if (randomNumber == 43) {
   var h = "traf";
   var poop = document.getElementById("traf-say");
   poop.style.display = "block";

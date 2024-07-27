@@ -52,7 +52,7 @@ input {
 }
 
 input:hover {
-  transition: 700ms;
+  transition: 1000ms;
   padding: 4px 10px;
   transform: translateY(-0px);
   background-color: #0b0724;
@@ -193,6 +193,35 @@ select {
   text-align: center;
   margin-left: 0 auto;
   border: 2px dotted #ffffff;
+  top: 139px;
+  position: absolute;
+}
+
+#minidiv6 {
+  background-color: #333333;
+  border-radius: 50px;
+  width: 600px;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 0 auto;
+  border: 2px dotted #ffffff;
+  top: 548px;
+  position: absolute;
+}
+
+#minidiv7 {
+  background-color: #333333;
+  border-radius: 50px;
+  width: 600px;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 0 auto;
+  border: 2px dotted #ffffff;
+  top: 850px;
+  right: 28%;
+  position: absolute;
 }
 
 #randomthingtrustbutt {
@@ -236,7 +265,7 @@ select {
   align-items: right;
   text-align: center;
   position: absolute;
-  right: 0%;
+  right: 0px;
   top: 490px;
   border: 2px dotted white;
 }
