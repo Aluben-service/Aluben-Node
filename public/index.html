@@ -335,15 +335,13 @@
             <br />
 
             <input type="password" />
-            <button id="confirm">Comfirm</button>
+            <button id="confirm" onclick="hideCustomAlert()">Comfirm</button>
         </div>
         <script>
             if (localStorage.getItem("passcode")) {
               document.getElementById("confirm").onclick = "validatePassword(this.value)"
               document.getElementById("welcome").innerHTML = "Welcome to Aluben, Enter Passcode"
             } 
-            document.getElementById("confirm").onclick = "hideCustomAlert()"
-            document.getElementById("welcome").innerHTMl = "Welcome to Aluben, Set Passcode"
             function showCustomAlert() {
               $("#myCustomAlert").show();
             }
