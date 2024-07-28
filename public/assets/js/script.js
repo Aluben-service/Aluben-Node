@@ -216,7 +216,7 @@ var randomNumber = Math.floor(Math.random() * 101);  // Generates a number betwe
 
 var randjk = Math.floor(Math.random() * (1000001));
 
-if (Math.floor(Math.random() * (maxjk + 1)) == 9933) {
+if (Math.floor(Math.random() * (1000001)) == 9933) {
   var yte = document.getElementById("7689");
   yte.style.display = "block";
 }
