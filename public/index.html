@@ -330,30 +330,34 @@
         </script>
 
         <!-- Custom alert with ID and class -->
-        <div id="myCustomAlert" class="custom-alert">
+        <div id="setPassword" class="set-password">
             <p id="welcome">Welcome to Aluben, Set Passcode</p>
             <br />
 
             <input id="pascode" type="password" />
             <button id="confirm" onclick="hideCustomAlert()">Comfirm</button>
         </div>
+        
+        <div style="display: none;" id="enterPassword" class="enter-password">
+            <p id="welcome">Welcome to Aluben, Enter Passcode</p>
+            <br />
+
+            <input id="passcode" type="password" />
+            <button id="confirm" onclick="validatePassword(this.value)">Comfirm</button>
+        </div>
         <script>
             if (localStorage.getItem("passcode")) {
-              document.getElementById("confirm").onclick = "validatePassword(this.value)"
-              document.getElementById("welcome").innerHTML = "Welcome to Aluben, Enter Passcode"
-            } 
-            function showCustomAlert() {
-              $("#myCustomAlert").show();
+              $("#setPassword").hide();
+              $("enterPassword").show();
             }
 
             function hideCustomAlert() {
               localStorage.setItem('passcode', document.getElementById('passcode').value);
-              $("#myCustomAlert").hide();
+              $("#setPassword").hide();
             }
 
-            function validatePassword() {
-                if (input == passcode) return true
-                return false
+            function validatePassword(input) {
+                if (input == passcode) document.getElementById("enterPassword").display = "block";
             }
 
             function passcodechange() {
