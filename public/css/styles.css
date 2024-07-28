@@ -1,6 +1,5 @@
 @import url('input.css');
 @import url('text.css');
-@import url('select.css');
 @import url('other.css');
 
 html, body, head {
@@ -19,3 +18,8 @@ iframe {
   border-radius: 10px;
 }
 
+select {
+  background-color: #001141;
+  border: 2px solid orange;
+  color: floralwhite;
+}
