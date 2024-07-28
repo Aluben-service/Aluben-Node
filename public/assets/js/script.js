@@ -1,5 +1,5 @@
 //error//
-const url = localStorage.getItem("url")
+const url = localStorage.getItem("url") || "https://google.com"
 
 
 function Byblk() {
@@ -232,7 +232,8 @@ if (randomNumber == 43) {
 }
 
 function panic() {
-  window.open(url, "_self");
+  // this will litteraly replace history somehow
+  window.parent.window.location.replace(url)
 }
 window.addEventListener("keydown", function (event) {
   // Check if the ` key was pressed
