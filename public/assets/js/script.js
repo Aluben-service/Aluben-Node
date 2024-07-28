@@ -1,4 +1,6 @@
 //error//
+const url = localStorage.getItem("url")
+
 
 function Byblk() {
   window.open("./byeblock", "_self");
