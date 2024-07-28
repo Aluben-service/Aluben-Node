@@ -358,7 +358,7 @@
             }
 
             function validatePassword(input) {
-                if (input == passcode) document.getElementById("enterPassword").display = "none";
+                if (document.getElementById("enterPassword").value == passcode) document.getElementById("enterPassword").display = "none";
             }
 
             function passcodechange() {
