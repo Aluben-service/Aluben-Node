@@ -13,14 +13,6 @@
         <script src="assets/js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-            p {
-                color: white;
-            }
-        </style>
-        <div id="containerforheadertoggle">
-            <button id="headertoggle">V</button>
-        </div>
         <br />
 
         <b>
@@ -41,36 +33,6 @@
             });
         </script>
         <script>
-            $(document).ready(function () {
-                $("#headertoggle").click(function () {
-                    $("#header").toggle();
-                });
-            });
-            $(document).ready(function () {
-                $("#headertoggle").click(function () {
-                    $("#headertoggle2").toggle();
-                });
-            });
-            $(document).ready(function () {
-                $("#headertoggle2").click(function () {
-                    $("#header").toggle();
-                });
-            });
-            $(document).ready(function () {
-                $("#headertoggle").click(function () {
-                    $("#headertoggle").toggle();
-                });
-            });
-            $(document).ready(function () {
-                $("#headertoggle2").click(function () {
-                    $("#headertoggle").toggle();
-                });
-            });
-            $(document).ready(function () {
-                $("#headertoggle2").click(function () {
-                    $("#headertoggle2").toggle();
-                });
-            });
             function search_show() {
                 window.open("portal");
             }
@@ -379,10 +341,9 @@
             if (localStorage.getItem("passcode")) {
               document.getElementById("confirm").onclick = "validatePassword(this.value)"
               document.getElementById("welcome").innerHTML = "Welcome to Aluben, Enter Passcode"
-            } else {
-              document.getElementById("confirm").onclick = "hideCustomAlert()"
-              document.getElementById("welcome").innerHTMl = "Welcome to Aluben, Set Passcode"
-            }
+            } 
+            document.getElementById("confirm").onclick = "hideCustomAlert()"
+            document.getElementById("welcome").innerHTMl = "Welcome to Aluben, Set Passcode"
             function showCustomAlert() {
               $("#myCustomAlert").show();
             }
