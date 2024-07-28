@@ -14,10 +14,8 @@ function populateproxyOptions() {
                 currentlink++;
             });
         })
-        .catch((error) => {
-            console.error(error);
-        });
 }
 
 // Call the function to populate the select options
+populateproxyOptions();
 populateproxyOptions();
