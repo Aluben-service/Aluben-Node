@@ -334,7 +334,7 @@
             <p id="welcome">Welcome to Aluben, Set Passcode</p>
             <br />
 
-            <input type="password" />
+            <input id="pascode" type="password" />
             <button id="confirm" onclick="hideCustomAlert()">Comfirm</button>
         </div>
         <script>
@@ -347,7 +347,7 @@
             }
 
             function hideCustomAlert() {
-              localStorage.setItem('passcode', this.value);
+              localStorage.setItem('passcode', document.getElementById('passcode').value);
               $("#myCustomAlert").hide();
             }
 
