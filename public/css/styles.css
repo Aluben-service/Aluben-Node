@@ -1,5 +1,4 @@
 @import url('input.css');
-@import url('iframe.css');
 @import url('text.css');
 @import url('select.css');
 @import url('other.css');
@@ -14,3 +13,9 @@ html, body, head {
 html, body {
   color: floralwhite;
 }
+
+iframe {
+  border: 2px solid aqua;
+  border-radius: 10px;
+}
+
