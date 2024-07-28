@@ -8,7 +8,7 @@ function populateproxyOptions() {
         .then((proxies) => {
             proxies.forEach((proxy) => {
                 const proxyEl = document.createElement('option');
-                proxyEl.textContent = currentlink.toString();
+                proxyEl.textContent = "Link " + currentlink.toString();
                 proxyEl.value = proxy;
                 proxiesContainer.appendChild(proxyEl);
                 currentlink++;
