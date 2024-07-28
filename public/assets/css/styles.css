@@ -6,7 +6,7 @@
 html, body, head {
   width: 100%;
   height: 100%;
-  background-color: #080a0b;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   text-align: center;
 }
 
@@ -24,3 +24,4 @@ select {
   border: 2px solid orange;
   color: floralwhite;
 }
+
