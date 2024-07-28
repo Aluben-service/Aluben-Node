@@ -97,23 +97,23 @@
                     var button = document.createElement("button");
 
                     menu.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            background-color: rgba(0, 255, 255, 0.2); 
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-radius: 5px;
-            width: 200px;
-            `;
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        z-index: 9999;
+                        background-color: rgba(0, 255, 255, 0.2); 
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                        border-radius: 5px;
+                        width: 200px;
+                    `;
 
                     menuContent.style.padding = "10px";
 
                     closeButton.style.cssText = `
-            float: right;
-            cursor: pointer;
-            color: #333;
-            `;
+                        float: right;
+                        cursor: pointer;
+                        color: #333;
+                    `;
                     closeButton.innerHTML = "&times;";
                     closeButton.onclick = function () {
                         menu.remove();
@@ -121,16 +121,16 @@
 
                     button.innerHTML = "Launch ByeBlocker";
                     button.style.cssText = `
-            font-family: Arial;
-            font-size: 16px;
-            color: #fff;
-            background-color: #333;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-            `;
+                        font-family: Arial;
+                        font-size: 16px;
+                        color: #fff;
+                        background-color: #333;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                        cursor: pointer;
+                    `;
                     button.onclick = function () {
                         var link = prompt("Url?");
                         var proxy = "https://api.codetabs.com/v1/proxy?quest=";

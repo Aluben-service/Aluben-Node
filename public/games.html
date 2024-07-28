@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="assets/js/games.js"></script>
+        <link rel="stylesheet" href="assets/css/gamecard.css">
         <script>
             function gcloak() {
                 var link = document.querySelector("link[rel*='icon']") || document.createElement("link");
@@ -73,97 +75,10 @@
                 height: 200px;
             }
         </style>
-        <script>
-            var ifrm = document.createElement("iframe");
-            function slope() {
-                ifrm.setAttribute("src", "https://bonbang.github.io/slope/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function geometrydash() {
-                ifrm.setAttribute("src", "https://bonbang.github.io/geometry-dash/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function redball4() {
-                ifrm.setAttribute("src", "https://techgai.github.io/red-ball-4/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function cuttherope() {
-                ifrm.setAttribute("src", "https://techgai.github.io/cut-the-rope/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function subway_surfers() {
-                ifrm.setAttribute("src", "https://bonbang.github.io/subway-surfers/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function minesweeper() {
-                ifrm.setAttribute("src", "https://techgai.github.io/minesweeper/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function minecraft() {
-                ifrm.setAttribute("src", "https://codehay.net/gm/minecraft-1.8/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function tfe() {
-                ifrm.setAttribute("src", "https://topvazstore.github.io/g/2048/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function bird() {
-                ifrm.setAttribute("src", "https://techgai.github.io/flappy-bird/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function cc() {
-                ifrm.setAttribute("src", "https://topvazstore.github.io/g/cookie-clicker/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function roblox() {
-                ifrm.setAttribute("src", "https://mathsspot.com/");
-                ifrm.style.width = "100%";
-                ifrm.style.height = "750px";
-                document.body.appendChild(ifrm);
-            }
-            function emtpy() {
-                window.location.reload();
-            }
-            function discord() {
-                window.open("https://discord.gg/Jeybsy2us4");
-            }
-        </script>
         <a href="#"><img id="logo" src="./assets/images/iceland%20logo.png" /><img /></a><br />
 
-        <button type="button" onclick="slope()">load slope</button>
-        <button type="button" onclick="geometrydash()">load geometry dash</button>
-        <button type="button" onclick="redball4()">load red ball 4</button>
-        <button type="button" onclick="cuttherope()">load cut the rope</button>
-        <button type="button" onclick="subway_surfers()">
-            load subway surfers
-        </button>
-        <button type="button" onclick="minesweeper()">load minesweeper</button>
-        <button type="button" onclick="minecraft()">load minecraft</button>
-        <button type="button" onclick="tfe()">load 2048</button>
-        <button type="button" onclick="cc()">load cookie clicker</button>
-        <button type="button" onclick="bird()">load flappy bird</button>
-        <button type="button" onclick="roblox()">load roblox</button>
-        <button type="button" onclick="emtpy()">remove iframe</button>
+        <div class="gamecontainer">
+        </div>
     </body>
-    <p id="copyright">&copy; Aluben Services 2023 inc all rights reserved</p>
+    <p id="copyright">&copy; Aluben Services 2024 inc all rights reserved</p>
 </html>
