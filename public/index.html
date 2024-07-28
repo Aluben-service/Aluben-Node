@@ -383,7 +383,7 @@
             <button id="confirm">Comfirm</button>
         </div>
         <script>
-            if localStorage.getItem("passcode") {
+            if (localStorage.getItem("passcode")) {
               document.getElementById("confirm").onclick = "validatePassword(this.value)"
               document.getElementById("welcome").innerHTML = "Welcome to Aluben, Enter Passcode"
             } else {
