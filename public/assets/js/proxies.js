@@ -1,3 +1,4 @@
+var currentlink = 1;
 // Function to fetch JSON and populate select options
 function populateproxyOptions() {
     const proxiesContainer = document.querySelector('#rammy');
@@ -7,9 +8,10 @@ function populateproxyOptions() {
         .then((proxies) => {
             proxies.forEach((proxy) => {
                 const proxyEl = document.createElement('option');
-                proxyEl.textContent = proxy;
+                proxyEl.textContent = currentlink.toString();
                 proxyEl.value = proxy;
                 proxiesContainer.appendChild(proxyEl);
+                currentlink++;
             });
         })
         .catch((error) => {
