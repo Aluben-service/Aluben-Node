@@ -97,7 +97,7 @@ function fixJSON(json){
 
 const gamesContainer = document.querySelector('.gamecontainer');
 
-fetch('assets/games.json')
+fetch('assets/json/games.json')
   .then((res) => res.json())
   .then((games) => {
     games = fixJSON(games);
