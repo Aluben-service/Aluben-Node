@@ -1,0 +1,123 @@
+button {
+  background-color: #0b0724;
+  color: floralwhite;
+  border: 1px dotted rgb(43, 207, 21);
+  border-radius: 5px;
+  padding: 2px 4px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 1000ms;
+  padding: 2px 8px;
+  transform: translateY(-0px);
+  background-color: #0b0724;
+  color: floralwhite;
+  border: solid 3px rgb(252, 245, 115);
+}
+
+img {
+  height: 100px;
+  color: #001191;
+  position: relative;
+  top: 50px;
+}
+
+script {
+  background-size: cover;
+  color: white;
+  position: absolute;
+  width: 350px;
+  border-radius: 5px;
+  left: 50%;
+  margin-left: -160px;
+  padding: 16px 8px 8px;
+  box-sizing: border-box;
+}
+
+#traf-say {
+  display: none;
+  font-size: 24px;
+  color: red;
+  position: absolute;
+  top: 20px;
+}
+
+#traf-say:hover {
+  font-size: 100vh;
+}
+
+.header {
+  color: rgb(255, 255, 255);
+  background-color: rgb(36, 36, 36);
+  text-align: center;
+  left: 0%;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
+#containerforheadertoggle {
+  text-align: right;
+  position: fixed;
+}
+
+#closeset {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+#closesetbutton {
+  background-color: #3d3d3d;
+  text-align: center;
+  border: 0px solid;
+  padding: 10px 20px;
+}
+
+#closesetbutton:hover {
+  background-color: #3d3d3d;
+  text-align: center;
+  border: 0px solid #3d3d3d;
+  padding: 10px 20px;
+}
+
+#cust {
+  color: rgb(255, 255, 255);
+  background-color: #3d3d3d;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 200vh;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+#cust1 {
+  background-color: rgb(36, 36, 36);
+  text-align: center;
+  border: 0px solid;
+  padding: 10px 20px;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+#cust1:hover {
+  background-color: rgb(36, 36, 36);
+  text-align: center;
+  border: 0px solid #3d3d3d;
+  padding: 10px 10px;
+}
+
+#settingsimg {
+  height: 28px;
+  width: 28px;
+  position: relative;
+  top: 7px;
+  background-color: #3d3d3d;
+}
