@@ -1,4 +1,3 @@
-//error//
 const url = localStorage.getItem("url") || "https://google.com"
 
 
