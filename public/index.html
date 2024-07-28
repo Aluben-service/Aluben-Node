@@ -227,6 +227,9 @@
           document.body.input.style.color = color;
         }
       </script>
+      <script>
+        url2 = url;
+      </script>
           <div>
             <h1>Color picker</h1>
             <p>enter background color with top picker</p>
@@ -262,7 +265,7 @@
       <script>
         var url2
         </script>
-      <input onchange='url2 = this.value;' placeholder="eg, https://example.com">
+      <input onchange='url2 = this.value;' placeholder="eg, https://example.com"/>
       <button onclick='url = url2' type="button">set</button>
       <br>
       <p class="subtitle">default url is <a href="https://google.com">google</a></p>

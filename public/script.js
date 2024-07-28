@@ -231,7 +231,7 @@ if (randomNumber == 43) {
   console.log(h);
 }
 function panic() {
-  window.open(url, "_self");
+  window.open(url2, "_self");
 }
 window.addEventListener("keydown", function (event) {
   // Check if the ` key was pressed
