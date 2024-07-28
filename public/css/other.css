@@ -121,3 +121,10 @@ script {
   top: 7px;
   background-color: #3d3d3d;
 }
+
+#end {
+  font-size: 25px;
+}
+#subtitle {
+  font-size: 20px;
+}
