@@ -4,3 +4,4 @@ node_module
 .vscode
 package-lock.json
 .codesandbox
+testing
