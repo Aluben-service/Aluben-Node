@@ -1,2 +1,4 @@
 node_module
 # node modules could lag down my computer and maybe other peopls to
+.vs
+.vscode
