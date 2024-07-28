@@ -9,7 +9,7 @@ Aluben services discord has
 - premium proxy
 - premium games
 - premium proxy list
-- chat gpt bot
+- chat gpt bot(not yet)
 - giveaways
 - blackjack
 - link upload
