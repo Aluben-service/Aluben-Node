@@ -1,0 +1,26 @@
+@import url('input.css');
+@import url('text.css');
+@import url('other.css');
+@import url('gamecard.css')
+
+html, body, head {
+  width: 100%;
+  height: 100%;
+  background-color: #080a0b;
+  text-align: center;
+}
+
+html, body {
+  color: floralwhite;
+}
+
+iframe {
+  border: 2px solid aqua;
+  border-radius: 10px;
+}
+
+select {
+  background-color: #001141;
+  border: 2px solid orange;
+  color: floralwhite;
+}
