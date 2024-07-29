@@ -1,4 +1,5 @@
 var theme = localStorage.getItem("theme");
+var cloak = localStorage.getItem("cloak");
 
 function set_theme() {
     var themes = document.getElementById("themes");
@@ -77,3 +78,5 @@ switch (theme) {
             document.body.style.backgroundImage = `url(${theme.image})`;
         }
 }
+
+switch
