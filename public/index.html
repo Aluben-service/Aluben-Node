@@ -3,7 +3,7 @@
 <html lang="en">
     <!--error-->
     <head>
-        <link rel="canonical"/>
+        <link rel="canonical" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Proxy,Epic,Unblocker,Unblocked Games, School Unblocker,Unblocked,Kazwire" />
@@ -14,6 +14,7 @@
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
         <script src="assets/js/script.js"></script>
         <script src="assets/js/proxies.js"></script>
+        <script src="assets/js/settings.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script>
@@ -51,39 +52,24 @@
                     $("#sidebartoggler").toggle();
                 });
             });
+            var button = document.getElementsByTagName("button");
+            function bkgrdclrpicker(color) {
+                document.body.style.backgroundColor = color;
+            }
+            function txtclrpicker(color) {
+                document.body.style.color = color;
+                document.body.input.style.color = color;
+            }
         </script>
     </head>
 
     <body style="background-color: black;">
-        <script>
-            var button = document.getElementsByTagName("button");
-        </script>
-        <button id="sidebartoggler" type="button" onclick="sidebar_toggle()">
-            
-        </button>
-        <button id="sidebartoggler2" type="button" style="display: none;" onclick="sidebar_toggle()">
-            
-        </button>
-
-        <div class="sidebar" id="sb" style="display: none;">
-            <button onclick="panic()">Panic button</button>
-        </div>
-        <div style="display: none;" class="header" id="header">
-            <!--header contents-->
-
+        <div class="header" id="header">
             <button class="button" type="button" onclick="calculator()">Calculator</button>
             <button class="button" type="button" onclick="Byblk()">luanch Byeblocker</button>
-            <button class="button" type="button" onclick="games()">
-                Iceland games
-            </button>
-            <button class="button" type="button" onclick="proxylist()">
-                Procky list
-            </button>
-
+            <button class="button" type="button" onclick="games()">Iceland games</button>
+            <button class="button" type="button" onclick="proxylist()">Procky list</button>
             <button id="cust1" type="button" onclick="cust()"><img id="settingsimg" src="assets/images/settings.png" /></button>
-        </div>
-        <div id="headertoggle2div">
-            <button style="display: none;" id="headertoggle2">^</button>
         </div>
         <div id="cust">
             <h1>Settings</h1>
@@ -108,65 +94,6 @@
                     <option value="custom_theme">Custom</option>
                 </select>
                 <button onclick="set_theme()">set</button>
-                <br />
-                <br />
-                <br />
-                <script>
-                    function set_theme() {
-                        var selectBox = document.getElementById("Themes");
-                        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-                        if (selectedValue === "N/A" || selectedValue == null) {
-                            alert("Please select a valid theme");
-                        } else if (selectedValue === "Dark") {
-                            document.body.style.backgroundColor = "#000000";
-                            document.body.style.color = "#ffffff";
-                            document.body.style.backgroundImage = "url()";
-                        } else if (selectedValue === "Light") {
-                            document.body.style.color = "#000000";
-                            document.body.style.backgroundColor = "#ffffff";
-                            document.body.style.backgroundImage = "url()";
-                        } else if (selectedValue === "Twilight") {
-                            document.body.style.color = "#c658ca";
-                            document.body.style.backgroundColor = "#26233a";
-                            document.body.style.backgroundImage = "url()";
-                        } else if (selectedValue === "Ocean") {
-                            document.body.style.color = "#00ffff";
-                            document.body.style.backgroundColor = "#00008B";
-                            document.body.style.backgroundImage = "url()";
-                        } else if (selectedValue === "McDonald's") {
-                            document.body.style.color = "#e1ff00";
-                            document.body.style.backgroundColor = "#ff2600";
-                            document.body.style.backgroundImage = "url()";
-                        } else if (selectedValue === "UnderGround") {
-                            document.body.style.color = "#b0afb1";
-                            document.body.style.backgroundColor = "#673b00";
-                            document.body.style.backgroundImage = "url()";
-                        } else if (selectedValue === "SunnyDay") {
-                            document.body.style.color = "#f0ff85";
-                            document.body.style.backgroundColor = "#93e8ff";
-                            document.body.style.backgroundImage = "url()";
-                        } else if (selectedValue === "Grassland") {
-                            document.body.style.color = "#f45faf";
-                            document.body.style.backgroundImage = "url(assets/images/gashopper.jpg)";
-                            $("#grass").show();
-                        } else if (selectedValue === "StormyDay") {
-                            document.body.style.color = "#b0afb1";
-                            document.body.style.backgroundImage = "url(assets/images/StormyDay.gif)";
-                        } else if (selectedValue === "custom_theme") {
-                            var backcolor = prompt("type hex value for background color");
-                            var textcolor = prompt("type hex value for text color");
-                            document.body.style.backgroundColor = backcolor;
-                            document.body.style.color = textcolor;
-                        }
-                    }
-                    function bkgrdclrpicker(color) {
-                        document.body.style.backgroundColor = color;
-                    }
-                    function txtclrpicker(color) {
-                        document.body.style.color = color;
-                        document.body.input.style.color = color;
-                    }
-                </script>
                 <div>
                     <h1>Color picker</h1>
                     <p>enter background color with top picker</p>
@@ -186,7 +113,6 @@
                 <button onclick="clevercloak()">clever</button>
                 <button onclick="googleclassroomcloak()">google classroom</button>
                 <br />
-
                 <span class="subtitle">custom tab cloak:</span>
                 <br />
                 <input type="text" onchange="tabrename = this.value;" placeholder="enter new tab name" />
@@ -201,15 +127,10 @@
                 <button onclick="aboutblank2()">about:blank cloak other websites</button>
             </div>
             <div id="minidiv2">
-                <h1>set website for panic button</h1>
-                <p class="subtitle">be sure to add http:// at the beginning of the url</p>
-                <script>
-                    var url2;
-                </script>
-                <input onchange="url2 = this.value;" placeholder="eg, https://example.com" />
-                <button onclick="url = url2" type="button">set</button>
-                <br />
-                <p class="subtitle">default url is <a href="https://google.com">google</a></p>
+                <h1>Panic key/url</h1>
+                <input id="panickey" placeholder="key..." />                
+                <input id="panicurl" placeholder="url..." />
+                <button onclick="localStorage.setItem('panicurl', 'https://' + $('#panicurl').value); localStorage.setItem('panickey', 'https://' + $('#panickey').value)" type="button">Save</button>
             </div>
             <div id="minidiv7">
                 <h1>default search engine</h1>
@@ -328,7 +249,7 @@
             <input id="pascode" type="password" />
             <button id="confirm" onclick="hideCustomAlert()">Comfirm</button>
         </div>
-        
+
         <div style="display: none;" id="enterPassword" class="custom-alert">
             <p id="welcome">Welcome to Aluben, Enter Passcode</p>
             <br />
@@ -338,28 +259,28 @@
         </div>
         <script>
             if (localStorage.getItem("passcode")) {
-              $("#setPassword").hide();
-              $("#enterPassword").show();
+                $("#setPassword").hide();
+                $("#enterPassword").show();
             }
 
             function hideCustomAlert() {
-              localStorage.setItem('passcode', document.getElementById('passcode').value);
-              $("#setPassword").hide();
+                localStorage.setItem("passcode", document.getElementById("passcode").value);
+                $("#setPassword").hide();
             }
 
             function validatePassword(input) {
-                if (document.getElementById("enterPassword").value == localStorage.getItem('passcode')) document.getElementById("enterPassword").display = "none";
+                if (document.getElementById("enterPassword").value == localStorage.getItem("passcode")) document.getElementById("enterPassword").display = "none";
             }
 
             function passcodechange() {
-              var oldpasscode = prompt("enter old passcode");
-              if (oldpasscode == passcode) {
-                var newpasscode = prompt('enter new passcode');
-                passcode = newpasscode;
-              } else {
-                  alert('incorrect passocde')
+                var oldpasscode = prompt("enter old passcode");
+                if (oldpasscode == passcode) {
+                    var newpasscode = prompt("enter new passcode");
+                    passcode = newpasscode;
+                } else {
+                    alert("incorrect passocde");
                 }
-              }
+            }
         </script>
         <br />
 
@@ -447,7 +368,7 @@
             <option value="https://televisionrepair.us/">Link 9</option>
             <option value="https://ur2ndlibrary.com/">Link 10</option>
         </select>
-      <button onclick='var selectBox = document.getElementById("holyub"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location.href = selectedValue;'>Go</button>
+        <button onclick='var selectBox = document.getElementById("holyub"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location.href = selectedValue;'>Go</button>
         <br />
         <br />
         <br />
