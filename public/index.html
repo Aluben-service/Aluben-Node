@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Proxy,Epic,Unblocker,Unblocked Games, School Unblocker,Unblocked,Kazwire" />
         <meta name="description" content="A good proxy with custom unblockers(that are completly different proxies) and a proxy list bulit in games it's amazing" />
-        <title>Aluben</title>
-        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+        <title id="title">Aluben</title>
+        <link id="favicon" rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
         <meta charset="UTF-8" />
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
         <script src="assets/js/script.js"></script>
@@ -80,7 +80,7 @@
             <br />
             <div id="minidiv">
                 <h1>Themes:</h1>
-                <select id="Themes">
+                <select id="themes">
                     <option value="N/A">Choose Your Theme</option>
                     <option value="Dark">Dark</option>
                     <option value="Light">Light</option>
@@ -110,14 +110,12 @@
             <br />
             <div id="minidiv6">
                 <h1>tab cloak(click a few times)</h1>
-                <button onclick="clevercloak()">clever</button>
-                <button onclick="googleclassroomcloak()">google classroom</button>
+                <button onclick="localStorage.setItem('cloak', 'clever')">clever</button>
+                <button onclick="localStorage.setItem('cloak', 'classroom')">google classroom</button>
                 <br />
                 <span class="subtitle">custom tab cloak:</span>
                 <br />
                 <input type="text" onchange="tabrename = this.value;" placeholder="enter new tab name" />
-                <button onclick="nowstrt()">set</button><br />
-                <br />
             </div>
             <br />
             <br />
@@ -173,8 +171,6 @@
                         win.document.body.appendChild(iframe);
                     })();
                 }
-            </script>
-            <script>
                 function googleclassroomcloak() {
                     function gcloak() {
                         var link = document.querySelector("link[rel*='icon']") || document.createElement("link");
@@ -213,34 +209,7 @@
                     setInterval(gcloak, 1000);
                 }
             </script>
-            <script>
-                $("#cust").hide();
-                function cust() {
-                    // $("#cust").show();
-                }
-            </script>
         </div>
-
-        <style>
-            /* Define styles for the custom alert */
-            .custom-alert {
-                display: center;
-                position: fixed;
-                top: 170px;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: black;
-                color: white;
-                border: 1px solid blue;
-                padding: 20px;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-                z-index: 1000;
-            }
-        </style>
-        <script>
-            var passcode;
-        </script>
-
         <!-- Custom alert with ID and class -->
         <div id="setPassword" class="custom-alert">
             <p id="welcome">Welcome to Aluben, Set Passcode</p>
@@ -257,53 +226,19 @@
             <input id="passcode" type="password" />
             <button id="confirm" onclick="validatePassword(this.value)">Comfirm</button>
         </div>
-        <script>
-            if (localStorage.getItem("passcode")) {
-                $("#setPassword").hide();
-                $("#enterPassword").show();
-            }
-
-            function hideCustomAlert() {
-                localStorage.setItem("passcode", document.getElementById("passcode").value);
-                $("#setPassword").hide();
-            }
-
-            function validatePassword(input) {
-                if (document.getElementById("enterPassword").value == localStorage.getItem("passcode")) document.getElementById("enterPassword").display = "none";
-            }
-
-            function passcodechange() {
-                var oldpasscode = prompt("enter old passcode");
-                if (oldpasscode == passcode) {
-                    var newpasscode = prompt("enter new passcode");
-                    passcode = newpasscode;
-                } else {
-                    alert("incorrect passocde");
-                }
-            }
-        </script>
         <br />
 
         <div id="grass" style="display: none;">
             <p>no world zero</p>
             <h1>touch grass</h1>
         </div>
-        <button class="button" type="button" onclick="pass2()">
-            Aluben tab options 2
-        </button>
-        <button class="button" type="button" onclick="pass1()">
-            Aluben tab options 1
-        </button>
-        <button class="button" type="button" onclick="discord()">
-            Join Discord
-        </button>
         <br />
         <br />
 
         &copy; Aluben Services 2024 inc all rights reserved
         <br />
 
-        <body id="timer" onload="startTime()">
+        <div id="timer" onload="startTime()">
             ​
             <style>
                 #txt {
@@ -312,44 +247,13 @@
                 }
             </style>
             <div id="txt"></div>
-            ​
-            <script>
-                function startTime() {
-                    const today = new Date();
-                    let h = today.getHours();
-                    let m = today.getMinutes();
-                    let s = today.getSeconds();
-                    m = checkTime(m);
-                    s = checkTime(s);
-                    document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
-                    setTimeout(startTime, 1000);
-                }
-
-                function checkTime(i) {
-                    if (i < 10) {
-                        i = "0" + i;
-                    } // add zero in front of numbers < 10
-                    return i;
-                }
-            </script>
-        </body>
-        <div></div>
+        </div>
         <br />
         <br />
         Rammerhead<br />
         <br />
         <select id="rammy"></select>
-        <button onclick="goToWebsite1()">Go</button>
-
-        <script>
-            function goToWebsite1() {
-                var selectBox = document.getElementById("rammy");
-                var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-                if (selectedValue != "") {
-                    window.location = selectedValue;
-                }
-            }
-        </script>
+        <button onclick='var selectBox = document.getElementById("rammy"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location = selectedValue;'>Go</button>
         <br />
         <br />
         Holy Unblocker<br />
