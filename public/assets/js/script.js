@@ -236,5 +236,5 @@ function panic() {
 }
 window.addEventListener("keydown", function (event) {
   // Check if the ` key was pressed
-  if (event.key === "`") panic();
+  if (event.key === localStorage.getItem("panickey")) panic();
 });
