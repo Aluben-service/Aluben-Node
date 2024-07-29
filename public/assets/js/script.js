@@ -62,3 +62,27 @@ function startTime() {
     document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
     setTimeout(startTime, 1000);
 }
+
+if (localStorage.getItem("passcode")) {
+    $("#setPassword").hide();
+    $("#enterPassword").show();
+}
+
+function hideCustomAlert() {
+    localStorage.setItem("passcode", document.getElementById("passcode").value);
+    $("#setPassword").hide();
+}
+
+function validatePassword(input) {
+    if (document.getElementById("enterPassword").value == localStorage.getItem("passcode")) document.getElementById("enterPassword").display = "none";
+}
+
+function passcodechange() {
+    var oldpasscode = prompt("enter old passcode");
+    if (oldpasscode == passcode) {
+        var newpasscode = prompt("enter new passcode");
+        passcode = newpasscode;
+    } else {
+        alert("incorrect passocde");
+    }
+}
