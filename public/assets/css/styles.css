@@ -2,6 +2,7 @@
 @import url('text.css');
 @import url('other.css');
 @import url('gamecard.css')
+@import url('uv.css')
 
 html, body, head {
   width: 100%;
