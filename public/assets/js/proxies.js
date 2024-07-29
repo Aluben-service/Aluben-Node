@@ -1,7 +1,7 @@
 var currentlink = 1;
 // Function to fetch JSON and populate select options
 function populateproxyOptions() {
-    const proxiesContainer = document.querySelector('#rammy');
+    const proxiesContainer = document.getElementById('rammy');
 
     fetch('assets/json/rammerhead.json')
         .then((res) => res.json())
