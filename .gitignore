@@ -5,3 +5,4 @@ node_module
 package-lock.json
 .codesandbox
 testing
+*.tgz
