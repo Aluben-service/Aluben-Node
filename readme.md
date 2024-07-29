@@ -33,11 +33,11 @@ and more!
 
 ---
 
-![discord](./public/assets/images/discord.png)
+![discord](./public/https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons//discord.png)
 
 ---
 
-![logo](./public/assets/images/logo.jpeg)
+![logo](./public/https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons//logo.jpeg)
 
 ---
 
