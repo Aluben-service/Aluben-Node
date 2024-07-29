@@ -50,10 +50,6 @@ if (randomNumber == 43) {
   console.log(h);
 }
 
-function panic() {
-  // this will litteraly replace history somehow
-  window.parent.window.location.replace(panicurl)
-}
 window.addEventListener("keydown", function (event) {
-  if (event.key == ) panic();
+  if (event.key == panickey) window.parent.window.location.replace(panicurl)
 });
