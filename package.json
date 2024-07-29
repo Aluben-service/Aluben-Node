@@ -9,7 +9,6 @@
     "@mercuryworkshop/epoxy-transport": "^2.1.5",
     "@titaniumnetwork-dev/ultraviolet": "^3.2.6",
     "express": "^4.18.2",
-    "ultraviolet-static": "github:titaniumnetwork-dev/Ultraviolet-Static",
     "wisp-server-node": "^1.1.3",
     "ws": "^8.17.1"
   }
