@@ -79,4 +79,4 @@ switch (theme) {
         }
 }
 
-switch
+

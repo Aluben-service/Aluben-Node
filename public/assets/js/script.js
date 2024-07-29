@@ -49,6 +49,7 @@ if (randomNumber == 43) {
 }
 
 window.addEventListener("keydown", function (event) {
+    console.log("Typed key: " + event.key)
     if (event.key == panickey) window.parent.window.location.replace(panicurl);
 });
 

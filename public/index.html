@@ -69,9 +69,10 @@
             <button class="button" type="button" onclick="Byblk()">luanch Byeblocker</button>
             <button class="button" type="button" onclick="games()">Iceland games</button>
             <button class="button" type="button" onclick="proxylist()">Procky list</button>
-            <button id="cust1" type="button" onclick="cust()"><img id="settingsimg" src="assets/images/settings.png" /></button>
+            <button id="cust1" type="button"><img id="settingsimg" src="assets/images/settings.png" /></button>
         </div>
-        <div id="cust">
+        <div style="display:none;" id="cust">
+            <script src="assets/js/settings.js"></script>
             <h1>Settings</h1>
             <div id="closeset">
                 <button id="closesetbutton"><strong>X</strong></button>
@@ -128,7 +129,7 @@
                 <h1>Panic key/url</h1>
                 <input id="panickey" placeholder="key..." />                
                 <input id="panicurl" placeholder="url..." />
-                <button onclick="localStorage.setItem('panicurl', 'https://' + $('#panicurl').value); localStorage.setItem('panickey', 'https://' + $('#panickey').value)" type="button">Save</button>
+                <button onclick="localStorage.setItem('panicurl', 'https://' + document.getElementById('panicurl').value); localStorage.setItem('panickey', document.getElementById('panickey').value)" type="button">Save</button>
             </div>
             <div id="minidiv7">
                 <h1>default search engine</h1>
@@ -237,12 +238,12 @@
         <br>
         <br>
         <br>
-  <button class="button" type="button" onclick="pass2()">
+ <!-- <button class="button" type="button" onclick="pass2()">
     Aluben tab options 2
   </button>
    <button class="button" type="button" onclick="pass1()">
     Aluben tab options 1
-  </button>
+  </button> -->
         <br />
         <br />
 
