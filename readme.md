@@ -55,21 +55,7 @@ Join the Aluben discord server because Aluben services has
 
 and more!
 -->
-[**Link**](https://is.gd/Alubendiscord)
+[**Link**](https://discord.gg/sR94jHBU)
 
----
-
-![discord](https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons//discord.png)
-
----
 
 ![logo](https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons//logo.jpeg)
-
----
-
-## Node
-
-### this is Aluben coded in node.js
-
-this allows us to make it so it saves settings to a microsoft Azure sql database or use [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).  
-convenient for the user to save settings
