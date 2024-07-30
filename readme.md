@@ -39,6 +39,9 @@ npm start
 
 Join the Aluben discord server because Aluben services has
 
+- absolutley nothing bc the new server just got created 12:10PM Pacific time zone
+
+<!--
 - premium proxy
 - premium games
 - premium proxy list
@@ -49,7 +52,9 @@ Join the Aluben discord server because Aluben services has
 - proxy list link upload
 - react roles
 
+
 and more!
+-->
 [**Link**](https://is.gd/Alubendiscord)
 
 ---
