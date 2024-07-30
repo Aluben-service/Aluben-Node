@@ -4,7 +4,7 @@
 @import url('gamecard.css')
 @import url('ultraviolet.css')
 
-html, body, head {
+html, body, head, #cust {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
