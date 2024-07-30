@@ -1,23 +1,43 @@
+
+# Aluben Services
+
+Helping kids play games.
+
+
+## Features
+
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
 ## Deployment
+
+To deploy this project click one of the buttons or run the commands below: 
 
 [![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/Aluben-service/Aluben-Node)
 [![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/Aluben-service/Aluben-Node)
 [![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Aluben-service/Aluben-Node&branch=main&name=Ultraviolet-App)
-[![Deploy to Render][https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg]](https://app.cyclic.sh/api/app/deploy/Aluben-service/Aluben-Node)
-[![Deploy to Render][https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg]](https://render.com/deploy?repo=https://github.com/Aluben-service/Aluben-Node)
+[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/Aluben-service/Aluben-Node)
+[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Aluben-service/Aluben-Node)
 
 ```bash
 npm i
 npm start
 ```
+## Authors
+
+- [@asc2653](https://www.github.com/asc2563)
+- [@Coding4Hours](https://www.github.com/Coding4Hours)
+
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 
 ## discord
 
-join the Aluben discord server
-
-reasons:
-
-Aluben services discord has
+Join the Aluben discord server because Aluben services has
 
 - premium proxy
 - premium games
@@ -30,7 +50,7 @@ Aluben services discord has
 - react roles
 
 and more!
-[**do you want malware?**](https://is.gd/Alubendiscord)
+[**Link**](https://is.gd/Alubendiscord)
 
 ---
 
