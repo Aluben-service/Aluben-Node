@@ -1,4 +1,4 @@
-button {
+.bounce {
   z-index: 1;
   font-size: inherit;
   font-family: inherit;
@@ -9,7 +9,7 @@ button {
   background-color: hsl(236, 32%, 26%);
 }
 
-button:hover {
+.bounce:hover {
   cursor: pointer;
   animation: jelly 0.5s;
 }
