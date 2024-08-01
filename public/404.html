@@ -23,29 +23,104 @@
             }
         </style>
     </head>
-    <body>
+    <body align="center">
         <h1>Error 404</h1>
         <p>
             Error 404 Page not found.
-            <br />
-            <br />
-            <a href="javascript:void(0);" onclick="location.href = location.origin">Home</a>
-            <br />
-            <br />
-            <a href="javascript:void(0);" onclick="location.href = location.origin + '/list.html'">Procky list</a>
-            <br />
-            <br />
-            <a href="javascript:void(0);" onclick="location.href = location.origin + '/byeblock.html'">ByeBlocker</a>
-            <br />
-            <br />
-            <a href="javascript:void(0);" onclick="location.href = location.origin = '/credits.html'">Credits</a>
-            <br />
-            <br />
-            <a href="https://google.com">google</a>
-            <br />
-            <br />
-            <a href="javascript:void(0);" onclick="location.href = location.origin = '/games.html'">Iceland game</a>
+            <center>
+                <button class="button" onclick="statsForNerds()">Stats for nerds</button>
+            </center>
         </p>
+
+        <div id="sfn" style="display: none;" class="message">
+            Requested URL: <span id="full">Fetching...</span><br />
+            Title: <span id="title">Fetching...</span><br />
+            Screen height: <span id="height">Fetching...</span><br />
+            Screen width: <span id="width">Fetching...</span><br />
+            Window height: <span id="winheight">Fetching...</span><br />
+            Window width: <span id="winwidth">Fetching...</span><br />
+            Cookies: <span id="cookie">Fetching...</span><br />
+            IPv6: <span id="ipv6">Fetching...</span><br />
+            IPv4: <span id="ipv4">Fetching...</span><br />
+            Network IP: <span id="network">Fetching...</span><br />
+            User agent: <span id="ua">Fetching...</span><br />
+            OS platform: <span id="plat">Fetching...</span><br />
+            Longitude: <span id="longitude">Fetching...</span><br />
+            Latitude: <span id="latitude">Fetching...</span><br />
+            Postal Code: <span id="postal">Fetching...</span><br />
+            Timezone: <span id="time">Fetching...</span><br />
+            Online: <span id="online">Fetching...</span><br />
+            Error code: 404<br />
+        </div>
+        <script>
+            function statsForNerds() {
+                var x = document.getElementById("sfn");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    console.log("[ℹ️] Showing the stats for nerds!");
+                } else {
+                    x.style.display = "none";
+                    console.log("[ℹ️] Hiding the stats for nerds!");
+                }
+            }
+
+            document.getElementById("full").innerText = window.location.href;
+            document.getElementById("title").innerText = document.title;
+            document.getElementById("height").innerHTML = screen.height + "px";
+            document.getElementById("width").innerHTML = screen.width + "px";
+            document.getElementById("winheight").innerHTML = window.innerHeight + "px";
+            document.getElementById("winwidth").innerHTML = window.innerWidth + "px";
+            document.getElementById("cookie").innerText = navigator.cookieEnabled;
+            document.getElementById("ua").innerHTML = navigator.userAgent;
+            document.getElementById("plat").innerHTML = navigator.platform;
+            document.getElementById("online").innerHTML = navigator.onLine;
+            let item,
+                ga,
+                request = new XMLHttpRequest();
+            request.open("GET", "https://ipapi.co/json/");
+            request.responseType = "json";
+            request.send();
+            request.onload = function () {
+                const response = request.response;
+                item = response;
+                set();
+            };
+            let request1 = new XMLHttpRequest();
+            request1.open("GET", "https://api.ipify.org/?format=json");
+            request1.responseType = "json";
+            request1.send();
+            request1.onload = function () {
+                const response = request1.response;
+                ga = response.ip;
+            };
+            function set() {
+                document.getElementById("latitude").innerHTML = item.latitude;
+                document.getElementById("longitude").innerHTML = item.longitude;
+                document.getElementById("postal").innerHTML = item.postal;
+                document.getElementById("time").innerHTML = item.timezone;
+                document.getElementById("ipv6").innerHTML = item.ip;
+                document.getElementById("network").innerHTML = item.network;
+                document.getElementById("ipv4").innerHTML = ga;
+            }
+        </script>
+        <br />
+        <br />
+        <a href="javascript:void(0);" onclick="location.href = location.origin">Home</a>
+        <br />
+        <br />
+        <a href="javascript:void(0);" onclick="location.href = location.origin + '/list.html'">Procky list</a>
+        <br />
+        <br />
+        <a href="javascript:void(0);" onclick="location.href = location.origin + '/byeblock.html'">ByeBlocker</a>
+        <br />
+        <br />
+        <a href="javascript:void(0);" onclick="location.href = location.origin = '/credits.html'">Credits</a>
+        <br />
+        <br />
+        <a href="https://google.com">google</a>
+        <br />
+        <br />
+        <a href="javascript:void(0);" onclick="location.href = location.origin = '/games.html'">Iceland game</a>
         <!-- 100% privacy-first analytics -->
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
