@@ -3,6 +3,7 @@
 @import url('other.css');
 @import url('gamecard.css')
 @import url('ultraviolet.css')
+@import url('buttons.css')
 
 html, body, head, #cust {
   width: 100%;
