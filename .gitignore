@@ -1,4 +1,5 @@
-node_module
+stuff
+node_modules
 # node modules could lag down my computer and maybe other peopls to
 .vs
 .vscode

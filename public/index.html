@@ -16,23 +16,15 @@
         <script src="assets/js/proxies.js"></script>
         <script src="assets/js/settings.js"></script>
         <script src="assets/js/scripts.js"></script>
+        <script src="uv/uv.bundle.js"></script>
+        <script src="uv/uv.config.js"></script>
         <script src="error.js"></script>
         <script src="index.js"></script>
         <script src="register-sw.js"></script>
-        <script src="search.js.js"></script>
-        <script src="uv/uv.config.js"></script>
-        <script src="uv/uv.bundle.js"></script>
+        <script src="search.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script>
-            $(document).ready(function () {
-                $("#cust1").click(function () {
-                    $("#cust").toggle();
-                });
-                $("#closesetbutton").click(function () {
-                    $("#cust").toggle();
-                });
-            });
             function search_show() {
                 window.open("portal");
             }
@@ -72,18 +64,20 @@
 
     <body style="background-color: black;">
         <div class="header" id="header">
-            <button class="bounce" type="button" onclick="alert('stop')">test</button>
+            <button class="pulse" type="button" onclick="alert('stop')">test</button>
             <button class="button" type="button" onclick="calculator()">Calculator</button>
-            <button class="button" type="button" onclick="Byblk()">luanch Byeblocker</button>
+            <button class="button" type="button" onclick="Byblk()">Byeblocker</button>
             <button class="button" type="button" onclick="games()">Iceland games</button>
-            <button class="button" type="button" onclick="proxylist()">Procky list</button>
-            <button id="cust1" type="button"><img id="settingsimg" src="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/settings.png" /></button>
+            <button class="button" type="button" onclick="proxylist()">Proxy list</button>
+            <button class="button" onclick="$('cust').show()" type="button"></button>
         </div>
         <div style="display: none;" id="cust">
             <script src="assets/js/settings.js"></script>
             <h1>Settings</h1>
             <div id="closeset">
-                <button id="closesetbutton"><strong>X</strong></button>
+                <button id="closesetbutton" class="icon-button">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             <br />
             <br />
@@ -267,7 +261,6 @@
         <br />
 
         <div id="timer" onload="startTime()">
-            ​
             <style>
                 #txt {
                     color: red;
