@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="canonical"/>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/favicon.ico" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="A good proxy with custom unblockers(that are completly different proxies) and a proxy list bulit in games it's amazing" />
-        <title>Byeblocker</title>
+        <script src="assets/js/scripts.js"></script>
         <style>
+            .bottom-left {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.2);
+                padding: 10px;
+            }
             body {
-                margin: 0;
                 overflow: hidden;
                 font-family: Arial, sans-serif;
-                padding: 0;
-                background-color: #000;
+                margin: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 100vh;
             }
-            input {
-                margin-bottom: 10px;
-            }
+
             #background {
                 position: absolute;
                 width: 100vw;
@@ -30,6 +31,7 @@
                 overflow: hidden;
                 background: radial-gradient(circle, rgb(0, 0, 0), rgb(1, 44, 42));
             }
+
             .star {
                 position: absolute;
                 background: rgb(57, 255, 215);
@@ -37,6 +39,7 @@
                 transform: scale(0);
                 animation: sparkle 2s infinite, drift linear infinite;
             }
+
             @keyframes sparkle {
                 0%,
                 100% {
@@ -48,6 +51,7 @@
                     transform: scale(1);
                 }
             }
+
             @keyframes drift {
                 0%,
                 100% {
@@ -57,67 +61,78 @@
                     transform: translate(50px, -50px);
                 }
             }
-            .image-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .image {
-                width: 250px;
-                height: 250px;
-                border: 2px solid #daf3f1;
-                margin: 40px;
-                padding: 10px;
-                box-sizing: border-box;
-                transition: all 0.3s ease;
-            }
-            .image:hover {
-                transform: scale(1.1);
-                border-color: #9900ff;
+            input {
+                margin-bottom: 10px;
             }
         </style>
     </head>
     <body>
-        <div id="background">
-            <!-- Generating stars -->
-            <script>
-                const numStars = 300;
-                const background = document.getElementById("background");
+        <body>
+            <div id="background">
+                <!-- Generating stars -->
+                <script>
+                    const numStars = 300;
+                    const background = document.getElementById("background");
 
-                for (let i = 0; i < numStars; i++) {
-                    const star = document.createElement("div");
-                    star.classList.add("star");
-                    star.style.width = `${Math.random() * 3}px`;
-                    star.style.height = star.style.width;
-                    star.style.left = `${Math.random() * 100}vw`;
-                    star.style.top = `${Math.random() * 100}vh`;
+                    for (let i = 0; i < numStars; i++) {
+                        const star = document.createElement("div");
+                        star.classList.add("star");
+                        star.style.width = `${Math.random() * 3}px`;
+                        star.style.height = star.style.width;
+                        star.style.left = `${Math.random() * 100}vw`;
+                        star.style.top = `${Math.random() * 100}vh`;
 
-                    background.appendChild(star);
+                        background.appendChild(star);
+                    }
+                </script>
+            </div>
+            <style>
+                .image-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
                 }
-                (function () {
+
+                .image {
+                    width: 250px;
+                    height: 250px;
+                    border: 2px solid #daf3f1;
+                    margin: 40px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    transition: all 0.3s ease;
+                }
+
+                .image:hover {
+                    transform: scale(1.1);
+                    border-color: #9900ff;
+                }
+            </style>
+            <script>
+                javascript: (function () {
                     var menu = document.createElement("div");
                     var menuContent = document.createElement("div");
                     var closeButton = document.createElement("span");
                     var button = document.createElement("button");
 
                     menu.style.cssText = `
-                        position: fixed;
-                        top: 20px;
-                        right: 20px;
-                        z-index: 9999;
-                        background-color: rgba(0, 255, 255, 0.2); 
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-                        border-radius: 5px;
-                        width: 200px;
-                    `;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: rgba(0, 255, 255, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 200px;
+  `;
 
                     menuContent.style.padding = "10px";
 
                     closeButton.style.cssText = `
-                        float: right;
-                        cursor: pointer;
-                        color: #333;
-                    `;
+    float: right;
+    cursor: pointer;
+    color: #333;
+  `;
                     closeButton.innerHTML = "&times;";
                     closeButton.onclick = function () {
                         menu.remove();
@@ -125,16 +140,16 @@
 
                     button.innerHTML = "Launch ByeBlocker";
                     button.style.cssText = `
-                        font-family: Arial;
-                        font-size: 16px;
-                        color: #fff;
-                        background-color: #333;
-                        padding: 10px 20px;
-                        border: none;
-                        border-radius: 5px;
-                        margin-top: 10px;
-                        cursor: pointer;
-                    `;
+    font-family: Arial;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  `;
                     button.onclick = function () {
                         var link = prompt("Url?");
                         var proxy = "https://api.codetabs.com/v1/proxy?quest=";
@@ -186,6 +201,12 @@
                     });
                 })();
             </script>
-        </div>
+            <div class="bottom-left">
+                Tacogamerman on github
+            </div>
+            <!-- 100% privacy-first analytics -->
+            <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+            <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+        </body>
     </body>
 </html>

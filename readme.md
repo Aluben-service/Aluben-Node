@@ -1,24 +1,47 @@
+
+# Aluben Services
+
+Helping kids play games.
+
+
+## Features
+
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
 ## Deployment
+
+To deploy this project click one of the buttons or run the commands below: 
 
 [![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/Aluben-service/Aluben-Node)
 [![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/Aluben-service/Aluben-Node)
 [![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Aluben-service/Aluben-Node&branch=main&name=Ultraviolet-App)
-    <a href="https://app.cyclic.sh/api/app/deploy/amethystnetwork-dev/Hypertabs"><img height="30px" src="https://img.shields.io/badge/cyclic-2e59c7.svg?style=for-the-badge&logo=cyclic&logoColor=white"><img></a>
-    <a href="https://render.com/deploy?repo=https://github.com/amethystnetwork-dev/Hypertabs"><img height="30px" src="https://img.shields.io/badge/render-4f65f1.svg?style=for-the-badge&logo=render&logoColor=46e3b7"><img></a>
+[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/Aluben-service/Aluben-Node)
+[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Aluben-service/Aluben-Node)
 
 ```bash
 npm i
 npm start
 ```
+## Authors
+
+- [@asc2653](https://www.github.com/asc2563)
+- [@Coding4Hours](https://www.github.com/Coding4Hours)
+
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 
 ## discord
 
-join the Aluben discord server
+Join the Aluben discord server because Aluben services has
 
-reasons:
+- absolutley nothing bc the new server just got created 12:10PM Pacific time zone
 
-Aluben services discord has
-
+<!--
 - premium proxy
 - premium games
 - premium proxy list
@@ -29,22 +52,10 @@ Aluben services discord has
 - proxy list link upload
 - react roles
 
+
 and more!
-[**do you want malware?**](https://is.gd/Alubendiscord)
+-->
+[**Link**](https://discord.gg/sR94jHBU)
 
----
-
-![discord](https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons//discord.png)
-
----
 
 ![logo](https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons//logo.jpeg)
-
----
-
-## Node
-
-### this is Aluben coded in node.js
-
-this allows us to make it so it saves settings to a microsoft Azure sql database or use [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).  
-convenient for the user to save settings

@@ -2,7 +2,7 @@ const panicurl = localStorage.getItem("panicurl") || "https://google.com";
 const panickey = localStorage.getItem("panickey") || "`";
 
 function Byblk() {
-    window.open("./byeblock", "_self");
+    open("./byeblock.html", "_self");
 }
 function calculator() {
     expr = prompt("Formula eg 34 * 32 \nto do multiplication type *\nto do exponents type **\n to divide type /\n to do Subtraction type -\n to do addition type +\n\n");
@@ -21,14 +21,14 @@ function calculator() {
 }
 
 function discord() {
-    window.open("https://discord.gg/Jeybsy2us4");
+    open("https://discord.gg/sR94jHBU");
 }
 
 function games() {
-    window.open("./games");
+    open("./games.html");
 }
 function proxylist() {
-    window.open("./list");
+    open("./list.html");
 }
 
 var randomNumber = Math.floor(Math.random() * 101); // Generates a number between 0 and 100
