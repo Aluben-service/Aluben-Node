@@ -68,7 +68,7 @@ server.on("upgrade", (req, socket, head) => {
     else socket.end();
 });
 
-let port = parseInt(process.env.PORT || "");
+let port = parseInt(config.PORT || "");
 
 if (isNaN(port)) port = 8080;
 
