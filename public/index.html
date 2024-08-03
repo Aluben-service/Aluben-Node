@@ -16,49 +16,15 @@
         <script src="assets/js/proxies.js"></script>
         <script src="assets/js/settings.js"></script>
         <script src="assets/js/scripts.js"></script>
+        <script src="uv/uv.bundle.js"></script>
+        <script src="uv/uv.config.js"></script>
         <script src="error.js"></script>
         <script src="index.js"></script>
         <script src="register-sw.js"></script>
-        <script src="search.js.js"></script>
-        <script src="uv/uv.config.js"></script>
-        <script src="uv/uv.bundle.js"></script>
+        <script src="search.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script>
-            $(document).ready(function () {
-                $("#cust1").click(function () {
-                    $("#cust").toggle();
-                });
-                $("#closesetbutton").click(function () {
-                    $("#cust").toggle();
-                });
-            });
-            function search_show() {
-                window.open("portal");
-            }
-            function sidebar_toggle() {
-                $("#sb").toggle();
-            }
-            $(document).ready(function () {
-                $("#sidebartoggler").click(function () {
-                    $("#sidebartoggler").toggle();
-                });
-            });
-            $(document).ready(function () {
-                $("#sidebartoggler").click(function () {
-                    $("#sidebartoggler2").toggle();
-                });
-            });
-            $(document).ready(function () {
-                $("#sidebartoggler2").click(function () {
-                    $("#sidebartoggler2").toggle();
-                });
-            });
-            $(document).ready(function () {
-                $("#sidebartoggler2").click(function () {
-                    $("#sidebartoggler").toggle();
-                });
-            });
             var button = document.getElementsByTagName("button");
             function bkgrdclrpicker(color) {
                 document.body.style.backgroundColor = color;
@@ -72,91 +38,113 @@
 
     <body style="background-color: black;">
         <div class="header" id="header">
-            <button class="bounce" type="button" onclick="alert('stop')">test</button>
+            <button class="pulse" type="button" onclick="alert('stop')">test</button>
             <button class="button" type="button" onclick="calculator()">Calculator</button>
-            <button class="button" type="button" onclick="Byblk()">luanch Byeblocker</button>
+            <button class="button" type="button" onclick="Byblk()">Byeblocker</button>
             <button class="button" type="button" onclick="games()">Iceland games</button>
-            <button class="button" type="button" onclick="proxylist()">Procky list</button>
-            <button id="cust1" type="button"><img id="settingsimg" src="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/settings.png" /></button>
+            <button class="button" type="button" onclick="proxylist()">Proxy list</button>
+            <button class="button" onclick="document.getElementById('settings').style.display = 'block'; document.getElementById('main').style.display = 'none'; document.getElementById('header').style.display = 'none'" type="button">
+                Settings
+            </button>
         </div>
-        <div style="display: none;" id="cust">
+        <div style="display: none;" id="settings">
             <script src="assets/js/settings.js"></script>
             <h1>Settings</h1>
             <div id="closeset">
-                <button id="closesetbutton"><strong>X</strong></button>
+                <button
+                    onclick='document.getElementById("settings").style.display = "none"; document.getElementById("main").style.display = "block"; document.getElementById("header").style.display = "block"'
+                    id="closesetbutton"
+                    class="icon-button"
+                >
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             <br />
             <br />
-            <div id="minidiv">
-                <h1>Themes:</h1>
-                <select id="themes">
-                    <option value="N/A">Choose Your Theme</option>
-                    <option value="Dark">Dark</option>
-                    <option value="Light">Light</option>
-                    <option value="Twilight">Twilight</option>
-                    <option value="Ocean">Ocean</option>
-                    <option value="McDonald's">McDonald's</option>
-                    <option value="UnderGround">Underground</option>
-                    <option value="SunnyDay">Sunny Day</option>
-                    <option value="StormyDay">Stormy Day</option>
-                    <option value="Grassland">Grassland</option>
-                    <option value="custom_theme">Custom</option>
-                </select>
-                <button onclick="set_theme()">set</button>
-                <div>
-                    <h1>Color picker</h1>
-                    <p>enter background color with top picker</p>
-                    <p>and text color with bottem picker</p>
-                    <input type="color" id="picker" name="picker" value="#e66465" onchange="bkgrdclrpicker(this.value)" />
-                    <label for="picker"></label>
-                    <br />
-                    <br />
-                    <input type="color" id="picker" name="picker" value="#e66465" onchange="txtclrpicker(this.value)" />
-                    <label for="picker2"></label>
+            <h1>Themes:</h1>
+            <select id="themes">
+                <option value="N/A">Choose Your Theme</option>
+                <option value="Dark">Dark</option>
+                <option value="Light">Light</option>
+                <option value="Twilight">Twilight</option>
+                <option value="Ocean">Ocean</option>
+                <option value="McDonald's">McDonald's</option>
+                <option value="UnderGround">Underground</option>
+                <option value="SunnyDay">Sunny Day</option>
+                <option value="StormyDay">Stormy Day</option>
+                <option value="Grassland">Grassland</option>
+                <option value="custom_theme">custom</option>
+            </select>
+            <button onclick="set_theme()">Save</button>
+            <div>
+                <h1>Text color</h1>
+                <input type="color" id="picker" name="picker" onchange="txtclrpicker(this.value)" />
+            </div>
+            <br />
+            <br />
+            <h1>tab cloak(click a few times)</h1>
+            <button onclick="localStorage.setItem('cloak', 'clever')">clever</button>
+            <button onclick="localStorage.setItem('cloak', 'classroom')">google classroom</button>
+            <br />
+            <span class="subtitle">custom tab cloak:</span>
+            <br />
+            <input type="text" onchange="tabrename = this.value;" placeholder="enter new tab name" />
+
+            <br />
+            <br />
+            <h1>About:blank no history cloak</h1>
+            <button onclick="aboutblank()">about:blank cloak Aluben</button>
+            <button onclick="aboutblank2()">about:blank cloak other websites</button>
+            <h1>Panic key/url</h1>
+            <input id="panickey" placeholder="key..." />
+            <input id="panicurl" placeholder="url..." />>
+            <button onclick="localStorage.setItem('panicurl', 'https://' + document.getElementById('panicurl').value); localStorage.setItem('panickey', document.getElementById('panickey').value)" type="button">Save</button>
+
+            <h1>default search engine</h1>
+            <div class="dropdown">
+                <div class="dropdown-display" id="dropdownDisplay">Google (Default)</div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a id="Google" onclick="setEngine('Google', 'https://www.google.com/search?q=')">Google (Default)</a>
+                    <a id="wiki" onclick="setEngine('Wikipedia', 'https://en.wikipedia.org/wiki/')">Wikipedia</a>
+                    <a id="gogoprivate" onclick="setEngine('Gogoprivate', 'https://gogoprivate.com/search?#gsc.q=')">Gogoprivate</a>
+                    <a id="bing" onclick="setEngine('Bing', 'https://www.bing.com/search?q=')">Bing</a>
                 </div>
             </div>
-            <br />
-            <br />
-            <div id="minidiv6">
-                <h1>tab cloak(click a few times)</h1>
-                <button onclick="localStorage.setItem('cloak', 'clever')">clever</button>
-                <button onclick="localStorage.setItem('cloak', 'classroom')">google classroom</button>
-                <br />
-                <span class="subtitle">custom tab cloak:</span>
-                <br />
-                <input type="text" onchange="tabrename = this.value;" placeholder="enter new tab name" />
-            </div>
-            <br />
-            <br />
-            <div id="minidiv3">
-                <h1>About:blank no history cloak</h1>
-                <button onclick="aboutblank()">about:blank cloak Aluben</button>
-                <button onclick="aboutblank2()">about:blank cloak other websites</button>
-            </div>
-            <div id="minidiv2">
-                <h1>Panic key/url</h1>
-                <input id="panickey" placeholder="key..." />
-                <input id="panicurl" placeholder="url..." />
-                <button onclick="localStorage.setItem('panicurl', 'https://' + document.getElementById('panicurl').value); localStorage.setItem('panickey', document.getElementById('panickey').value)" type="button">Save</button>
-            </div>
-            <div id="minidiv7">
-                <h1>default search engine</h1>
-                <select id="SE" style="color: aliceblue;">
-                    <option value="https://www.google.com?igu=1" id="Google">Google(Default)</option>
-                    <option value="https://en.wikipedia.org/wiki/" id="wiki">wikipedia</option>
-                    <option value="https://www.gogoprivate.com/" id="gogoprivate">gogoprivate</option>
-                </select>
-                <button onclick="set_browser()" type="button">Set Search Engine</button>
-                <script>
-                    function set_browser() {
-                        alert("Your browser is now " + engineDisplay);
+            <button onclick="set_browser()" type="button">Set Search Engine</button>
+            <script>
+                let selectedEngine = "Google";
+                let engineDisplay = "Google (Default)";
+                let engineURL = "https://www.google.com?igu=1";
+
+                function toggleDropdown() {
+                    document.getElementById("dropdownContent").style.display = document.getElementById("dropdownContent").style.display === "block" ? "none" : "block";
+                }
+
+                function setEngine(name, url) {
+                    selectedEngine = name;
+                    engineDisplay = name;
+                    engineURL = url;
+                    document.getElementById("dropdownDisplay").innerText = engineDisplay;
+                    document.getElementById("dropdownContent").style.display = "none";
+                }
+
+                function set_browser() {
+                    localStorage.setItem("se", engineURL);
+                    alert("Your browser is now " + engineDisplay);
+                }
+
+                document.getElementById("dropdownDisplay").addEventListener("click", toggleDropdown);
+
+                window.onclick = function (event) {
+                    if (!event.target.matches(".dropdown-display")) {
+                        document.getElementById("dropdownContent").style.display = "none";
                     }
-                </script>
-            </div>
-            <div id="minidiv5">
-                <h1>Passcode Settings</h1>
-                <button onclick="passcodechange()">change passcode</button>
-            </div>
+                };
+            </script>
+            <!--
+            <h1>Passcode Settings</h1>
+            <button onclick="passcodechange()">change passcode</button>
+-->
             <script>
                 function aboutblank() {
                     win = window.open();
@@ -219,13 +207,13 @@
                 }
             </script>
         </div>
-        <!-- Custom alert with ID and class -->
+        <!-- custom alert with ID and class -->
         <div id="setPassword" class="custom-alert">
             <p id="welcome">Welcome to Aluben, Set Passcode</p>
             <br />
 
             <input id="pascode" type="password" />
-            <button id="confirm" onclick="hideCustomAlert()">Comfirm</button>
+            <button id="confirm" onclick="hidecustomAlert()">Comfirm</button>
         </div>
 
         <div style="display: none;" id="enterPassword" class="custom-alert">
@@ -252,63 +240,64 @@
    <button class="button" type="button" onclick="pass1()">
     Aluben tab options 1
   </button> -->
-        <form id="ultraviolet-form" class="flex-center">
-            <input id="ultraviolet-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
-            <input id="ultraviolet-address" type="text" placeholder="Search the web freely" />
-        </form>
-        <div class="desc left-margin">
-            <p id="ultraviolet-error"></p>
-            <pre id="ultraviolet-error-code"></pre>
-        </div>
-        <br />
-        <br />
+        <div id="main" style="display: block;">
+            <form id="ultraviolet-form" class="flex-center">
+                <input id="ultraviolet-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+                <input id="ultraviolet-address" type="text" placeholder="Search the web freely" />
+            </form>
+            <div class="desc left-margin">
+                <p id="ultraviolet-error"></p>
+                <pre id="ultraviolet-error-code"></pre>
+            </div>
+            <br />
+            <br />
 
-        &copy; Aluben Services 2024 inc all rights reserved
-        <br />
+            &copy; Aluben Services 2024 inc all rights reserved
+            <br />
 
-        <div id="timer" onload="startTime()">
-            ​
-            <style>
-                #txt {
-                    color: red;
-                    font-weight: bolder;
-                }
-            </style>
-            <div id="txt"></div>
-        </div>
-        <br />
-        <br />
-        Rammerhead<br />
-        <br />
-        <select id="rammy"></select>
-        <button onclick='var selectBox = document.getElementById("rammy"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location = selectedValue;'>Go</button>
-        <br />
-        <br />
-        Holy Unblocker<br />
-        <br />
-        <select id="holyub">
-            <option value="">Select a Link...</option>
-            <option value="https://www.holyubofficial.net/">Holy Unblocker</option>
-            <option value="https://campusdirections.org/">Link 1</option>
-            <option value="https://mathematicalsols.org/">Link 2</option>
-            <option value="https://historicalanime.org/">Link 3</option>
-            <option value="https://mournfully.info/">Link 4</option>
-            <option value="https://totalmathway.com/">Link 5</option>
-            <option value="https://thechefmethod.com/">Link 6</option>
-            <option value="https://livrersurweb.net/">Link 7</option>
-            <option value="https://obetenernav.com/">Link 8</option>
-            <option value="https://televisionrepair.us/">Link 9</option>
-            <option value="https://ur2ndlibrary.com/">Link 10</option>
-        </select>
-        <button onclick='var selectBox = document.getElementById("holyub"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location.href = selectedValue;'>Go</button>
-        <br />
-        <br />
-        <br />
-        <div id="traf-say">
-            <a href="Fart"><span class="stinky">traf</span></a>
-        </div>
-        <div id="7689" style="display: none;">
-            go to the Aluben discord server and go to claim then type "7689" for a reward
+            <div id="timer" onload="startTime()">
+                <style>
+                    #txt {
+                        color: red;
+                        font-weight: bolder;
+                    }
+                </style>
+                <div id="txt"></div>
+            </div>
+            <br />
+            <br />
+            Rammerhead<br />
+            <br />
+            <select id="rammy"></select>
+            <button onclick='var selectBox = document.getElementById("rammy"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location = selectedValue;'>Go</button>
+            <br />
+            <br />
+            Holy Unblocker<br />
+            <br />
+            <select id="holyub">
+                <option value="">Select a Link...</option>
+                <option value="https://www.holyubofficial.net/">Holy Unblocker</option>
+                <option value="https://campusdirections.org/">Link 1</option>
+                <option value="https://mathematicalsols.org/">Link 2</option>
+                <option value="https://historicalanime.org/">Link 3</option>
+                <option value="https://mournfully.info/">Link 4</option>
+                <option value="https://totalmathway.com/">Link 5</option>
+                <option value="https://thechefmethod.com/">Link 6</option>
+                <option value="https://livrersurweb.net/">Link 7</option>
+                <option value="https://obetenernav.com/">Link 8</option>
+                <option value="https://televisionrepair.us/">Link 9</option>
+                <option value="https://ur2ndlibrary.com/">Link 10</option>
+            </select>
+            <button onclick='var selectBox = document.getElementById("holyub"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location.href = selectedValue;'>Go</button>
+            <br />
+            <br />
+            <br />
+            <div id="traf-say">
+                <a href="Fart"><span class="stinky">traf</span></a>
+            </div>
+            <div id="7689" style="display: none;">
+                go to the Aluben discord server and go to claim then type "7689" for a reward
+            </div>
         </div>
         <!-- 100% privacy-first analytics -->
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
