@@ -3,7 +3,7 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "format": "prettier --loglevel warn --write \"**/*.{js, css, json}\""
+        "format": "prettier --loglevel warn --write \"public/*.{js, css, json}\""
     },
     "dependencies": {
         "express": "^4.18.2",
