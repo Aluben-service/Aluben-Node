@@ -5,12 +5,26 @@ import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { join } from "node:path";
 import { hostname } from "node:os";
-import wisp from "wisp-server-node"
 import { fileURLToPath } from "url";
 import config from "./config.js";
+import wisp from "wisp-server-node"
+import chalk from "chalk";
+
+console.log(chalk.yellow("🚀 Starting server..."));
+
 
 const app = express();
 const publicPath = fileURLToPath(new URL("public/", import.meta.url));
+
+if (config.challenge) {
+  console.log(
+    chalk.green("🔒 Password protection is enabled! Listing logins below"),
+  );
+  Object.entries(config.users).forEach(([username, password]) => {
+    console.log(chalk.blue(`Username: ${username}, Password: ${password}`));
+  });
+  app.use(basicAuth({ users: config.users, challenge: true }));
+}
 
 app.use(express.static(publicPath));
 
@@ -60,11 +74,12 @@ if (isNaN(port)) port = 8080;
 
 server.on("listening", () => { 
     const address = server.address();
-    console.log("Listening on:"); 
+    console.log(chalk.green("🌍 Server is running on: "));
     console.log(`\thttp://localhost:${address.port}`); 
     console.log(`\thttp://${hostname()}:${address.port}`); 
     console.log( `\thttp://${address.family === "IPv6" ? `[${address.address}]` : address.address }:${address.port}` );
 });
+
 
 // https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html
 process.on("SIGINT", shutdown);
