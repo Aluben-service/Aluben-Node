@@ -9,22 +9,7 @@ const proxylist = () => open("./list.html", "_self");
 
 // Password stuff
 const validatePassword = (input) => if (document.getElementById("enterPassword").value == localStorage.getItem("passcode")) document.getElementById("enterPassword").display = "none";
-
-function calculator() {
-    expr = prompt("Formula eg 34 * 32 \nto do multiplication type *\nto do exponents type **\n to divide type /\n to do Subtraction type -\n to do addition type +\n\n");
-    if (expr != null) {
-        with (Math) {
-            evl = parseFloat(eval(expr));
-        }
-        if (isNaN(evl)) {
-            alert("Invalid Format.");
-        } else {
-            alert(evl);
-        }
-    } else {
-        void null;
-    }
-}
+const calculator = () => Function(`"use strict"; return (${prompt("Enter a calculation (only +, -, *, /):").replace(/[^-()\d/*+.]/g, '')})`)();
 
 
 var randomNumber = Math.floor(Math.random() * 101); // Generates a number between 0 and 100
