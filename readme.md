@@ -10,6 +10,7 @@ Helping kids play games.
 - Live previews
 - Fullscreen mode
 - Cross platform
+
 ## Deployment
 
 To deploy this project click one of the buttons or run the commands below: 
@@ -21,6 +22,13 @@ To deploy this project click one of the buttons or run the commands below:
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Aluben-service/Aluben-Node)
 
 ```bash
+npm i
+npm start
+```
+
+To deploy the ripper run:
+```bash
+cd ripper
 npm i
 npm start
 ```

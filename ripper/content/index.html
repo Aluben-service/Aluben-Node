@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="blaze.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  <title>Blaze | EmberNetwork</title>
+</head>
+
+<body>
+  <p class="red"></p>
+
+  <form class="content">
+    <img src="logo.png" class="logo"/>
+    <p>Website URL:</p>
+    <br>
+    <input type="url" placeholder="Website URL" id="url" />
+    <br>
+    <br>
+    <p>Filename:</p>
+    <br>
+    <input id="filename" type="text" placeholder="Filename" value="index.html" />
+    <br>
+    <br>
+    <button class="button-62" role="button" type="submit">Submit</button>
+  </form>
+
+  <div class="controls hidden">
+    <div class="item">
+      <i class="fa-solid fa-circle-stop" id="stop"></i>
+    </div>
+    <div class="item">
+      <i class="fa-solid fa-circle-check" id="done"></i>
+    </div>
+  </div>
+
+  <div class="logs hidden"></div>
+
+  <script src="blaze.js"></script>
+</body>
+
+</html>

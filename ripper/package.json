@@ -1,0 +1,31 @@
+{
+  "name": "blaze",
+  "version": "1.0.3",
+  "description": "rip games",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmberNetwork/Blaze.git"
+  },
+  "keywords": [
+    "games"
+  ],
+  "author": "EmberNetwork",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmberNetwork/Blaze/issues"
+  },
+  "homepage": "https://github.com/EmberNetwork/Blaze#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mime": "^3.0.0",
+    "mime-db": "^1.52.0",
+    "node-fetch": "^3.3.0",
+    "ws": "^8.17.1"
+  }
+}
