@@ -499,7 +499,7 @@
       "categories": "all"
    },
    {
-      "url": "https://55gms.com/misc/geometry-dash-subzero/index.html",
+      "url": "https://rawcdn.githack.com/Aluben-service/geodash/3ee914195d08f2a4a94d502b513b7c8232fb706b/geodash/Geometry%20Dash%20Subzero/index.html?min=1",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrgeARJvorBVf72IElSMZPayFoprgHpq0tnOABt2OdaQ&s",
       "name": "Geometry Dash Subzero",
       "desc": " ",
@@ -2112,5 +2112,11 @@
       "url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/subway-surfers-singapore/index.html",
       "image": "https://polarislearning.org/api/games/223/image",
       "categories": "all"
-    }
+    },
+   {
+      "name": "Geometry Dash: Acheron",
+      "url": "https://rawcdn.githack.com/Aluben-service/geodash/3ee914195d08f2a4a94d502b513b7c8232fb706b/geodash/Geometry%20Dash%20Acheron/index.html",
+      "image": "https://raw.githubusercontent.com/Aluben-service/Aluben_icons/29c1d446a363bec3ea7de9c9a0124c540d2e128f/acheron.png?min=1",
+      "categories": "all"
+   }      
 ]
