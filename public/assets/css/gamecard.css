@@ -129,3 +129,8 @@ a:hover .gameinfo .gamedesc {
   gap: 0px; /* Space between cards */
 }
 
+.pinned {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0px; /* Space between cards */
+}
