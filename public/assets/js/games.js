@@ -127,7 +127,7 @@ fetch('assets/json/games.json')
     console.error(error);
   });
  
-function showImages() {
+function showCategory() {
   var selectedCategories = Array.from(document.querySelectorAll("#category option:checked")).map(option => option.value);
   var games = document.getElementsByClassName("gamecard");
 
