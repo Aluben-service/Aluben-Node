@@ -31,11 +31,6 @@ if (randomNumber == 43) {
     console.log(h);
 }
 
-window.addEventListener("keydown", function (event) {
-    console.log("Typed key: " + event.key)
-    if (event.key == panickey) window.parent.window.location.replace(panicurl);
-});
-
 function startTime() {
     const today = new Date();
     let h = today.getHours();
