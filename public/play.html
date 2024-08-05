@@ -1,14 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link rel="canonical" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/favicon.ico" />
         <meta charset="UTF-8" />
-        <script src="assets/js/scripts.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="A good proxy with custom unblockers(that are completly different proxies) and a proxy list bulit in games it's amazing" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="description" content="A good proxy with custom unblockers (that are completely different proxies) and a built-in proxy list. Games are amazing." />
+        <link rel="canonical" href="https://example.com/current-page" />
+        <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/favicon.ico" />
         <title>Play - Aluben</title>
+        <style>
+            .container {
+                margin-top: 10%;
+                font-family: "Comfortaa", sans-serif;
+                font-size: 50px;
+                color: #6886ed;
+            }
+            .flbtn {
+                color: black;
+                font-family: "Montserrat", sans-serif;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 12px 0;
+                border: 2px solid #0f0f0f;
+                border-radius: 0.5rem;
+                text-align: center;
+                box-shadow: 0px 5px 10px 0px #2e2e2e;
+                display: inline-block;
+            }
+            .flbtn:hover {
+                background-color: #2e2e2e;
+                color: white;
+            }
+            .flbtn:active {
+                background-color: #2e2e2e;
+                color: black;
+            }
+            #flbutton {
+                position: fixed;
+                bottom: 20px;
+                left: 6px;
+            }
+            .controls #hack {
+                position: relative;
+                display: none;
+            }
+            .controls i.hack {
+                background-color: #006bcf;
+                color: #fff;
+                text-shadow: none;
+                margin: 0.5vw;
+                padding: 0.5vw;
+                border-radius: 0.5vw;
+            }
+            .controls #hack:hover h3 {
+                opacity: 1;
+                z-index: 9999;
+                transition: opacity 0.2s ease;
+            }
+            .controls span h3 {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                transition: opacity 0.2s ease;
+                opacity: 0;
+                background-color: #292929ee;
+                padding: 0.2vw 0.5vw;
+                margin-top: -0.2vw;
+                border-radius: 0.5vw;
+                box-shadow: 0 0 5px #181818;
+                font-size: 1vw;
+                cursor: pointer;
+                width: max-content;
+                text-align: center;
+            }
+            #closeButton {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                z-index: 69420;
+                width: 40px;
+                height: 40px;
+            }
+            iframe {
+                width: 75%;
+                height: 80%;
+                margin: 0 auto;
+                display: block;
+                border: 2vw solid black;
+                border-radius: 1vw;
+            }
+        </style>
     </head>
     <body>
         <div class="navbar" id="navbar">
@@ -17,19 +98,75 @@
             <button class="button" type="button" onclick="Byblk()">Byeblocker</button>
             <button class="button" type="button" onclick="games()">Iceland games</button>
             <button class="button" type="button" onclick="proxylist()">Proxy list</button>
-            <button class="button" onclick="document.getElementById('settings').style.display = 'block'; document.getElementById('main').style.display = 'none'; document.getElementById('header').style.display = 'none'" type="button">
+            <button class="button" type="button" onclick="showSettings()">
                 Settings
             </button>
         </div>
-        <br/>
-        <iframe id="play"></iframe>
+        <br />
+        <div class="container">
+            <h1 style="color: white;" id="gamename"></h1>
+            <h5 style="color: white;" id="gamedesc"></h5>
+            <iframe id="game-frame" frameborder="0" cellspacing="0"></iframe>
+            <div class="controls">
+                <div id="flbutton">
+                    <a href="#" class="flbtn" onclick="fullscreen()"><i class="fa-solid fa-expand"></i></a>
+                </div>
+                <i class="fa-solid fa-code hack"></i>
+            </div>
+        </div>
+
         <script>
-            const iframe = document.getElementById('play');
-            const currentGameUrl = localStorage.getItem('currentgame') || '';
-            
-            iframe.src = currentGameUrl;
+            document.addEventListener("DOMContentLoaded", () => {
+                const iframe = document.getElementById("game-frame");
+                const currentGameUrl = localStorage.getItem("currentgame") || "";
+                iframe.src = currentGameUrl;
+
+                document.getElementById("gamename").innerText = localStorage.getItem("currentgamename") || "";
+                document.getElementById("gamedesc").innerText = localStorage.getItem("currentgamedesc") || "";
+
+                let gameHacks = JSON.parse(localStorage.getItem("hacks")) || [];
+                let game = localStorage.getItem("currentgamecheat");
+
+                let gameFunctions = {
+                    retrobowl: retroBowl,
+                    vexsix: vexSix,
+                    templeruntwo: templeRunTwo,
+                    bobtherobbertwo: bobTheRobberTwo,
+                    cookie: cookie,
+                    jetpackjoyride: jetPackJoyride,
+                    monkeymart: monkeyMart,
+                    eggycar: eggyCar,
+                    wordle: Wordle,
+                    subwaysurfers: subwaySurfers,
+                };
+
+                if (gameHacks.includes(game)) {
+                    const hackButton = document.getElementById("hack");
+                    hackButton.style.display = "block";
+                    hackButton.onclick = gameFunctions[game];
+                }
+
+                document.addEventListener("keydown", function (event) {
+                    if (event.code === "KeyF") fullscreen();
+                });
+            });
+
+            function fullscreen() {
+                let iframe = document.getElementById("game-frame");
+                if (!iframe) iframe = document.getElementById("app-frame");
+
+                if (iframe.requestFullscreen) iframe.requestFullscreen();
+                else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+                else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+                else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+            }
+
+            function showSettings() {
+                document.getElementById("settings").style.display = "block";
+                document.getElementById("main").style.display = "none";
+                document.getElementById("header").style.display = "none";
+            }
         </script>
-        <!-- 100% privacy-first analytics -->
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
     </body>
