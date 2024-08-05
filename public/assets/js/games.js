@@ -102,7 +102,8 @@ fetch('assets/json/games.json')
   .then((games) => {
     games = fixJSON(games);
     games.forEach((game) => {
-      const gameEl = document.createElement('li');
+      let gameEl = document.createElement('li');
+      let gameDesc = game.desc || ' ';
       gameEl.innerHTML = `
         <div class="gamecard" data-category="${game.categories}">
           <a href="#" onclick="localStorage.setItem('currentgame', '${game.url}'); localStorage.setItem('currentgamename', '${game.name}'); localStorage.setItem('currentgamecheat', '${game.cheat}'); location.href='play.html';">
@@ -114,7 +115,7 @@ fetch('assets/json/games.json')
               <b>
                 <p class="gamename">${game.name}</p>
               </b>
-              <p class="gamedesc">${game.desc}</p>
+              <p class="gamedesc">${gameDesc}</p>
             </div>
           </a>
         </div>
