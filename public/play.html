@@ -22,7 +22,13 @@
             </button>
         </div>
         <br/>
-        <iframe id="play" src="${localStorage.getItem('currentgame') || ''}"></iframe>
+        <iframe id="play"></iframe>
+        <script>
+            const iframe = document.getElementById('play');
+            const currentGameUrl = localStorage.getItem('currentgame') || '';
+            
+            iframe.src = currentGameUrl;
+        </script>
         <!-- 100% privacy-first analytics -->
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
