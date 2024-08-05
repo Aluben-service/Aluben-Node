@@ -122,9 +122,9 @@ fetch('assets/json/games.json')
       `;
       document.querySelector('.gamecontainer').appendChild(gameEl);
         if (localStorage.getItem(game.name) == 'pinned') {
-      let gameEl = document.createElement('li');
-      let gameDesc = game.desc || ' ';
-      gameEl.innerHTML = `
+      let pinnedEl = document.createElement('li');
+      let pinnedDesc = game.desc || ' ';
+      pinnedEl.innerHTML = `
         <div class="gamecard" data-category="${game.categories}">
           <a href="#" onclick="localStorage.setItem('currentgame', '${game.url}'); localStorage.setItem('currentgamename', '${game.name}'); localStorage.setItem('currentgamecheat', '${game.cheat}'); location.href='play.html';">
             <img title='${game.name}' src="${game.img}" class="gameimage"/>
@@ -135,12 +135,12 @@ fetch('assets/json/games.json')
               <b>
                 <p class="gamename">${game.name}</p>
               </b>
-              <p class="gamedesc">${gameDesc}</p>
+              <p class="gamedesc">${pinnedDesc}</p>
             </div>
           </a>
         </div>
       `;
-      document.querySelector('.pinned').appendChild(gameEl);
+      document.querySelector('.pinned').appendChild(pinnedEl);
         }
     });
   })
