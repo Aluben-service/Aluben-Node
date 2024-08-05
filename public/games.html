@@ -83,8 +83,38 @@
         </div>
         <br/>
         <a href="#"><img id="logo" src="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/iceland%20logo.png" /><img /></a><br />
-
+         <input type="text" id="myInput" onkeyup="search()" placeholder='Search For A Game...' title="Type in a game">
+         <select id="category" name="category" onchange="showCategory()">
+            <option class="white" value="all">All</option>
+            <option class="white" value="2P">Multiplayer</option>
+            <option class="white" value="sports">Sports</option>
+            <option class="white" value="flash">Flash</option>
+            <option class="white" value="local">Local</option>
+         </select>
+      </form>
+        <h3 style="color: white;">Pinned Games</h3>
+        <div class="pinned" id="gamescontainer">
+        </div>
+        <br />
+        <h3 style="color: white;">All Games</h3>
         <div class="gamecontainer"></div>
+        <script>
+                     function search() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("gamescontainer");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+              } else {
+                li[i].style.display = "none";
+              }
+            }
+                         </script>
         <!-- 100% privacy-first analytics -->
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
