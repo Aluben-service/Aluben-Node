@@ -123,3 +123,13 @@ function handleVisibilityChange() {
    }
 }
 document.addEventListener("visibilitychange", handleVisibilityChange);
+
+// what should i add
+document.onkeydown = (e) => {
+  if (e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey) {
+    switch (e.key) {
+      default:
+        break;
+    }
+  }
+};
