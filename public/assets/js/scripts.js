@@ -16,14 +16,20 @@ analytics.setAttribute("async", "");
 analytics.setAttribute("defer", "");
 analytics.setAttribute("src", "https://scripts.simpleanalyticscdn.com/latest.js");
 document.head.append(analytics);
-script("1/2 (Simple Analytics)");
+script("1/3 (Simple Analytics)");
 
 const plausible = document.createElement("script");
 plausible.setAttribute("defer", "");
 plausible.setAttribute("data-domain", location.origin);
 plausible.setAttribute("src", "https://plausible.io/js/script.js");
 document.head.append(plausible)
-script("2/2 (Plausible Analytics)")
+script("2/3 (Plausible Analytics)")
+
+const main = document.createElement("script");
+main.setAttribute("src", "assets/js/script.js");
+document.head.append(main);
+script("3/3 (Main script)")
+
 
 if (isMobileDevice()) {
     const dialog = document.createElement("dialog");

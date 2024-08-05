@@ -1,15 +1,17 @@
 const panicurl = localStorage.getItem("panicurl") || "https://google.com";
 const panickey = localStorage.getItem("panickey") || "`";
 
-// Navbar functions
+// Navbar stuff
 const Byblk = () => open("./byeblock.html", "_self");
 const discord = () => open("https://discord.gg/sR94jHBU");
 const games = () => open("./games.html", "_self");
 const proxylist = () => open("./list.html", "_self");
+const home = () => open("./", "_self");
 
 // Password stuff
-const validatePassword = (input) => if (document.getElementById("enterPassword").value == localStorage.getItem("passcode")) document.getElementById("enterPassword").display = "none";
+const validatePassword = () => document.getElementById("enterPassword").value === localStorage.getItem("passcode") ? document.getElementById("enterPassword").style.display = "none" : null;
 const calculator = () => Function(`"use strict"; return (${prompt("Enter a calculation (only +, -, *, /):").replace(/[^-()\d/*+.]/g, '')})`)();
+
 
 
 var randomNumber = Math.floor(Math.random() * 101); // Generates a number between 0 and 100

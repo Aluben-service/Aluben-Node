@@ -9,6 +9,7 @@ import { fileURLToPath } from "url";
 import config from "./config.js";
 import wisp from "wisp-server-node"
 import chalk from "chalk";
+import basicAuth from "express-basic-auth";
 
 console.log(chalk.yellow("🚀 Starting server..."));
 

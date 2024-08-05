@@ -48,7 +48,7 @@ script {
     font-size: 100vh;
 }
 
-.header {
+.navbar {
     color: rgb(255, 255, 255);
     background-color: rgb(36, 36, 36);
     text-align: center;
@@ -58,7 +58,7 @@ script {
     top: 0px;
 }
 
-#containerforheadertoggle {
+#containerfornavbartoggle {
     text-align: right;
     position: fixed;
 }
@@ -128,15 +128,14 @@ script {
 #subtitle {
     font-size: 20px;
 }
-
-//credits
-//body {
-//  text-align: center;
-//  font-size: 15px;
-//  background-color: black;
-//  color: aliceblue;
-//}
-
+/*credits
+body {
+  text-align: center;
+  font-size: 15px;
+    background-color: black;
+  color: aliceblue;
+}
+*/
 .custom-alert {
     display: center;
     position: fixed;

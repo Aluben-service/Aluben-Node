@@ -1,3 +1,73 @@
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gamecard {
+  position: relative;
+  width: 300px; 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gamecard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gameimage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.gameinfo {
+  padding: 16px;
+}
+
+.gamename {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.gamedesc {
+  font-size: 14px;
+  color: #666;
+}
+
+
+.fa-map-pin {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.fa-map-pin:hover {
+  color: #f39c12; 
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover .gameinfo .gamename,
+a:hover .gameinfo .gamedesc {
+  color: #007bff; 
+}*/
 .gamecard {
   background-color: #2c2f33;
   border-radius: 10px;
@@ -51,3 +121,11 @@
   font-size: 14px;
   color: #b9bbbe;
 }
+
+
+.gamecontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0px; /* Space between cards */
+}
+

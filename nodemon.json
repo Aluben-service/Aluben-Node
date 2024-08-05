@@ -2,5 +2,5 @@
   "watch": ["server", "client"],
   "ext": "js,json",
   "ignore": ["node_modules"],
-  "exec": "node app.js"
+  "exec": "node index.js"
 }
