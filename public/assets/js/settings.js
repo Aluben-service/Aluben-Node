@@ -21,66 +21,6 @@ function set_theme() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    switch (theme) {
-        case "N/A":
-            break;
-        case null:
-            break;
-        case "Dark":
-            document.body.style.backgroundColor = "#000000";
-            document.body.style.color = "#ffffff";
-            document.body.style.backgroundImage = "none";
-            break;
-        case "Light":
-            document.body.style.color = "#000000";
-            document.body.style.backgroundColor = "#ffffff";
-            document.body.style.backgroundImage = "none";
-            break;
-        case "Twilight":
-            document.body.style.color = "#c658ca";
-            document.body.style.backgroundColor = "#26233a";
-            document.body.style.backgroundImage = "none";
-            break;
-        case "Ocean":
-            document.body.style.color = "#00ffff";
-            document.body.style.backgroundColor = "#00008B";
-            document.body.style.backgroundImage = "none";
-            break;
-        case "McDonald's":
-            document.body.style.color = "#e1ff00";
-            document.body.style.backgroundColor = "#ff2600";
-            document.body.style.backgroundImage = "none";
-            break;
-        case "UnderGround":
-            document.body.style.color = "#b0afb1";
-            document.body.style.backgroundColor = "#673b00";
-            document.body.style.backgroundImage = "none";
-            break;
-        case "SunnyDay":
-            document.body.style.color = "#f0ff85";
-            document.body.style.backgroundColor = "#93e8ff";
-            document.body.style.backgroundImage = "none";
-            break;
-        case "Grassland":
-            document.body.style.color = "#f45faf";
-            document.body.style.backgroundImage = "url(assets/images/gashopper.jpg)";
-            $("#grass").show();
-            break;
-        case "StormyDay":
-            document.body.style.color = "#b0afb1";
-            document.body.style.backgroundImage = "url(assets/images/StormyDay.gif)";
-            break;
-        case "custom":
-            var theme = JSON.parse(localStorage.getItem("customTheme"));
-            if (theme.style == 1) {
-                document.body.style.backgroundColor = theme.backcolor;
-                document.body.style.color = theme.textcolor;
-                break;
-            } else if (theme.style == 2) {
-                document.body.style.backgroundImage = `url(${theme.image})`;
-            }
-    }
-
     // Get the saved theme from localStorage
     var savedTheme = localStorage.getItem("theme");
 
