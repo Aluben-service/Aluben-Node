@@ -109,3 +109,17 @@ window.addEventListener("keydown", function (event) {
     console.log("Typed key: " + event.key)
     if (event.key == panickey) window.parent.window.location.replace(panicurl);
 });
+
+function handleVisibilityChange() {
+ if (localStorage.getItem('clickoff_cloaking') === 'true') {
+   if (document.hidden) {
+     document.title = "Google";
+     const originalFavicon = document.querySelector("link[rel*='icon']").href;
+     document.querySelector("link[rel*='icon']").href = "https://raw.githubusercontent.com/whitespider-dev/whitespider/Main/res/google.ico";
+   } else {
+      document.title = "Aluben";
+      document.getElementById('favicon').href = originalFavicon;
+    }
+   }
+}
+document.addEventListener("visibilitychange", handleVisibilityChange);
