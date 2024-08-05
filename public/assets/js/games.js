@@ -102,8 +102,8 @@ fetch('assets/json/games.json')
   .then((games) => {
     games = fixJSON(games);
     games.forEach((game) => {
-      let gameEl = document.createElement('li');
-      let gameDesc = game.desc || ' ';
+      const gameEl = document.createElement('li');
+      const gameDesc = game.desc || ' ';
       gameEl.innerHTML = `
         <div class="gamecard" data-category="${game.categories}">
           <a href="#" onclick="localStorage.setItem('currentgame', '${game.url}'); localStorage.setItem('currentgamename', '${game.name}'); localStorage.setItem('currentgamecheat', '${game.cheat}'); location.href='play.html';">
@@ -122,8 +122,8 @@ fetch('assets/json/games.json')
       `;
       document.querySelector('.gamecontainer').appendChild(gameEl);
         if (localStorage.getItem(game.name) == 'pinned') {
-      let pinnedEl = document.createElement('li');
-      let pinnedDesc = game.desc || ' ';
+      const pinnedEl = document.createElement('li');
+      const pinnedDesc = game.desc || ' ';
       pinnedEl.innerHTML = `
         <div class="gamecard" data-category="${game.categories}">
           <a href="#" onclick="localStorage.setItem('currentgame', '${game.url}'); localStorage.setItem('currentgamename', '${game.name}'); localStorage.setItem('currentgamecheat', '${game.cheat}'); location.href='play.html';">
