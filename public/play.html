@@ -9,9 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="A good proxy with custom unblockers(that are completly different proxies) and a proxy list bulit in games it's amazing" />
         <title>Play - Aluben</title>
-        <script>
-            document.getElementById("play").src = localStorage.getItem("currentgame");
-        </script>
     </head>
     <body>
         <div class="navbar" id="navbar">
@@ -25,7 +22,7 @@
             </button>
         </div>
         <br/>
-        <iframe id="play"></iframe>
+        <iframe id="play" src="${localStorage.getItem('currentgame') || ''}"></iframe>
         <!-- 100% privacy-first analytics -->
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
