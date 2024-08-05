@@ -41,7 +41,7 @@ document.head.append(font);
 script("Font awesome");
 
 const settings = document.createElement("script");
-settings.setAttribute("src", "main.js");
+settings.setAttribute("src", "assets/js/main.js");
 document.head.append(settings);
 script("Settings stuff");
 
