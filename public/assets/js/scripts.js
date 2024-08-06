@@ -2,7 +2,7 @@
 * Credits to 3kh0!
 **/
 
-let scripts = 5;
+let scripts = 6;
 let currentscript = 1;
 
 function script(text) {
@@ -44,6 +44,11 @@ const settings = document.createElement("script");
 settings.setAttribute("src", "assets/js/main.js");
 document.head.append(settings);
 script("Settings stuff");
+
+const ABC = document.createElement("script");
+ABC.setAttribute("src", "https://cdn.jsdelivr.net/gh/FogNetwork/ABC/index.js");
+document.head.append(ABC);
+script("ABC(By FogNetwork)");
 
 if (isMobileDevice()) {
     const dialog = document.createElement("dialog");
