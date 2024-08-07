@@ -43,6 +43,6 @@ form.addEventListener("submit", async (event) => {
 		"/wisp/";
 	if ((await connection.getTransport()) !== "/epoxy/index.mjs") {
 		await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
-	}
+	
 	frame.src = __uv$config.prefix + __uv$config.encodeUrl(url);
 });

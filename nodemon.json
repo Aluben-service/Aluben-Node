@@ -1,6 +1,6 @@
 {
-  "watch": ["server", "client"],
-  "ext": "js,json",
-  "ignore": ["node_modules"],
-  "exec": "node index.js"
+	"watch": ["public", "."],
+	"ext": "js,json",
+	"ignore": ["node_modules"],
+	"exec": "node index.js"
 }

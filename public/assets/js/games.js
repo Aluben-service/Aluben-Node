@@ -101,6 +101,8 @@ fetch('assets/json/games.json')
   .then((res) => res.json())
   .then((games) => {
     games = fixJSON(games);
+        games.sort((a, b) => a.name.localeCompare(b.name));
+
     games.forEach((game) => {
       const gameEl = document.createElement('li');
       const gameDesc = game.desc || ' ';
