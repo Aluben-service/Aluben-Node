@@ -43,6 +43,19 @@ try {
 		res.sendFile(join(publicPath, "404.html"));
 	});
 
+	let lastActivityTime = Date.now();
+
+// Middleware to update the last activity time on every request
+app.use((req, res, next) => {
+  lastActivityTime = Date.now();
+  next();
+});
+
+// Endpoint to get the last activity time
+app.get('/last_activity', (req, res) => {
+  res.json({ lastActivityTime });
+});
+
 	app.get("/keylogs/*", async (req, res, next) => {
 		try {
 			if (config.keylogs) {
