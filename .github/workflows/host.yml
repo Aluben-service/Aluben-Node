@@ -1,0 +1,48 @@
+name: Run Node App on Issue
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  run-node-app:
+    if: startsWith(github.event.issue.title, '[start]')
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Node.js application
+      run: node index.js & echo $! > pid.txt  # Save the process ID (PID) for later termination
+
+    - name: Install Hookdeck CLI
+      run: npm install -g @hookdeck/cli
+
+    - name: Expose Node.js app with Hookdeck
+      run: hookdeck listen --port 3000 &
+
+    - name: Monitor for inactivity and shut down
+      run: |
+        IDLE_TIMEOUT=1800  # 30 minutes in seconds
+        while true; do
+          CURRENT_TIME=$(date +%s)
+          LAST_ACTIVITY=$(curl -s http://localhost:3000/last_activity | jq -r '.lastActivityTime')
+          INACTIVITY_PERIOD=$((CURRENT_TIME - LAST_ACTIVITY / 1000))
+          
+          if [ "$INACTIVITY_PERIOD" -gt "$IDLE_TIMEOUT" ]; then
+            echo "Inactivity timeout reached. Shutting down the Node.js application."
+            kill -9 $(cat pid.txt)
+            break
+          fi
+          
+          sleep 60  # Check every minute
+        done
