@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 	const icon = document.getElementById("favicon");
 	const name = document.getElementById("title");
-	var selectedValue = localStorage.getItem("selectedOption");
+	var selectedValue = localStorage.getItem("cloak");
 	if (selectedValue) {
 		switch (selectedValue) {
 			case "Google":

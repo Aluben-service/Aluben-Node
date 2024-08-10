@@ -9,7 +9,8 @@
 		"dev": "nodemon index.js",
 		"format": "prettier --log-level warn --write \"**/*.{js,css,json}\"",
 		"lint": "eslint .",
-		"lint:fix": "eslint . --fix"
+		"lint:fix": "eslint . --fix",
+                "compress": "magick mogrify -path output_directory -resize 800x800 -quality 85% *.jpg"
 	},
 	"dependencies": {
 		"@mercuryworkshop/bare-mux": "^2.0.4",
@@ -21,7 +22,9 @@
 		"express": "^4.19.2",
 		"express-basic-auth": "^1.2.1",
 		"http": "^0.0.1-security",
+		"http-proxy-middleware": "^3.0.0",
 		"mongoose": "^8.5.2",
+		"node-fetch": "^3.3.2",
 		"path": "^0.12.7",
 		"wisp-server-node": "^1.1.3",
 		"ws": "^8.18.0"

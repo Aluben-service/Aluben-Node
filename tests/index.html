@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display with CORS Proxy</title>
+</head>
+<body>
+    <h1>Image Display</h1>
+    <img id="image" src="" alt="Image will appear here">
+
+    <script>
+        // Function to set the image source using the CORS proxy
+        const displayImage = async (imageUrl) => {
+            try {
+                // Fetch the image from the proxy
+                const proxyUrl = 'http://localhost:3000/proxy/api/endpoint';
+                const response = await fetch(proxyUrl, {
+                    headers: {
+                        'x-target-url': imageUrl
+                    }
+                });
+                
+                if (response.status == 404) {
+                    // Set the image source to the proxied URL
+                    const imageBlob = await response.blob();
+                    const imageObjectUrl = URL.createObjectURL(imageBlob);
+                    document.getElementById('image').src = imageObjectUrl;
+                } else {
+                    console.error('Failed to fetch image:', response.status);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+
+        // Example image URL to display
+        const imageUrl = 'https://www.iana.org/_img/2022/iana-logo-header.svg'; // Replace with the actual imageUL
+        displayImage(imageUrl);
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!doctype HTML>
+<html>
+  <head>
+          <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/proxies.js"></script>
+        <script src="assets/js/settings.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="uv/uv.bundle.js"></script>
+        <script src="uv/uv.config.js"></script>
+        <script src="error.js"></script>
+        <script src="index.js"></script>
+        <script src="register-sw.js"></script>
+        <script src="search.js"></script>
+<script src="assets/js/settings.js"></script>
+        </head><body>
+        <h1>Settings</h1>
+            <div id="closeset">
+                <button
+                    onclick='window.history.back();'
+                    id="closesetbutton"
+                    class="icon-button"
+                >
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <br />
+            <br />
+            <h1>Themes:</h1>
+            <select id="themes">
+                <option value="N/A">Choose Your Theme</option>
+                <option value="Dark">Dark</option>
+                <option value="Light">Light</option>
+                <option value="Twilight">Twilight</option>
+                <option value="Ocean">Ocean</option>
+                <option value="McDonald's">McDonald's</option>
+                <option value="UnderGround">Underground</option>
+                <option value="SunnyDay">Sunny Day</option>
+                <option value="StormyDay">Stormy Day</option>
+                <option value="Grassland">Grassland</option>
+                <option value="custom_theme">custom</option>
+            </select>
+            <button onclick="set_theme()">Save</button>
+            <div>
+                <h1>Text color</h1>
+                <input type="color" id="picker" name="picker" onchange="txtclrpicker(this.value)" />
+            </div>
+            <br />
+            <br />
+            <h1>tab cloak(click a few times)</h1>
+            <button onclick="localStorage.setItem('cloak', 'Clever')">Clever</button>
+            <button onclick="localStorage.setItem('cloak', 'Classroom')">Google Classroom</button>
+            <br />
+            <span class="subtitle">custom tab cloak:</span>
+            <br />
+            <input type="text" onchange="tabrename = this.value;" placeholder="enter new tab name" />
+
+            <br />
+            <br />
+            <h1>About:blank no history cloak</h1>
+            <button onclick="aboutblank()">about:blank cloak Aluben</button>
+            <button onclick="aboutblank2()">about:blank cloak other websites</button>
+            <h1>Panic key/url</h1>
+            <input id="panickey" placeholder="key..." />
+            <input id="panicurl" placeholder="url..." />>
+            <button onclick="localStorage.setItem('panicurl', 'https://' + document.getElementById('panicurl').value); localStorage.setItem('panickey', document.getElementById('panickey').value)" type="button">Save</button>
+
+            <h1>default search engine</h1>
+            <div class="dropdown">
+                <div class="dropdown-display" id="dropdownDisplay">Google (Default)</div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a id="Google" onclick="setEngine('Google', 'https://www.google.com/search?q=')">Google (Default)</a>
+                    <a id="wiki" onclick="setEngine('Wikipedia', 'https://en.wikipedia.org/wiki/')">Wikipedia</a>
+                    <a id="gogoprivate" onclick="setEngine('Gogoprivate', 'https://gogoprivate.com/search?#gsc.q=')">Gogoprivate</a>
+                    <a id="bing" onclick="setEngine('Bing', 'https://www.bing.com/search?q=')">Bing</a>
+                </div>
+            </div>
+            <button onclick="set_browser()" type="button">Set Search Engine</button>
+            <script>
+                let selectedEngine = "Google";
+                let engineDisplay = "Google (Default)";
+                let engineURL = "https://www.google.com?igu=1";
+
+                function toggleDropdown() {
+                    document.getElementById("dropdownContent").style.display = document.getElementById("dropdownContent").style.display === "block" ? "none" : "block";
+                }
+
+                function setEngine(name, url) {
+                    selectedEngine = name;
+                    engineDisplay = name;
+                    engineURL = url;
+                    document.getElementById("dropdownDisplay").innerText = engineDisplay;
+                    document.getElementById("dropdownContent").style.display = "none";
+                }
+
+                function set_browser() {
+                    localStorage.setItem("se", engineURL);
+                    alert("Your browser is now " + engineDisplay);
+                }
+
+                document.getElementById("dropdownDisplay").addEventListener("click", toggleDropdown);
+
+                window.onclick = function (event) {
+                    if (!event.target.matches(".dropdown-display")) {
+                        document.getElementById("dropdownContent").style.display = "none";
+                    }
+                };
+            </script>
+            <!--
+            <h1>Passcode Settings</h1>
+            <button onclick="passcodechange()">change passcode</button>
+-->
+            <script>
+                function aboutblank() {
+                    win = window.open();
+                    url4 = "https://is.gd/Aluben_Node/";
+                    iframe = win.document.createElement("iframe");
+                    iframe.style = "position:fixed;width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;z-index:2147483647;background-color:white;border:none;";
+                    iframe.src = url4;
+                    win.document.body.appendChild(iframe);
+                }
+                function aboutblank2() {
+                    (function () {
+                        var url3 = prompt("Enter website url for cloaked page");
+                        var win = window.open();
+                        var iframe = win.document.createElement("iframe");
+                        iframe.style = "position:fixed;width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;z-index:2147483647;background-color:white;border:none;";
+                        if (url3.includes("https://") || url3.includes("http://")) {
+                            iframe.src = url3;
+                        } else {
+                            iframe.src = "https://" + url3;
+                        }
+                        win.document.body.appendChild(iframe);
+                    })();
+                }
+                function googleclassroomcloak() {
+                    function gcloak() {
+                        var link = document.querySelector("link[rel*='icon']") || document.createElement("link");
+                        link.type = "image/x-icon";
+                        link.rel = "shortcut icon";
+                        link.href = " https://ssl.gstatic.com/classroom/ic_product_classroom_32.png";
+                        document.title = "Home";
+                        console.log(document.title);
+                        document.getElementsByTagName("head")[0].appendChild(link);
+                    }
+                    gcloak();
+                    setInterval(gcloak, 1000);
+                }
+                function clevercloak() {
+                    function gcloak() {
+                        var link = document.querySelector("link[rel*='icon']") || document.createElement("link");
+                        link.type = "image/x-icon";
+                        link.rel = "shortcut icon";
+                        link.href = "https://assets.clever.com/launchpad/c4a9bd82e/favicon.ico?1";
+                        document.title = "Clever | Portal";
+                        console.log(document.title);
+                        document.getElementsByTagName("head")[0].appendChild(link);
+                    }
+                    gcloak();
+                    setInterval(gcloak, 1000);
+                }
+                function nowstrt() {
+                    tabrenamechange = tabrename;
+                    tabicon = tabiconchange;
+                    function gcloak() {
+                        document.title = tabrenamechange;
+                        console.log(document.title);
+                        document.getElementsByTagName("head")[0].appendChild(link);
+                    }
+                    gcloak();
+                    setInterval(gcloak, 1000);
+                }
+            </script></body></html>

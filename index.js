@@ -10,6 +10,8 @@ import config from "./config.js";
 import wisp from "wisp-server-node";
 import chalk from "chalk";
 import basicAuth from "express-basic-auth";
+import fetch from "node-fetch";
+import { URL } from "url";
 
 try {
 	console.log(chalk.yellow("🚀 Starting server..."));
@@ -31,11 +33,37 @@ try {
 		app.use(basicAuth({ users: config.users, challenge: true }));
 	}
 
+	app.use((req, res, next) => {
+		res.header("Access-Control-Allow-Origin", "*");
+		next();
+	});
+
 	app.use(express.static(publicPath));
 
 	app.use("/uv/", express.static(uvPath));
 	app.use("/epoxy/", express.static(epoxyPath));
 	app.use("/baremux/", express.static(baremuxPath));
+
+	// Proxy endpoint with origin check and dynamic target URL
+	app.use(
+		"/proxy/*",
+		targetMiddleware,
+		async (req, res, next) => {
+			targetUrl = req.params[0];
+			const response = await fetch(targetUrl, {
+				method: req.method, // Forward the request method (GET, POST, etc.)
+				headers: {
+					...req.headers,
+					Host: new URL(targetUrl).host, // Override Host header
+				},
+				body:
+					req.method === "POST" || req.method === "PUT"
+						? JSON.stringify(req.body)
+						: undefined, // Forward body for POST/PUT requests
+			});
+			res.send(await response.text());
+		},
+	);
 
 	// 404 stuff
 	app.use((req, res) => {
@@ -98,6 +126,6 @@ try {
 	server.listen({
 		port,
 	});
-} catch {
-	console.log("Error");
+} catch (err) {
+	console.log(`Error: ${err}`);
 }
