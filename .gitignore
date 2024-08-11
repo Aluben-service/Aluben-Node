@@ -7,4 +7,4 @@ package-lock.json
 .codesandbox
 testing
 *.tgz
-
+tests/output

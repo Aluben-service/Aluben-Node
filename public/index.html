@@ -52,7 +52,7 @@
             <h1>Settings</h1>
             <div id="closeset">
                 <button
-                    onclick='document.getElementById("settings").style.display = "none"; document.getElementById("main").style.display = "block"; document.getElementById("header").style.display = "block"'
+                    onclick='settings()'
                     id="closesetbutton"
                     class="icon-button"
                 >
@@ -206,14 +206,7 @@
                     setInterval(gcloak, 1000);
                 }
             </script>
-        </div>
-        <!-- custom alert with ID and class -->
-        <div id="setPassword" class="custom-alert">
-            <p id="welcome">Welcome to Aluben, Set Passcode</p>
-            <br />
-
-            <input id="pascode" type="password" />
-            <button id="confirm" onclick="hidecustomAlert()">Comfirm</button>
+        </div>lick="hidecustomAlert()">Comfirm</button>
         </div>
 
         <div style="display: none;" id="enterPassword" class="custom-alert">
@@ -270,7 +263,7 @@
             Rammerhead<br />
             <br />
             <select id="rammy"></select>
-            <button onclick='var selectBox = document.getElementById("rammy"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location = selectedValue;'>Go</button>
+            <button onclick='window.location = (v => v && v)(document.getElementById("rammy").value);'>Go</button>
             <br />
             <br />
             Holy Unblocker<br />
@@ -289,7 +282,7 @@
                 <option value="https://televisionrepair.us/">Link 9</option>
                 <option value="https://ur2ndlibrary.com/">Link 10</option>
             </select>
-            <button onclick='var selectBox = document.getElementById("holyub"); var selectedValue = selectBox.options[selectBox.selectedIndex].value; if (selectedValue != "") window.location.href = selectedValue;'>Go</button>
+            <button onclick='window.location = (v => v && v)(document.getElementById("holyub").value);'>Go</button>
             <br />
             <br />
             <br />

@@ -60,19 +60,6 @@ function startTime() {
 	setTimeout(startTime, 1000);
 }
 
-// Show or hide password input fields based on stored passcode
-if (localStorage.getItem("passcode")) {
-	$("#setPassword").hide();
-	$("#enterPassword").show();
-}
-
-// Function to hide custom alert and set passcode
-function hideCustomAlert() {
-	const passcodeValue = document.getElementById("passcode").value;
-	localStorage.setItem("passcode", passcodeValue);
-	$("#setPassword").hide();
-}
-
 // Function to change passcode with validation
 function passcodechange() {
 	const oldpasscode = prompt("Enter old passcode");
@@ -84,3 +71,54 @@ function passcodechange() {
 		alert("Incorrect passcode");
 	}
 }
+
+document.addEventListener("DOMContentLoaded", function (event) {
+       function passcodeask() {
+	Swal.fire({
+		title: `${localStorage.getItem("passcode") ? "Enter" : "Set"} your passcode.`,
+		input: "text",
+		inputAttributes: {
+			autocapitalize: "off",
+		},
+		showCancelButton: true,
+		confirmButtonText: "Look up",
+		showLoaderOnConfirm: true,
+		preConfirm: async (login) => {
+			try {
+				passcode = localStorage.getItem("passcode");
+				if (passcode && passcode == login) {
+					Swal.fire({
+						title: "Successful!",
+						text: "You have been allowed!",
+						icon: "success",
+					});
+				} else if (passcode && passcode != login) {
+					Swal.fire({
+						title: "Failed!",
+						text: "Wrong passcode!",
+						icon: "error",
+					});
+					passcodeask();
+				} else if (
+					(localStorage.getItem("passcode") ? true : false) == false
+				) {
+					localStorage.setItem("passcode", login);
+					Swal.fire({
+						title: "Successful",
+						text: "Passcode successfully set!",
+						icon: "success",
+					});
+				}
+			} catch (error) {
+				Swal.fire({
+					title: "Failed!",
+					text: `Error: ${error}`,
+					icon: "error",
+				});
+			}
+		},
+		allowOutsideClick: () => !Swal.isLoading(),
+	});
+}
+passcodeask();
+});
