@@ -19,12 +19,44 @@ const validatePassword = () => {
 };
 
 // Calculator function
-const calculator = () => {
-	const calculation = prompt("Enter a calculation (only +, -, *, /):");
-	const sanitizedCalculation = calculation.replace(/[^-()\d/*+.]/g, "");
-	return Function(`"use strict"; return (${sanitizedCalculation})`)();
-};
+const calculator = async () => {
+  // Prompt the user for input using SweetAlert2
+  const { value: calculation } = await Swal.fire({
+    title: 'Enter a calculation',
+    input: 'text',
+    inputLabel: 'Calculation (only +, -, *, /):',
+    inputPlaceholder: 'e.g., 3 + 5 * (2 - 8)',
+    showCancelButton: true,
+    confirmButtonText: 'Calculate',
+    cancelButtonText: 'Cancel'
+  });
 
+  // Check if user pressed "Cancel" or entered nothing
+  if (calculation) {
+    // Sanitize the input
+    const sanitizedCalculation = calculation.replace(/[^-()\d/*+.]/g, "");
+
+    // Perform the calculation
+    try {
+      const result = Function(`"use strict"; return (${sanitizedCalculation})`)();
+      // Show the result using SweetAlert2
+      await Swal.fire({
+        title: 'Result',
+        text: `The result is: ${result}`,
+        icon: 'info',
+        confirmButtonText: 'OK'
+      });
+    } catch (error) {
+      // Handle any errors
+      await Swal.fire({
+        title: 'Error',
+        text: 'There was an error with the calculation.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+    }
+  }
+};
 // Generate random numbers
 const randomNumber = Math.floor(Math.random() * 101); // Generates a number between 0 and 100
 const randjk = Math.floor(Math.random() * 1000001);
@@ -72,7 +104,7 @@ function passcodechange() {
 	}
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
+//document.addEventListener("DOMContentLoaded", function (event) {
        function passcodeask() {
 	Swal.fire({
 		title: `${localStorage.getItem("passcode") ? "Enter" : "Set"} your passcode.`,
@@ -80,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		inputAttributes: {
 			autocapitalize: "off",
 		},
-		showCancelButton: true,
-		confirmButtonText: "Look up",
+		showCancelButton: false,
+		confirmButtonText: "Ok!",
 		showLoaderOnConfirm: true,
 		preConfirm: async (login) => {
 			try {
@@ -117,8 +149,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				});
 			}
 		},
-		allowOutsideClick: () => !Swal.isLoading(),
+		allowOutsideClick: () => false,
 	});
 }
-passcodeask();
-});

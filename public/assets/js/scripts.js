@@ -1,8 +1,8 @@
 /**
  * Credits to 3kh0!
  **/
-document.addEventListener("DOMContentLoaded", (event) => {
-	let scripts = 7;
+//document.addEventListener("DOMContentLoaded", (event) => {
+	let scripts = 6;
 	let currentscript = 1;
 
 	function script(text) {
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	const main = document.createElement("script");
 	main.setAttribute("src", "assets/js/script.js");
+//      main.setAttribute("onload", "passcodeask();");
 	document.head.append(main);
 	script("Main script");
 
@@ -61,8 +62,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	const sweetAlerts = document.createElement("script");
 	sweetAlerts.setAttribute("src", "assets/lib/sweetAlerts.js");
+        sweetAlerts.setAttribute("onload", "passcodeask();");
 	document.head.append(sweetAlerts);
 	script("SweetAlerts2");
+
 
 	if (isMobileDevice()) {
 		const dialog = document.createElement("dialog");
@@ -74,4 +77,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		const closedDialog = document.querySelector("#notice");
 		closedDialog.showModal();
 	}
-});
+//});
