@@ -9,3 +9,4 @@ testing
 *.tgz
 tests/output
 tests/images
+.unlighthouse
