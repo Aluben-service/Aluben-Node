@@ -20,42 +20,45 @@ const validatePassword = () => {
 
 // Calculator function
 const calculator = async () => {
-  // Prompt the user for input using SweetAlert2
-  const { value: calculation } = await Swal.fire({
-    title: 'Enter a calculation',
-    input: 'text',
-    inputLabel: 'Calculation (only +, -, *, /):',
-    inputPlaceholder: 'e.g., 3 + 5 * (2 - 8)',
-    showCancelButton: true,
-    confirmButtonText: 'Calculate',
-    cancelButtonText: 'Cancel'
-  });
+	// Prompt the user for input using SweetAlert2
+	const { value: calculation } = await Swal.fire({
+		title: "Enter a calculation",
+		input: "text",
+		inputLabel:
+			"Calculation (only +, -, *, /, whatever else will be ignored):",
+		inputPlaceholder: "e.g., 3 + 5 * (2 - 8)",
+		showCancelButton: true,
+		confirmButtonText: "Calculate",
+		cancelButtonText: "Cancel",
+	});
 
-  // Check if user pressed "Cancel" or entered nothing
-  if (calculation) {
-    // Sanitize the input
-    const sanitizedCalculation = calculation.replace(/[^-()\d/*+.]/g, "");
+	// Check if user pressed "Cancel" or entered nothing
+	if (calculation) {
+		// Sanitize the input
+		const sanitizedCalculation = calculation.replace(/[^-()\d/*+.]/g, "");
 
-    // Perform the calculation
-    try {
-      const result = Function(`"use strict"; return (${sanitizedCalculation})`)();
-      // Show the result using SweetAlert2
-      await Swal.fire({
-        title: 'Result',
-        text: `The result is: ${result}`,
-        icon: 'info',
-        confirmButtonText: 'OK'
-      });
-    } catch (error) {
-      // Handle any errors
-      await Swal.fire({
-        title: 'Error',
-        text: 'There was an error with the calculation.',
-        icon: 'error',
-        confirmButtonText: 'OK'
-      });
-    }
-  }
+		// Perform the calculation
+		try {
+			const result = Function(
+				`"use strict"; return (${sanitizedCalculation})`,
+			)();
+			// Show the result using SweetAlert2
+			await Swal.fire({
+				title: "Result",
+				text: `The result is: ${result}`,
+				icon: "info",
+				confirmButtonText: "OK",
+			});
+		} catch (error) {
+			// Handle any errors
+			await Swal.fire({
+				title: "Error",
+				text: "There was an error with the calculation.",
+				icon: "error",
+				confirmButtonText: "OK",
+			});
+		}
+	}
 };
 // Generate random numbers
 const randomNumber = Math.floor(Math.random() * 101); // Generates a number between 0 and 100
@@ -104,11 +107,10 @@ function passcodechange() {
 	}
 }
 
-//document.addEventListener("DOMContentLoaded", function (event) {
-       function passcodeask() {
+function passcodeask() {
 	Swal.fire({
 		title: `${localStorage.getItem("passcode") ? "Enter" : "Set"} your passcode.`,
-		input: "text",
+		input: "password", // Change input type to password
 		inputAttributes: {
 			autocapitalize: "off",
 		},
@@ -117,23 +119,16 @@ function passcodechange() {
 		showLoaderOnConfirm: true,
 		preConfirm: async (login) => {
 			try {
-				passcode = localStorage.getItem("passcode");
-				if (passcode && passcode == login) {
-					Swal.fire({
-						title: "Successful!",
-						text: "You have been allowed!",
-						icon: "success",
-					});
-				} else if (passcode && passcode != login) {
+				let passcode = localStorage.getItem("passcode");
+				if (passcode && passcode !== login) {
 					Swal.fire({
 						title: "Failed!",
 						text: "Wrong passcode!",
 						icon: "error",
+					}).then(() => {
+						passcodeask(); // Re-prompt the user
 					});
-					passcodeask();
-				} else if (
-					(localStorage.getItem("passcode") ? true : false) == false
-				) {
+				} else if (!localStorage.getItem("passcode")) {
 					localStorage.setItem("passcode", login);
 					Swal.fire({
 						title: "Successful",
@@ -151,4 +146,15 @@ function passcodechange() {
 		},
 		allowOutsideClick: () => false,
 	});
+}
+
+if ("serviceWorker" in navigator) {
+	navigator.serviceWorker
+		.register("/sw.js")
+		.then(function (registration) {
+			console.log("Service worker started");
+		})
+		.catch(function (error) {
+			console.log("Service worker failed, error:", error);
+		});
 }

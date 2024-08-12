@@ -8,3 +8,4 @@ package-lock.json
 testing
 *.tgz
 tests/output
+tests/images

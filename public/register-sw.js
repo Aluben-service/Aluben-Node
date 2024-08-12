@@ -27,4 +27,8 @@ async function registerSW() {
 	}
 
 	await navigator.serviceWorker.register(stockSW);
+       // This is the line you change to change the wisp server (essential for static hosting ofc)
+       let wispUrl = `wss://${location.origin}/wisp/`;
+       window.connection = new BareMux.BareMuxConnection();
+       connection.setTransport("/epoxy/index.js", { wisp: `wss://${location.origin}/wisp/` });
 }

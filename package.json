@@ -10,7 +10,7 @@
 		"format": "prettier --log-level warn --write \"**/*.{js,css,json}\"",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
-                "compress": "magick mogrify -path output_directory -resize 800x800 -quality 85% *.jpg"
+		"compress": "magick mogrify -path output_directory -resize 800x800 -quality 85% *.jpg"
 	},
 	"dependencies": {
 		"@mercuryworkshop/bare-mux": "^2.0.4",
@@ -33,7 +33,6 @@
 		"@eslint/config-array": "^0.17.1",
 		"@eslint/js": "^9.8.0",
 		"@eslint/object-schema": "^2.1.4",
-		"eslint": "^9.8.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
 		"globals": "^15.9.0",

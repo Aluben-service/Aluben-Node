@@ -175,7 +175,7 @@
 		"categories": "all"
 	},
 	{
-		"url": "//dreamboxmath.org/src/static/games/bloxors",
+		"url": "https://dreamboxmath.org/src/static/games/bloxors",
 		"img": "https://dreamboxmath.org/src/static/icons/bloxorz.jpg",
 		"name": "Bloxorz",
 		"desc": "Manipulate a square block to move it through a maze and reach the exit. Use your wits and problem-solving skills to navigate through increasingly difficult levels, each with its unique obstacles and challenges.",
@@ -343,7 +343,7 @@
 		"categories": "all"
 	},
 	{
-		"url": "//dreamboxmath.org/src/static/games/death-run-3d/",
+		"url": "https://dreamboxmath.org/src/static/games/death-run-3d/",
 		"img": "https://dreamboxmath.org/src/static/icons/deathrun.jpg",
 		"name": "Death Run",
 		"desc": "Death Run is a fast-paced, high-stakes game where players navigate a challenging obstacle course while avoiding deadly traps and obstacles. With simple controls and a quick pace, Death Run is an adrenaline-fueled experience that will keep you on the edge of your seat.",
@@ -485,7 +485,7 @@
 		"categories": "all"
 	},
 	{
-		"url": "//hydrogen-assets.onrender.com/geometrydash/",
+		"url": "https://hydrogen-assets.onrender.com/geometrydash/",
 		"img": "data:image/jpeg;base64,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",
 		"name": "Geometry Dash",
 		"desc": "Jump and fly your way through danger in this rhythm-based action platformer! Prepare for a near impossible challenge in the world of Geometry Dash.",
@@ -715,7 +715,7 @@
 		"categories": "all"
 	},
 	{
-		"url": "//io.sqeven.workers.dev/-----https://mountain658.github.io/",
+		"url": "https://io.sqeven.workers.dev/-----https://mountain658.github.io/",
 		"img": "https://mountain658.pages.dev/mountainNoFade.png",
 		"name": "Mountain Games",
 		"desc": "Roblox, Call Of Duty, Stumble Guys, PUBG, Android VM, PUBG, and more all in one website!",
@@ -979,7 +979,7 @@
 		"categories": "all"
 	},
 	{
-		"url": "//dreamboxmath.org/src/static/games/snake/index.html",
+		"url": "https://dreamboxmath.org/src/static/games/snake/index.html",
 		"img": "https://dreamboxmath.org/src/static/icons/google-snake.webp",
 		"name": "Snake",
 		"desc": "Snake is a classic mobile game where you control a growing snake as it moves through a grid, eating food pellets to grow longer. Avoid running into walls or other snakes to survive!",
@@ -1007,15 +1007,15 @@
 		"categories": "all"
 	},
 	{
-		"url": "https://raw.githack.com/Skoolgq/v2/mainhttps://polarislearning.org/cdn/stickman-hook/index.html",
-		"img": "https://raw.githack.com/Skoolgq/v2/mainhttps://polarislearning.org/cdn/stickman-hook/stickman-hook.png",
+		"url": "https://polarislearning.org/cdn/stickman-hook/index.html",
+		"img": "https://polarislearning.org/cdn/stickman-hook/stickman-hook.png",
 		"name": "Stickman Hook",
 		"desc": "Tap to hook and make incredible jumps; Avoid every obstacle that stands in your way.",
 		"categories": "all"
 	},
 	{
 		"url": "https://raw.githack.com/D3ch/hell/main/Games/SoccerHeads/index.html",
-		"img": "img/soccre.PNG",
+		"img": "https://raw.githubusercontent.com/Hydrogen-Network/Hydrogen-static/main/static/assets/img/soccre.PNG",
 		"name": "Soccerheads",
 		"desc": " ",
 		"categories": "all"
@@ -1119,7 +1119,7 @@
 	},
 	{
 		"url": "https://raw.githack.com/Skoolgq/v2/mainhttps://polarislearning.org/cdn/tunnelrush/index.html",
-		"img": "https://raw.githubusercontent.com/Skoolgq/v2/mainhttps://polarislearning.org/cdn/tunnelrush/tunnel-rush.png",
+		"img": "https://polarislearning.org/cdn/tunnelrush/tunnel-rush.png",
 		"name": "Tunnel Rush",
 		"desc": "Get ready for this new colourful experience, Tunnel Rush! Slide down a colorful tunnel and get as far as you can. But beware! Different obstacles are in the way, so try to avoid as many as possible while making your way through the tunnel.",
 		"categories": "all"
@@ -1177,7 +1177,7 @@
 		"categories": "all"
 	},
 	{
-		"url": "//raw.githack.com/3kh0/3kh0-assets/main/xx142-b2exe/index.html",
+		"url": "https://raw.githack.com/3kh0/3kh0-assets/main/xx142-b2exe/index.html",
 		"img": "https://raw.githubusercontent.com/Skoolgq/v2/main/img/xb.jpeg",
 		"name": "xx142-b2exe",
 		"desc": "You are an AI weaponized virus built to infiltrate the alien network and deactivate all power generators and weapon systems."
@@ -1196,7 +1196,7 @@
 	},
 	{
 		"url": "https://www.ehabgames.com/games/circlo/index.html",
-		"img": "//www.ehabgames.com/imgimg/Circlo0.png",
+		"img": "https://www.ehabgames.com/imgimg/Circlo0.png",
 		"name": "Circloo",
 		"desc": "use a circle to collect other circles."
 	},
@@ -1234,883 +1234,883 @@
 	{
 		"name": "99 Balls 3D",
 		"url": "https://gamesnacks.com/games/99balls3d",
-		"image": "https://polarislearning.org/api/games/4/image",
+		"img":  "https://polarislearning.org/api/games/4/image",
 		"categories": "all"
 	},
 	{
 		"name": "Drive Mad",
 		"url": "https://polarislearning.org/cdn/3kh0/drive-mad/index.html",
-		"image": "https://polarislearning.org/api/games/46/image",
+		"img":  "https://polarislearning.org/api/games/46/image",
 		"categories": "all"
 	},
 	{
 		"name": "Retro Bowl",
 		"url": "https://polarislearning.org/cdn/3kh0/retro-bowl/index.html",
-		"image": "https://polarislearning.org/api/games/88/image",
+		"img":  "https://polarislearning.org/api/games/88/image",
 		"categories": "all"
 	},
 	{
 		"name": "Roblox",
 		"url": "https://now.gg/iframe/snippet?app_pkg=com.roblox.client&partner=skool",
-		"image": "https://polarislearning.org/api/games/90/image",
+		"img":  "https://polarislearning.org/api/games/90/image",
 		"categories": "all"
 	},
 	{
 		"name": "Stickman Archero Fight",
 		"url": "https://html5.gamedistribution.com/rvvASMiM/3f4c166817ad4fd4b5b05d9adba22fcd/?gd_sdk_referrer_url=https://www.gamegab.com/play/16561/Stickman-Archero-Fight/",
-		"image": "https://polarislearning.org/api/games/99/image",
+		"img":  "https://polarislearning.org/api/games/99/image",
 		"categories": "all"
 	},
 	{
 		"name": "Funny Shooter 2",
 		"url": "https://rawcdn.githack.com/nightrose-labs/quartz/master/1/6af3cc65-32f9-4f3d-a66c-6c8882a7c5df/index.html",
-		"image": "https://polarislearning.org/api/games/118/image",
+		"img":  "https://polarislearning.org/api/games/118/image",
 		"categories": "all"
 	},
 	{
 		"name": "10 Minutes Till dawn",
 		"url": "https://polarislearning.org/cdn/10-minutes-till-dawn/index.html",
-		"image": "https://polarislearning.org/api/games/1/image",
+		"img":  "https://polarislearning.org/api/games/1/image",
 		"categories": "all"
 	},
 	{
 		"name": "1v1.LoL",
 		"url": "https://polarislearning.org/cdn/3kh0/1v1lol/index.html",
-		"image": "https://polarislearning.org/api/games/2/image",
+		"img":  "https://polarislearning.org/api/games/2/image",
 		"categories": "all"
 	},
 	{
 		"name": "2048",
 		"url": "https://polarislearning.org/cdn/2048/index.html",
-		"image": "https://polarislearning.org/api/games/3/image",
+		"img":  "https://polarislearning.org/api/games/3/image",
 		"categories": "all"
 	},
 	{
 		"name": "99 Balls 3D",
 		"url": "https://gamesnacks.com/games/99balls3d",
-		"image": "https://polarislearning.org/api/games/4/image",
+		"img":  "https://polarislearning.org/api/games/4/image",
 		"categories": "all"
 	},
 	{
 		"name": "Achievement Unlocked",
 		"url": "https://polarislearning.org/cdn/3kh0/achievementunlocked/index.html",
-		"image": "https://polarislearning.org/api/games/5/image",
+		"img":  "https://polarislearning.org/api/games/5/image",
 		"categories": "all"
 	},
 	{
 		"name": "Adventure Capitalist",
 		"url": "https://than1089.github.io/adventure-capitalist/",
-		"image": "https://polarislearning.org/api/games/6/image",
+		"img":  "https://polarislearning.org/api/games/6/image",
 		"categories": "all"
 	},
 	{
 		"name": "Alien Hominid",
 		"url": "https://polarislearning.org/cdn/alienhominid/index.html",
-		"image": "https://polarislearning.org/api/games/7/image",
+		"img":  "https://polarislearning.org/api/games/7/image",
 		"categories": "all"
 	},
 	{
 		"name": "Amidst The Clouds",
 		"url": "https://polarislearning.org/cdn/amidst-the-clouds/index.html",
-		"image": "https://polarislearning.org/api/games/8/image",
+		"img":  "https://polarislearning.org/api/games/8/image",
 		"categories": "all"
 	},
 	{
 		"name": "Aquapark.io",
 		"url": "https://html5.gamedistribution.com/rvvASMiM/ce67b95f0db44d66b8b0dc48ade7ce1a/index.html",
-		"image": "https://polarislearning.org/api/games/9/image",
+		"img":  "https://polarislearning.org/api/games/9/image",
 		"categories": "all"
 	},
 	{
 		"name": "Archery World Tour",
 		"url": "https://gamesnacks.com/embed/games/archery",
-		"image": "https://polarislearning.org/api/games/10/image",
+		"img":  "https://polarislearning.org/api/games/10/image",
 		"categories": "all"
 	},
 	{
 		"name": "Diep.io",
 		"url": "https://diep.io/",
-		"image": "https://polarislearning.org/api/games/11/image",
+		"img":  "https://polarislearning.org/api/games/11/image",
 		"categories": "all"
 	},
 	{
 		"name": "Ashbelt",
 		"url": "https://ultimatemen.github.io/games/ashbelt/index.html",
-		"image": "https://polarislearning.org/api/games/12/image",
+		"img":  "https://polarislearning.org/api/games/12/image",
 		"categories": "all"
 	},
 	{
 		"name": "Asphalt Retro",
 		"url": "https://html5.gamedistribution.com/rvvASMiM/2c122cee7ef04222a962449e32a34e98/?gd_sdk_referrer_url=https://gamedistribution.com/games/asphalt-retro",
-		"image": "https://polarislearning.org/api/games/13/image",
+		"img":  "https://polarislearning.org/api/games/13/image",
 		"categories": "all"
 	},
 	{
 		"name": "Awesome Tanks 2",
 		"url": "https://polarislearning.org/cdn/awesometanks2/index.html",
-		"image": "https://polarislearning.org/api/games/14/image",
+		"img":  "https://polarislearning.org/api/games/14/image",
 		"categories": "all"
 	},
 	{
 		"name": "Axis Football League",
 		"url": "https://polarislearning.org/cdn/axisfootballleague/index.html",
-		"image": "https://polarislearning.org/api/games/15/image",
+		"img":  "https://polarislearning.org/api/games/15/image",
 		"categories": "all"
 	},
 	{
 		"name": "Backrooms",
 		"url": "https://polarislearning.org/cdn/3kh0/backrooms/index.html",
-		"image": "https://polarislearning.org/api/games/16/image",
+		"img":  "https://polarislearning.org/api/games/16/image",
 		"categories": "all"
 	},
 	{
 		"name": "Basket Bros",
 		"url": "https://polarislearning.org/cdn/3kh0/basketbros-io/index.html",
-		"image": "https://polarislearning.org/api/games/17/image",
+		"img":  "https://polarislearning.org/api/games/17/image",
 		"categories": "all"
 	},
 	{
 		"name": "Big NEON Tower Tiny Square",
 		"url": "https://polarislearning.org/cdn/bntts/index.html",
-		"image": "https://polarislearning.org/api/games/20/image",
+		"img":  "https://polarislearning.org/api/games/20/image",
 		"categories": "all"
 	},
 	{
 		"name": "Bonk.io",
 		"url": "https://bonk.io",
-		"image": "https://polarislearning.org/api/games/27/image",
+		"img":  "https://polarislearning.org/api/games/27/image",
 		"categories": "all"
 	},
 	{
 		"name": "BuildNow.GG",
 		"url": "https://games.crazygames.com/en_US/buildnow-gg/index.html",
-		"image": "https://polarislearning.org/api/games/29/image",
+		"img":  "https://polarislearning.org/api/games/29/image",
 		"categories": "all"
 	},
 	{
 		"name": "Candy Jump",
 		"url": "https://candyjump.games235.com/",
-		"image": "https://polarislearning.org/api/games/30/image",
+		"img":  "https://polarislearning.org/api/games/30/image",
 		"categories": "all"
 	},
 	{
 		"name": "COD Mobile",
 		"url": "https://now.gg/play/activision-publishing-inc/7935/call-of-duty.html",
-		"image": "https://polarislearning.org/api/games/34/image",
+		"img":  "https://polarislearning.org/api/games/34/image",
 		"categories": "all"
 	},
 	{
 		"name": "Counter Strike",
 		"url": "https://play-cs.com",
-		"image": "https://polarislearning.org/api/games/35/image",
+		"img":  "https://polarislearning.org/api/games/35/image",
 		"categories": "all"
 	},
 	{
 		"name": "Cubeform",
 		"url": "https://www.mathplayground.com/cubeform/index.html",
-		"image": "https://polarislearning.org/api/games/37/image",
+		"img":  "https://polarislearning.org/api/games/37/image",
 		"categories": "all"
 	},
 	{
 		"name": "Dante",
 		"url": "https://polarislearning.org/cdn/dante/index.html",
-		"image": "https://polarislearning.org/api/games/39/image",
+		"img":  "https://polarislearning.org/api/games/39/image",
 		"categories": "all"
 	},
 	{
 		"name": "Defly.io",
 		"url": "https://defly.io/",
-		"image": "https://polarislearning.org/api/games/40/image",
+		"img":  "https://polarislearning.org/api/games/40/image",
 		"categories": "all"
 	},
 	{
 		"name": "DogeMiner",
 		"url": "https://polarislearning.org/cdn/3kh0/DogeMiner/index.html",
-		"image": "https://polarislearning.org/api/games/41/image",
+		"img":  "https://polarislearning.org/api/games/41/image",
 		"categories": "all"
 	},
 	{
 		"name": "Doodle Jump",
 		"url": "https://polarislearning.org/cdn/doodle-jump/index.html",
-		"image": "https://polarislearning.org/api/games/42/image",
+		"img":  "https://polarislearning.org/api/games/42/image",
 		"categories": "all"
 	},
 	{
 		"name": "Draw the Hill",
 		"url": "https://www.mathplayground.com/draw-the-hill/index.html",
-		"image": "https://polarislearning.org/api/games/43/image",
+		"img":  "https://polarislearning.org/api/games/43/image",
 		"categories": "all"
 	},
 	{
 		"name": "Drift Boss",
 		"url": "https://www.mathplayground.com/drift-boss-v3/index.html",
-		"image": "https://polarislearning.org/api/games/44/image",
+		"img":  "https://polarislearning.org/api/games/44/image",
 		"categories": "all"
 	},
 	{
 		"name": "Flappy Bird",
 		"url": "https://polarislearning.org/cdn/3kh0/flappybird/index.html",
-		"image": "https://polarislearning.org/api/games/48/image",
+		"img":  "https://polarislearning.org/api/games/48/image",
 		"categories": "all"
 	},
 	{
 		"name": "Genshin Impact",
 		"url": "https://nowgg.nl/play/cognosphere-pte-ltd-/1773/genshin-impact.html",
-		"image": "https://polarislearning.org/api/games/51/image",
+		"img":  "https://polarislearning.org/api/games/51/image",
 		"categories": "all"
 	},
 	{
 		"name": "GunSpin",
 		"url": "https://ubg365.github.io/gunspin/play.html",
-		"image": "https://polarislearning.org/api/games/54/image",
+		"img":  "https://polarislearning.org/api/games/54/image",
 		"categories": "all"
 	},
 	{
 		"name": "Happy Wheels",
 		"url": "https://games-online.io/game/HappyWheels",
-		"image": "https://polarislearning.org/api/games/56/image",
+		"img":  "https://polarislearning.org/api/games/56/image",
 		"categories": "all"
 	},
 	{
 		"name": "Idle Breakout",
 		"url": "https://polarislearning.org/cdn/3kh0/idle-breakout/index.html",
-		"image": "https://polarislearning.org/api/games/57/image",
+		"img":  "https://polarislearning.org/api/games/57/image",
 		"categories": "all"
 	},
 	{
 		"name": "Janissary Battles",
 		"url": "https://html5.gamedistribution.com/rvvASMiM/8b55f4f729be4e70b6155f27d2e04690/?gd_sdk_referrer_url=https://gamedistribution.com/games/janissary-battles",
-		"image": "https://polarislearning.org/api/games/58/image",
+		"img":  "https://polarislearning.org/api/games/58/image",
 		"categories": "all"
 	},
 	{
 		"name": "Line Rider",
 		"url": "https://www.linerider.com/",
-		"image": "https://polarislearning.org/api/games/64/image",
+		"img":  "https://polarislearning.org/api/games/64/image",
 		"categories": "all"
 	},
 	{
 		"name": "Master Archer",
 		"url": "https://playcanv.as/p/JERg21J8",
-		"image": "https://polarislearning.org/api/games/65/image",
+		"img":  "https://polarislearning.org/api/games/65/image",
 		"categories": "all"
 	},
 	{
 		"name": "Melon Sandbox",
 		"url": "https://nowgg.nl/play/playducky/7199/melon-sandbox.html",
-		"image": "https://polarislearning.org/api/games/66/image",
+		"img":  "https://polarislearning.org/api/games/66/image",
 		"categories": "all"
 	},
 	{
 		"name": "Mindustry",
 		"url": "https://polarislearning.org/cdn/mindustry/index.html",
-		"image": "https://polarislearning.org/api/games/67/image",
+		"img":  "https://polarislearning.org/api/games/67/image",
 		"categories": "all"
 	},
 	{
 		"name": "Minecraft 1.3",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/eagler-1.3/index.html",
-		"image": "https://polarislearning.org/api/games/68/image",
+		"img":  "https://polarislearning.org/api/games/68/image",
 		"categories": "all"
 	},
 	{
 		"name": "Minecraft 1.5.2",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/eagler-1.5.2/index.html",
-		"image": "https://polarislearning.org/api/games/69/image",
+		"img":  "https://polarislearning.org/api/games/69/image",
 		"categories": "all"
 	},
 	{
 		"name": "Minecraft 1.8",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/eagler-1.8/index.html",
-		"image": "https://polarislearning.org/api/games/70/image",
+		"img":  "https://polarislearning.org/api/games/70/image",
 		"categories": "all"
 	},
 	{
 		"name": "Missiles",
 		"url": "https://polarislearning.org/cdn/missiles/index.html",
-		"image": "https://polarislearning.org/api/games/71/image",
+		"img":  "https://polarislearning.org/api/games/71/image",
 		"categories": "all"
 	},
 	{
 		"name": "Monster Truck Stunts",
 		"url": "https://files.twoplayergames.org/files/games/other/Monster_Truck_Port_Stunt/index.html",
-		"image": "https://polarislearning.org/api/games/73/image",
+		"img":  "https://polarislearning.org/api/games/73/image",
 		"categories": "all"
 	},
 	{
 		"name": "Moto X3M Pool Party",
 		"url": "https://polarislearning.org/cdn/motox3m-pool/index.html",
-		"image": "https://polarislearning.org/api/games/75/image",
+		"img":  "https://polarislearning.org/api/games/75/image",
 		"categories": "all"
 	},
 	{
 		"name": "Moto X3M Spooky",
 		"url": "https://polarislearning.org/cdn/motox3m-spooky/index.html",
-		"image": "https://polarislearning.org/api/games/76/image",
+		"img":  "https://polarislearning.org/api/games/76/image",
 		"categories": "all"
 	},
 	{
 		"name": "Moto X3M Winter",
 		"url": "https://polarislearning.org/cdn/motox3m-winter/index.html",
-		"image": "https://polarislearning.org/api/games/77/image",
+		"img":  "https://polarislearning.org/api/games/77/image",
 		"categories": "all"
 	},
 	{
 		"name": "Offline Paradise",
 		"url": "https://polarislearning.org/cdn/offline-paradise/index.html",
-		"image": "https://polarislearning.org/api/games/78/image",
+		"img":  "https://polarislearning.org/api/games/78/image",
 		"categories": "all"
 	},
 	{
 		"name": "Papa's Taco Mia",
 		"url": "https://www.numuki.com/gameframe/papa-s-taco-mia",
-		"image": "https://polarislearning.org/api/games/84/image",
+		"img":  "https://polarislearning.org/api/games/84/image",
 		"categories": "all"
 	},
 	{
 		"name": "Penalty Kicks",
 		"url": "https://www.mathplayground.com/penalty-kicks/index.html",
-		"image": "https://polarislearning.org/api/games/85/image",
+		"img":  "https://polarislearning.org/api/games/85/image",
 		"categories": "all"
 	},
 	{
 		"name": "Polka Dot Game",
 		"url": "https://www.polkadotgame.com/game.html",
-		"image": "https://polarislearning.org/api/games/87/image",
+		"img":  "https://polarislearning.org/api/games/87/image",
 		"categories": "all"
 	},
 	{
 		"name": "Rise Higher",
 		"url": "https://www.mathplayground.com/rise-higher/index.html",
-		"image": "https://polarislearning.org/api/games/89/image",
+		"img":  "https://polarislearning.org/api/games/89/image",
 		"categories": "all"
 	},
 	{
 		"name": "Robostorm",
 		"url": "https://robostorm.io",
-		"image": "https://polarislearning.org/api/games/91/image",
+		"img":  "https://polarislearning.org/api/games/91/image",
 		"categories": "all"
 	},
 	{
 		"name": "Rocket League 2D",
 		"url": "https://v6p9d9t4.ssl.hwcdn.net/html/3325334/index.html",
-		"image": "https://polarislearning.org/api/games/92/image",
+		"img":  "https://polarislearning.org/api/games/92/image",
 		"categories": "all"
 	},
 	{
 		"name": "Run 3",
 		"url": "https://polarislearning.org/cdn/run3/index.html",
-		"image": "https://polarislearning.org/api/games/94/image",
+		"img":  "https://polarislearning.org/api/games/94/image",
 		"categories": "all"
 	},
 	{
 		"name": "Smash Karts",
 		"url": "https://smartcart1.github.io/s/smash-karts/",
-		"image": "https://polarislearning.org/api/games/96/image",
+		"img":  "https://polarislearning.org/api/games/96/image",
 		"categories": "all"
 	},
 	{
 		"name": "Snow Rider 3D",
 		"url": "https://23azostore.github.io/s8/snow-rider-3d/",
-		"image": "https://polarislearning.org/api/games/97/image",
+		"img":  "https://polarislearning.org/api/games/97/image",
 		"categories": "all"
 	},
 	{
 		"name": "Stumble Guys",
 		"url": "https://now.gg/iframe/snippet?app_pkg=com.kitkagames.fallbuddies&partner=skool",
-		"image": "https://polarislearning.org/api/games/100/image",
+		"img":  "https://polarislearning.org/api/games/100/image",
 		"categories": "all"
 	},
 	{
 		"name": "Subway Surfers",
 		"url": "https://polarislearning.org/cdn/subway-surfers/index.html",
-		"image": "https://polarislearning.org/api/games/101/image",
+		"img":  "https://polarislearning.org/api/games/101/image",
 		"categories": "all"
 	},
 	{
 		"name": "Super Mario 64",
 		"url": "https://ultimatemen.github.io/games/superm64/index.html",
-		"image": "https://polarislearning.org/api/games/102/image",
+		"img":  "https://polarislearning.org/api/games/102/image",
 		"categories": "all"
 	},
 	{
 		"name": "There is No Game",
 		"url": "https://polarislearning.org/cdn/there-is-no-game/index.html",
-		"image": "https://polarislearning.org/api/games/105/image",
+		"img":  "https://polarislearning.org/api/games/105/image",
 		"categories": "all"
 	},
 	{
 		"name": "Tiny Fishing",
 		"url": "https://polarislearning.org/cdn/tiny-fishing/index.html",
-		"image": "https://polarislearning.org/api/games/106/image",
+		"img":  "https://polarislearning.org/api/games/106/image",
 		"categories": "all"
 	},
 	{
 		"name": "Wolfenstein",
 		"url": "https://polarislearning.org/cdn/wolfenstein-3d/index.html",
-		"image": "https://polarislearning.org/api/games/114/image",
+		"img":  "https://polarislearning.org/api/games/114/image",
 		"categories": "all"
 	},
 	{
 		"name": "World's Hardest Game 2",
 		"url": "https://polarislearning.org/cdn/worlds-hardest-game-2/index.html",
-		"image": "https://polarislearning.org/api/games/115/image",
+		"img":  "https://polarislearning.org/api/games/115/image",
 		"categories": "all"
 	},
 	{
 		"name": "xx142-b2.exe",
 		"url": "https://polarislearning.org/cdn/xx142-b2exe/index.html",
-		"image": "https://polarislearning.org/api/games/116/image",
+		"img":  "https://polarislearning.org/api/games/116/image",
 		"categories": "all"
 	},
 	{
 		"name": "Amongus",
 		"url": "https://polarislearning.org/cdn/3kh0/among-us/index.html",
-		"image": "https://polarislearning.org/api/games/119/image",
+		"img":  "https://polarislearning.org/api/games/119/image",
 		"categories": "all"
 	},
 	{
 		"name": "Taming.io",
 		"url": "https://taming.io",
-		"image": "https://polarislearning.org/api/games/120/image",
+		"img":  "https://polarislearning.org/api/games/120/image",
 		"categories": "all"
 	},
 	{
 		"name": "Google Snake",
 		"url": "https://polarislearning.org/cdn/3kh0/google-snake/index.html",
-		"image": "https://polarislearning.org/api/games/122/image",
+		"img":  "https://polarislearning.org/api/games/122/image",
 		"categories": "all"
 	},
 	{
 		"name": "Appel",
 		"url": "https://polarislearning.org/cdn/appel/index.html",
-		"image": "https://polarislearning.org/api/games/125/image",
+		"img":  "https://polarislearning.org/api/games/125/image",
 		"categories": "all"
 	},
 	{
 		"name": "Stack Bump 3D",
 		"url": "https://polarislearning.org/cdn/3kh0/stack-bump-3d/index.html",
-		"image": "https://polarislearning.org/api/games/127/image",
+		"img":  "https://polarislearning.org/api/games/127/image",
 		"categories": "all"
 	},
 	{
 		"name": "Cut the Rope Time Travel",
 		"url": "https://polarislearning.org/cdn/3kh0/ctr-tr/index.html",
-		"image": "https://polarislearning.org/api/games/130/image",
+		"img":  "https://polarislearning.org/api/games/130/image",
 		"categories": "all"
 	},
 	{
 		"name": "Cut the Rope Holiday",
 		"url": "https://polarislearning.org/cdn/3kh0/ctr-holiday/index.html",
-		"image": "https://polarislearning.org/api/games/131/image",
+		"img":  "https://polarislearning.org/api/games/131/image",
 		"categories": "all"
 	},
 	{
 		"name": "Om-Nom Bounce",
 		"url": "https://polarislearning.org/cdn/3kh0/om-bounce/index.html",
-		"image": "https://polarislearning.org/api/games/134/image",
+		"img":  "https://polarislearning.org/api/games/134/image",
 		"categories": "all"
 	},
 	{
 		"name": "Evowars.io",
 		"url": "https://evowars.io",
-		"image": "https://polarislearning.org/api/games/137/image",
+		"img":  "https://polarislearning.org/api/games/137/image",
 		"categories": "all"
 	},
 	{
 		"name": "Deepest Sword",
 		"url": "https://html-classic.itch.zone/html/4017918/index.html",
-		"image": "https://polarislearning.org/api/games/138/image",
+		"img":  "https://polarislearning.org/api/games/138/image",
 		"categories": "all"
 	},
 	{
 		"name": "Tunnel Rush Mania",
 		"url": "https://html5.gamemonetize.co/2fp4sd31llh6u6vjxe1wxbx8meapsgop/",
-		"image": "https://polarislearning.org/api/games/139/image",
+		"img":  "https://polarislearning.org/api/games/139/image",
 		"categories": "all"
 	},
 	{
 		"name": "Bacon May Die",
 		"url": "https://game.enjoy4fun.com/baconmaydie/v2/index.html",
-		"image": "https://polarislearning.org/api/games/140/image",
+		"img":  "https://polarislearning.org/api/games/140/image",
 		"categories": "all"
 	},
 	{
 		"name": "Eggy Car",
 		"url": "https://webglmath.github.io/eggy-car/",
-		"image": "https://polarislearning.org/api/games/142/image",
+		"img":  "https://polarislearning.org/api/games/142/image",
 		"categories": "all"
 	},
 	{
 		"name": "Cookie Clicker",
 		"url": "https://orteil.dashnet.org/cookieclicker/",
-		"image": "https://polarislearning.org/api/games/143/image",
+		"img":  "https://polarislearning.org/api/games/143/image",
 		"categories": "all"
 	},
 	{
 		"name": "Papery Planes",
 		"url": "https://polarislearning.org/cdn/3kh0/papery-planes/index.html",
-		"image": "https://polarislearning.org/api/games/144/image",
+		"img":  "https://polarislearning.org/api/games/144/image",
 		"categories": "all"
 	},
 	{
 		"name": "Rolly Vortex",
 		"url": "https://polarislearning.org/cdn/3kh0/rolly-vortex/index.html",
-		"image": "https://polarislearning.org/api/games/145/image",
+		"img":  "https://polarislearning.org/api/games/145/image",
 		"categories": "all"
 	},
 	{
 		"name": "Snowbattle.io",
 		"url": "https://polarislearning.org/cdn/3kh0/snowbattle/index.html",
-		"image": "https://polarislearning.org/api/games/146/image",
+		"img":  "https://polarislearning.org/api/games/146/image",
 		"categories": "all"
 	},
 	{
 		"name": "Swerve",
 		"url": "https://polarislearning.org/cdn/3kh0/swerve/index.html",
-		"image": "https://polarislearning.org/api/games/147/image",
+		"img":  "https://polarislearning.org/api/games/147/image",
 		"categories": "all"
 	},
 	{
 		"name": "Tube Jumpers",
 		"url": "https://polarislearning.org/cdn/3kh0/tube-jumpers/index.html",
-		"image": "https://polarislearning.org/api/games/148/image",
+		"img":  "https://polarislearning.org/api/games/148/image",
 		"categories": "all"
 	},
 	{
 		"name": "Glass City",
 		"url": "https://polarislearning.org/cdn/3kh0/glass-city/index.html",
-		"image": "https://polarislearning.org/api/games/150/image",
+		"img":  "https://polarislearning.org/api/games/150/image",
 		"categories": "all"
 	},
 	{
 		"name": "Connect 3",
 		"url": "https://polarislearning.org/cdn/3kh0/connect3/index.html",
-		"image": "https://polarislearning.org/api/games/151/image",
+		"img":  "https://polarislearning.org/api/games/151/image",
 		"categories": "all"
 	},
 	{
 		"name": "Henry Stickmin: Breaking the Bank",
 		"url": "https://polarislearning.org/cdn/3kh0/breakingthebank/index.html",
-		"image": "https://polarislearning.org/api/games/152/image",
+		"img":  "https://polarislearning.org/api/games/152/image",
 		"categories": "all"
 	},
 	{
 		"name": "Riddle School",
 		"url": "https://polarislearning.org/cdn/3kh0/riddleschool/index.html",
-		"image": "https://polarislearning.org/api/games/155/image",
+		"img":  "https://polarislearning.org/api/games/155/image",
 		"categories": "all"
 	},
 	{
 		"name": "Riddle School 2",
 		"url": "https://polarislearning.org/cdn/3kh0/riddleschool2/index.html",
-		"image": "https://polarislearning.org/api/games/156/image",
+		"img":  "https://polarislearning.org/api/games/156/image",
 		"categories": "all"
 	},
 	{
 		"name": "Riddle School 3",
 		"url": "https://polarislearning.org/cdn/3kh0/riddleschool3/index.html",
-		"image": "https://polarislearning.org/api/games/157/image",
+		"img":  "https://polarislearning.org/api/games/157/image",
 		"categories": "all"
 	},
 	{
 		"name": "Riddle School 4",
 		"url": "https://polarislearning.org/cdn/3kh0/riddleschool4/index.html",
-		"image": "https://polarislearning.org/api/games/158/image",
+		"img":  "https://polarislearning.org/api/games/158/image",
 		"categories": "all"
 	},
 	{
 		"name": "Riddle School 5",
 		"url": "https://polarislearning.org/cdn/3kh0/riddleschool5/index.html",
-		"image": "https://polarislearning.org/api/games/159/image",
+		"img":  "https://polarislearning.org/api/games/159/image",
 		"categories": "all"
 	},
 	{
 		"name": "Riddle Transfer",
 		"url": "https://polarislearning.org/cdn/3kh0/riddletransfer/index.html",
-		"image": "https://polarislearning.org/api/games/160/image",
+		"img":  "https://polarislearning.org/api/games/160/image",
 		"categories": "all"
 	},
 	{
 		"name": "Riddle Transfer 2",
 		"url": "https://polarislearning.org/cdn/3kh0/riddletransfer2/index.html",
-		"image": "https://polarislearning.org/api/games/161/image",
+		"img":  "https://polarislearning.org/api/games/161/image",
 		"categories": "all"
 	},
 	{
 		"name": "Slope Ball",
 		"url": "https://polarislearning.org/cdn/3kh0/slope-ball/index.html",
-		"image": "https://polarislearning.org/api/games/163/image",
+		"img":  "https://polarislearning.org/api/games/163/image",
 		"categories": "all"
 	},
 	{
 		"name": "Rabbit Samurai",
 		"url": "https://polarislearning.org/cdn/3kh0/rabbit-samurai/index.html",
-		"image": "https://polarislearning.org/api/games/164/image",
+		"img":  "https://polarislearning.org/api/games/164/image",
 		"categories": "all"
 	},
 	{
 		"name": "Rabbit Samurai 2",
 		"url": "https://polarislearning.org/cdn/3kh0/rabbit-samurai2/index.html",
-		"image": "https://polarislearning.org/api/games/165/image",
+		"img":  "https://polarislearning.org/api/games/165/image",
 		"categories": "all"
 	},
 	{
 		"name": "Ages of Conflict",
 		"url": "https://polarislearning.org/cdn/3kh0/ages-of-conflict/index.html",
-		"image": "https://polarislearning.org/api/games/170/image",
+		"img":  "https://polarislearning.org/api/games/170/image",
 		"categories": "all"
 	},
 	{
 		"name": "Amazing Rope Police",
 		"url": "https://polarislearning.org/cdn/3kh0/amazing-rope-police/index.html",
-		"image": "https://polarislearning.org/api/games/171/image",
+		"img":  "https://polarislearning.org/api/games/171/image",
 		"categories": "all"
 	},
 	{
 		"name": "Bad Ice Cream",
 		"url": "https://polarislearning.org/cdn/3kh0/bad-ice-cream/index.html",
-		"image": "https://polarislearning.org/api/games/173/image",
+		"img":  "https://polarislearning.org/api/games/173/image",
 		"categories": "all"
 	},
 	{
 		"name": "Bad Ice Cream 2",
 		"url": "https://polarislearning.org/cdn/3kh0/bad-ice-cream-2/index.html",
-		"image": "https://polarislearning.org/api/games/174/image",
+		"img":  "https://polarislearning.org/api/games/174/image",
 		"categories": "all"
 	},
 	{
 		"name": "Bad Ice Cream 3",
 		"url": "https://polarislearning.org/cdn/3kh0/bad-ice-cream-3/index.html",
-		"image": "https://polarislearning.org/api/games/175/image",
+		"img":  "https://polarislearning.org/api/games/175/image",
 		"categories": "all"
 	},
 	{
 		"name": "Paper.io",
 		"url": "https://g-class.biz/lessons/1/",
-		"image": "https://polarislearning.org/api/games/179/image",
+		"img":  "https://polarislearning.org/api/games/179/image",
 		"categories": "all"
 	},
 	{
 		"name": "Slime Rush TD",
 		"url": "https://polarislearning.org/cdn/3kh0/slime-rush-td/index.html",
-		"image": "https://polarislearning.org/api/games/180/image",
+		"img":  "https://polarislearning.org/api/games/180/image",
 		"categories": "all"
 	},
 	{
 		"name": "Station 141",
 		"url": "https://polarislearning.org/cdn/3kh0/station-141/index.html",
-		"image": "https://polarislearning.org/api/games/181/image",
+		"img":  "https://polarislearning.org/api/games/181/image",
 		"categories": "all"
 	},
 	{
 		"name": "Rolling Forests",
 		"url": "https://polarislearning.org/cdn/3kh0/rolling-forests/index.html",
-		"image": "https://polarislearning.org/api/games/182/image",
+		"img":  "https://polarislearning.org/api/games/182/image",
 		"categories": "all"
 	},
 	{
 		"name": "Veloce",
 		"url": "https://polarislearning.org/cdn/3kh0/veloce/index.html",
-		"image": "https://polarislearning.org/api/games/183/image",
+		"img":  "https://polarislearning.org/api/games/183/image",
 		"categories": "all"
 	},
 	{
 		"name": "Polybranch",
 		"url": "https://polarislearning.org/cdn/3kh0/polybranch/index.html",
-		"image": "https://polarislearning.org/api/games/184/image",
+		"img":  "https://polarislearning.org/api/games/184/image",
 		"categories": "all"
 	},
 	{
 		"name": "Stick Archers",
 		"url": "https://polarislearning.org/cdn/3kh0/stick-archers/index.html",
-		"image": "https://polarislearning.org/api/games/185/image",
+		"img":  "https://polarislearning.org/api/games/185/image",
 		"categories": "all"
 	},
 	{
 		"name": "Soccer Skills",
 		"url": "https://polarislearning.org/cdn/3kh0/soccer-skills/index.html",
-		"image": "https://polarislearning.org/api/games/186/image",
+		"img":  "https://polarislearning.org/api/games/186/image",
 		"categories": "all"
 	},
 	{
 		"name": "Stick Merge",
 		"url": "https://polarislearning.org/cdn/3kh0/stick-merge/index.html",
-		"image": "https://polarislearning.org/api/games/187/image",
+		"img":  "https://polarislearning.org/api/games/187/image",
 		"categories": "all"
 	},
 	{
 		"name": "Subway Surfers: New York",
 		"url": "https://polarislearning.org/cdn/3kh0/subway-surfers-ny/index.html",
-		"image": "https://polarislearning.org/api/games/188/image",
+		"img":  "https://polarislearning.org/api/games/188/image",
 		"categories": "all"
 	},
 	{
 		"name": "Henry Stickmin: Escaping The Prision",
 		"url": "https://polarislearning.org/cdn/3kh0/escapingtheprison/index.html",
-		"image": "https://polarislearning.org/api/games/189/image",
+		"img":  "https://polarislearning.org/api/games/189/image",
 		"categories": "all"
 	},
 	{
 		"name": "Knife Master",
 		"url": "https://polarislearning.org/cdn/3kh0/knife-master/index.html",
-		"image": "https://polarislearning.org/api/games/190/image",
+		"img":  "https://polarislearning.org/api/games/190/image",
 		"categories": "all"
 	},
 	{
 		"name": "Monster Tracks",
 		"url": "https://polarislearning.org/cdn/3kh0/monster-tracks/index.html",
-		"image": "https://polarislearning.org/api/games/191/image",
+		"img":  "https://polarislearning.org/api/games/191/image",
 		"categories": "all"
 	},
 	{
 		"name": "Madalin Stunt Cars 2",
 		"url": "https://polarislearning.org/cdn/3kh0/madalin-stunt-cars-2/index.html",
-		"image": "https://polarislearning.org/api/games/192/image",
+		"img":  "https://polarislearning.org/api/games/192/image",
 		"categories": "all"
 	},
 	{
 		"name": "Madalin Stunt Cars 3",
 		"url": "https://polarislearning.org/cdn/3kh0/madalin-stunt-cars-3/index.html",
-		"image": "https://polarislearning.org/api/games/193/image",
+		"img":  "https://polarislearning.org/api/games/193/image",
 		"categories": "all"
 	},
 	{
 		"name": "Henry Stickmin: Fleeing The Complex",
 		"url": "https://polarislearning.org/cdn/3kh0/fleeingthecomplex/index.html",
-		"image": "https://polarislearning.org/api/games/194/image",
+		"img":  "https://polarislearning.org/api/games/194/image",
 		"categories": "all"
 	},
 	{
 		"name": "Grey Box",
 		"url": "https://polarislearning.org/cdn/3kh0/greybox/index.html",
-		"image": "https://polarislearning.org/api/games/195/image",
+		"img":  "https://polarislearning.org/api/games/195/image",
 		"categories": "all"
 	},
 	{
 		"name": "Cars Simulator",
 		"url": "https://polarislearning.org/cdn/3kh0/cars-simulator/index.html",
-		"image": "https://polarislearning.org/api/games/196/image",
+		"img":  "https://polarislearning.org/api/games/196/image",
 		"categories": "all"
 	},
 	{
 		"name": "Stickman Survival",
 		"url": "https://polarislearning.org/cdn/3kh0/Stickman-Survival/index.html",
-		"image": "https://polarislearning.org/api/games/198/image",
+		"img":  "https://polarislearning.org/api/games/198/image",
 		"categories": "all"
 	},
 	{
 		"name": "Pool/Billiards Classic",
 		"url": "https://13582048327635951979.playables.usercontent.goog/v/assets/index.html",
-		"image": "https://polarislearning.org/api/games/202/image",
+		"img":  "https://polarislearning.org/api/games/202/image",
 		"categories": "all"
 	},
 	{
 		"name": "Alien Shooter",
 		"url": "https://16702553337040190672.playables.usercontent.goog/v/assets/index.html",
-		"image": "https://polarislearning.org/api/games/203/image",
+		"img":  "https://polarislearning.org/api/games/203/image",
 		"categories": "all"
 	},
 	{
 		"name": "Amaze!",
 		"url": "https://580820627722902829.playables.usercontent.goog/v/assets/index.html",
-		"image": "https://polarislearning.org/api/games/204/image",
+		"img":  "https://polarislearning.org/api/games/204/image",
 		"categories": "all"
 	},
 	{
 		"name": "Angry Birds: Showdown",
 		"url": "https://6381249690777614785.playables.usercontent.goog/v/assets/index.html",
-		"image": "https://polarislearning.org/api/games/205/image",
+		"img":  "https://polarislearning.org/api/games/205/image",
 		"categories": "all"
 	},
 	{
 		"name": "Basketball FRVR",
 		"url": "https://11024365036548115513.playables.usercontent.goog/v/assets/index.html",
-		"image": "https://polarislearning.org/api/games/206/image",
+		"img":  "https://polarislearning.org/api/games/206/image",
 		"categories": "all"
 	},
 	{
 		"name": "Cannon Balls 3D",
 		"url": "https://14726002176993811037.playables.usercontent.goog/v/assets/index.html",
-		"image": "https://polarislearning.org/api/games/207/image",
+		"img":  "https://polarislearning.org/api/games/207/image",
 		"categories": "all"
 	},
 	{
 		"name": "Radius Raid",
 		"url": "https://jackrugile.com/radius-raid/",
-		"image": "https://polarislearning.org/api/games/208/image",
+		"img":  "https://polarislearning.org/api/games/208/image",
 		"categories": "all"
 	},
 	{
 		"name": "Dino Run 3d",
 		"url": "https://russell2259.github.io/dino3d/",
-		"image": "https://polarislearning.org/api/games/210/image",
+		"img":  "https://polarislearning.org/api/games/210/image",
 		"categories": "all"
 	},
 	{
 		"name": "Burrito Bison: Launcha Libre",
 		"url": "https://rawcdn.githack.com/GameHub88/Yexex-Assets/main/bb/index.html",
-		"image": "https://polarislearning.org/api/games/211/image",
+		"img":  "https://polarislearning.org/api/games/211/image",
 		"categories": "all"
 	},
 	{
 		"name": "Yohoho.io",
 		"url": "https://rawcdn.githack.com/GameHub88/Yexex-Assets/main/yohoho/index.html",
-		"image": "https://polarislearning.org/api/games/212/image",
+		"img":  "https://polarislearning.org/api/games/212/image",
 		"categories": "all"
 	},
 	{
 		"name": "Jacksmith",
 		"url": "https://moonlight.silvereen.net/src/static/games/jacksmith/index.html",
-		"image": "https://polarislearning.org/api/games/213/image",
+		"img":  "https://polarislearning.org/api/games/213/image",
 		"categories": "all"
 	},
 	{
 		"name": "Sans Fight Simulator",
 		"url": "https://jcw87.github.io/c2-sans-fight/",
-		"image": "https://polarislearning.org/api/games/214/image",
+		"img":  "https://polarislearning.org/api/games/214/image",
 		"categories": "all"
 	},
 	{
 		"name": "Slowroads",
 		"url": "https://slowroads.io",
-		"image": "https://polarislearning.org/api/games/215/image",
+		"img":  "https://polarislearning.org/api/games/215/image",
 		"categories": "all"
 	},
 	{
 		"name": "Duck Life 5",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/duck-life-5/index.html",
-		"image": "https://polarislearning.org/api/games/216/image",
+		"img":  "https://polarislearning.org/api/games/216/image",
 		"categories": "all"
 	},
 	{
 		"name": "Raft Wars",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/raft-wars/index.html",
-		"image": "https://polarislearning.org/api/games/219/image",
+		"img":  "https://polarislearning.org/api/games/219/image",
 		"categories": "all"
 	},
 	{
 		"name": "Raft Wars 2",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/raft-wars-2/index.html",
-		"image": "https://polarislearning.org/api/games/220/image",
+		"img":  "https://polarislearning.org/api/games/220/image",
 		"categories": "all"
 	},
 	{
 		"name": "Run",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/run/index.html",
-		"image": "https://polarislearning.org/api/games/221/image",
+		"img":  "https://polarislearning.org/api/games/221/image",
 		"categories": "all"
 	},
 	{
 		"name": "Run 2",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/run2/index.html",
-		"image": "https://polarislearning.org/api/games/222/image",
+		"img":  "https://polarislearning.org/api/games/222/image",
 		"categories": "all"
 	},
 	{
 		"name": "Subway Surfers: Singapore",
 		"url": "https://rawcdn.githack.com/CybriaTech/Opium/main/games/subway-surfers-singapore/index.html",
-		"image": "https://polarislearning.org/api/games/223/image",
+		"img":  "https://polarislearning.org/api/games/223/image",
 		"categories": "all"
 	}
 ]
