@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width" />
     <title id="title">Games - Aluben</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/favicon.ico" />
+    <link rel="manifest" href="manifest.json">
+    <script src="assets/js/script.js"></script>
     <style>
         html {
             width: 100%;
@@ -62,8 +64,8 @@
             top: 0px;
         }
     </style>
-    <script src="assets/js/scripts.js"></script>
-    <script>
+       <script src="assets/js/scripts.js" defer></script>
+     <script async defer>
         function gcloak() {
             var link = document.querySelector("link[rel*='icon']") || document.createElement("link");
             link.type = "image/x-icon";
@@ -75,28 +77,28 @@
         }
         gcloak();
         setInterval(gcloak, 1000);
-        const Byblk = () => open('./byeblock.html', '_self');
-const discord = () => open('https://discord.gg/sR94jHBU');
-const games = () => open('./games.html', '_self');
-const proxylist = () => open('./list.html', '_self');
-const settings = () => open('./settings.html', '_self');
-const home = () => open('./', '_self');
+  //      const Byblk = () => open('./byeblock.html', '_self');
+//const discord = () => open('https://discord.gg/sR94jHBU');
+//const games = () => open('./games.html', '_self');
+//const proxylist = () => open('./list.html', '_self');/
+//const settings = () => open('./settings.html', '_self');
+//const home = () => open('./', '_self');
 
-// Password validation function
-const validatePassword = () => {
-  const enteredPassword = document.getElementById('enterPassword').value;
-  const storedPassword = localStorage.getItem('passcode');
-  if (enteredPassword === storedPassword) {
-    document.getElementById('enterPassword').style.display = 'none';
-  }
-};
+// Password validation function/
+//const validatePassword = () => {
+ // const enteredPassword = document.getElementById('enterPassword').value;
+  //const storedPassword = localStorage.getItem('passcode');
+  //if (enteredPassword === storedPassword) {
+ //   document.getElementById('enterPassword').style.display = 'none';
+//  }
+//}/;
 
 // Calculator function
-const calculator = () => {
-  const calculation = prompt('Enter a calculation (only +, -, *, /):');
-  const sanitizedCalculation = calculation.replace(/[^-()\d/*+.]/g, '');
-  return Function(`"use strict"; return (${sanitizedCalculation})`)();
-};
+//const calculator = () => {
+//  const calculation = prompt('Enter a calculation (only +, -, *, /):');
+ // const sanitizedCalculation = calculation.replace(/[^-()\d/*+.]/g, '');
+  //return Function(`"use strict"; return (${sanitizedCalculation})`)();
+//};
     </script>
 </head>
 <body>
@@ -123,8 +125,8 @@ const calculator = () => {
     <br />
     <h3 style="color: white;">All Games</h3>
     <div class="gamecontainer"></div>
-    <script src="assets/js/games.js"></script>
-    <script>
+    <script src="assets/js/games.js" async defer></script>
+    <script async defer>
         function search() {
             var input, filter, ul, li, a, i, txtValue;
             input = document.getElementById("myInput");

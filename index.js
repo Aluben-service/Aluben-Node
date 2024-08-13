@@ -11,12 +11,14 @@ import wisp from "wisp-server-node";
 import chalk from "chalk";
 import basicAuth from "express-basic-auth";
 import fetch from "node-fetch";
-import { URL } from "url";
+import compression from 'compression';
+import { URL } from 'url';
 
 try {
     console.log(chalk.yellow("🚀 Starting server..."));
 
     const app = express();
+    app.use(compression());
     const publicPath = fileURLToPath(new URL("public/", import.meta.url));
 
     if (config.challenge) {

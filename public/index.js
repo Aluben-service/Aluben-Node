@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			"://" +
 			location.host +
 			"/wisp/";
-		if ((await connection.getTransport()) !== "/epoxy/index.mjs")
-			await connection.setTransport("/epoxy/index.mjs", [
+		if ((await connection.getTransport()) !== "/epoxy/index.js")
+			await connection.setTransport("/epoxy/index.js", [
 				{ wisp: wispUrl },
 			]);
 

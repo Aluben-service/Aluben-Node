@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/scripts.js" async defer></script>
         <style>
             .bottom-left {
                 position: fixed;
@@ -67,17 +67,17 @@
         </style>
     </head>
     <body>
-        <body>
+        
         <div class="navbar" id="navbar">
-            <button class="pulse" type="button" onclick="alert('stop')">test</button>
+            <button class="button" type="button" onclick="location.href='/'">Home</button>
             <button class="button" type="button" onclick="calculator()">Calculator</button>
-            <button class="button" type="button" onclick="Byblk()">Byeblocker</button>
-            <button class="button" type="button" onclick="games()">Iceland games</button>
-            <button class="button" type="button" onclick="proxylist()">Proxy list</button>
+            <button class="button" type="button" onclick="location.href='/byeblock.html'">Byeblocker</button>
+            <button class="button" type="button" onclick="location.href='/games.html'">Iceland games</button>
+            <button class="button" type="button" onclick="location.href='/list.html'">Proxy list</button>
             <button class="button" onclick="settings()" type="button">
                 Settings
             </button>
-        </div>
+        </div>        
             <div id="background">
                 <!-- Generating stars -->
                 <script>

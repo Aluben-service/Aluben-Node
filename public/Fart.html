@@ -8,11 +8,12 @@
         <meta name="description" content="A good proxy with a  custom unblocker and a proxy list bulit in games it's amazing" />
         <title id="title">Aluben</title>
         <meta charset="UTF-8" />
-        <script src="assets/js/script.js"></script>
-        <script src="assets/js/scripts.js"></script>
+        <!--<script src="assets/js/script.js"></script>-->
+        <script src="assets/js/scripts.js" async defer></script>
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
-        <style>
+        <link rel="manifest" href="manifest.json">
+<!--        <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
+ -->       <style>
             p {
                 color: white;
                 background-color: black;
@@ -38,11 +39,11 @@
     </head>
     <body>
         <div class="navbar" id="navbar">
-            <button class="button" type="button" onclick="home()">Home</button>
+            <button class="button" type="button" onclick="location.href='/'">Home</button>
             <button class="button" type="button" onclick="calculator()">Calculator</button>
-            <button class="button" type="button" onclick="Byblk()">Byeblocker</button>
-            <button class="button" type="button" onclick="games()">Iceland games</button>
-            <button class="button" type="button" onclick="proxylist()">Proxy list</button>
+            <button class="button" type="button" onclick="location.href='/byeblock.html'">Byeblocker</button>
+            <button class="button" type="button" onclick="location.href='/games.html'">Iceland games</button>
+            <button class="button" type="button" onclick="location.href='/list.html'">Proxy list</button>
             <button class="button" onclick="settings()" type="button">
                 Settings
             </button>

@@ -1,221 +1,31 @@
-function fixJSON(json) {
-	function bulkRegex(str, callback) {
-		if (callback && typeof callback === "function") {
-			return callback(str);
-		} else if (callback && Array.isArray(callback)) {
-			for (let i = 0; i < callback.length; i++) {
-				if (callback[i] && typeof callback[i] === "function") {
-					str = callback[i](str);
-				} else {
-					break;
-				}
-			}
-			return str;
-		}
-		return str;
-	}
-	if (json && json !== "") {
-		if (typeof json !== "string") {
-			try {
-				json = JSON.stringify(json);
-			} catch (e) {
-				return false;
-			}
-		}
-		if (typeof json === "string") {
-			json = bulkRegex(json, false, [
-				(str) => str.replace(/[\n\t]/gm, ""),
-				(str) => str.replace(/,\}/gm, "}"),
-				(str) => str.replace(/,\]/gm, "]"),
-				(str) => {
-					str = str.split(/(?=[,\}\]])/g);
-					str = str.map((s) => {
-						if (s.includes(":") && s) {
-							let strP = s.split(/:(.+)/, 2);
-							strP[0] = strP[0].trim();
-							if (strP[0]) {
-								let firstP = strP[0].split(/([,\{\[])/g);
-								firstP[firstP.length - 1] = bulkRegex(
-									firstP[firstP.length - 1],
-									false,
-									(p) => p.replace(/[^A-Za-z0-9\-_]/, ""),
-								);
-								strP[0] = firstP.join("");
-							}
-							let part = strP[1].trim();
-							if (
-								(part.startsWith('"') && part.endsWith('"')) ||
-								(part.startsWith("'") && part.endsWith("'")) ||
-								(part.startsWith("`") && part.endsWith("`"))
-							) {
-								part = part.substr(1, part.length - 2);
-							}
-							part = bulkRegex(part, false, [
-								(p) => p.replace(/(["])/gm, "\\$1"),
-								(p) => p.replace(/\\'/gm, "'"),
-								(p) => p.replace(/\\`/gm, "`"),
-							]);
-							strP[1] = ('"' + part + '"').trim();
-							s = strP.join(":");
-						}
-						return s;
-					});
-					return str.join("");
-				},
-				(str) =>
-					str.replace(/(['"])?([a-zA-Z0-9\-_]+)(['"])?:/g, '"$2":'),
-				(str) => {
-					str = str.split(/(?=[,\}\]])/g);
-					str = str.map((s) => {
-						if (s.includes(":") && s) {
-							let strP = s.split(/:(.+)/, 2);
-							strP[0] = strP[0].trim();
-							if (
-								strP[1].includes('"') &&
-								strP[1].includes(":")
-							) {
-								let part = strP[1].trim();
-								if (
-									part.startsWith('"') &&
-									part.endsWith('"')
-								) {
-									part = part.substr(1, part.length - 2);
-									part = bulkRegex(part, false, (p) =>
-										p.replace(/(?<!\\)"/gm, ""),
-									);
-								}
-								strP[1] = ('"' + part + '"').trim();
-							}
-							s = strP.join(":");
-						}
-						return s;
-					});
-					return str.join("");
-				},
-			]);
-			try {
-				json = JSON.parse(json);
-			} catch (e) {
-				return false;
-			}
-		}
-		return json;
-	}
-	return false;
-}
-
-const gamesContainer = document.querySelector(".gamecontainer");
-
-fetch("assets/json/games.json")
-	.then((res) => res.json())
-	.then((games) => {
-		games = fixJSON(games);
-		games.sort((a, b) => a.name.localeCompare(b.name));
-		games.forEach((game) => {
-			const gameEl = document.createElement("li");
-			const gameDesc = game.desc || " ";
-			gameEl.innerHTML = `
-        <div class="gamecard" data-category="${game.categories}">
-          <a href="#" onclick="localStorage.setItem('currentgame', '${game.url}'); localStorage.setItem('currentgamename', '${game.name}'); localStorage.setItem('currentgamecheat', '${game.cheat}'); location.href='play.html';">
-            <img title='${game.name}' src="${game.img}" class="gameimage"/>
+var A=a=>typeof a==='string';const{isArray:_}=Array;function d(B){function C(_a,_b){if(_b&&c(_b))return _b(_a);if(_b&&_(_b)){for(let i=0;i<_b.length;i++)if(_b[i]&&c(_b[i]))_a=_b[i](_a);else break;return _a}return _a}if(B&&B!==''){if(!A(B))try{B=JSON.stringify(B)}catch(e){return!1}if(A(B)){B=C(B,!1,[str=>str.replace(/[\n\t]/gm,''),str=>str.replace(/,\}/gm,'}'),str=>str.replace(/,\]/gm,']'),D=>(D=D.split(/(?=[,\}\]])/g),D=D.map(s=>{if(s.includes(':')&&s){let _A=s.split(/:(.+)/,2);_A[0]=_A[0].trim();if(_A[0]){let E=_A[0].split(/([,\{\[])/g);E[E.length-1]=C(E[E.length-1],!1,p=>p.replace(/[^\w\-]/,''));_A[0]=E.join('')}let _B=_A[1].trim();((_B.startsWith('"')&&_B.endsWith('"'))||(_B.startsWith('\'')&&_B.endsWith('\''))||(_B.startsWith('`')&&_B.endsWith('`')))&&(_B=_B.substr(1,_B.length-2));_B=C(_B,!1,[p=>p.replace(/(")/gm,'\\$1'),p=>p.replace(/\\'/gm,'\''),p=>p.replace(/\\`/gm,'`')]);_A[1]=`"${_B}"`.trim();s=_A.join(':')}return s}),D.join('')),str=>str.replace(/(["'])?([\w\-]+)(["'])?:/g,'"$2":'),aA=>(aA=aA.split(/(?=[,\}\]])/g),aA=aA.map(s=>{if(s.includes(':')&&s){let aB=s.split(/:(.+)/,2);aB[0]=aB[0].trim();if(aB[1].includes('"')&&aB[1].includes(':')){let aC=aB[1].trim();(aC.startsWith('"')&&aC.endsWith('"'))&&(aC=aC.substr(1,aC.length-2),aC=C(aC,!1,p=>p.replace(/(?<!\\)"/gm,'')));aB[1]=`"${aC}"`.trim()}s=aB.join(':')}return s}),aA.join(''))]);try{B=JSON.parse(B)}catch(e){return!1}}return B}return!1}var e=document.querySelector('.gamecontainer'),c=a=>typeof a==='function';fetch('assets/json/games.json').then(res=>res.json()).then(aD=>{aD=d(aD);aD.sort((a,b)=>a.name.localeCompare(b.name));for(const aF of aD){var aE=document.createElement('li'),_c=aF.desc||' ';aE.innerHTML=`
+        <div class="gamecard" data-category="${aF.categories}">
+          <a href="#" onclick="localStorage.setItem('currentgame', '${aF.url}'); localStorage.setItem('currentgamename', '${aF.name}'); localStorage.setItem('currentgamecheat', '${aF.cheat}'); location.href='play.html';">
+            <img title='${aF.name}' src="${aF.img}" class="gameimage" width="100%" height="100%"/>
           </a>
-          <i onclick="pin('${game.name}');" style="color:white;" class="fa fa-map-pin" aria-hidden="true"></i>
-          <a href="#" onclick="localStorage.setItem('currentgame', '${game.url}'); localStorage.setItem('currentgamename', '${game.name}'); localStorage.setItem('currentgamecheat', '${game.cheat}'); location.href='play.html';">
+          <i onclick="pin('${aF.name}');" style="color:white;" class="fa fa-map-pin" aria-hidden="true"></i>
+          <a href="#" onclick="localStorage.setItem('currentgame', '${aF.url}'); localStorage.setItem('currentgamename', '${aF.name}'); localStorage.setItem('currentgamecheat', '${aF.cheat}'); location.href='play.html';">
             <div class="gameinfo">
               <b>
-                <p class="gamename">${game.name}</p>
+                <p class="gamename">${aF.name}</p>
               </b>
-              <p class="gamedesc">${gameDesc}</p>
+              <p class="gamedesc">${_c}</p>
             </div>
           </a>
         </div>
-      `;
-			document.querySelector(".gamecontainer").appendChild(gameEl);
-			if (localStorage.getItem(game.name) == "pinned") {
-				const pinnedEl = document.createElement("li");
-				const pinnedDesc = game.desc || " ";
-				pinnedEl.innerHTML = `
-        <div class="gamecard" data-category="${game.categories}">
-          <a href="#" onclick="localStorage.setItem('currentgame', '${game.url}'); localStorage.setItem('currentgamename', '${game.name}'); localStorage.setItem('currentgamecheat', '${game.cheat}'); location.href='play.html';">
-            <img title='${game.name}' src="${game.img}" class="gameimage"/>
+      `;document.querySelector('.gamecontainer').appendChild(aE);if(localStorage.getItem(aF.name)=='pinned'){var _d=document.createElement('li'),_e=aF.desc||' ';_d.innerHTML=`
+        <div class="gamecard" data-category="${aF.categories}">
+          <a href="#" onclick="localStorage.setItem('currentgame', '${aF.url}'); localStorage.setItem('currentgamename', '${aF.name}'); localStorage.setItem('currentgamecheat', '${aF.cheat}'); location.href='play.html';">
+            <img title='${aF.name}' src="${aF.img}" class="gameimage" width="100%" height="100%"/>
           </a>
-          <i onclick="pin('${game.name}');" style="color:white;" class="fa fa-map-pin" aria-hidden="true"></i>
-          <a href="#" onclick="localStorage.setItem('currentgame', '${game.url}'); localStorage.setItem('currentgamename', '${game.name}'); localStorage.setItem('currentgamecheat', '${game.cheat}'); location.href='play.html';">
+          <i onclick="pin('${aF.name}');" style="color:white;" class="fa fa-map-pin" aria-hidden="true"></i>
+          <a href="#" onclick="localStorage.setItem('currentgame', '${aF.url}'); localStorage.setItem('currentgamename', '${aF.name}'); localStorage.setItem('currentgamecheat', '${aF.cheat}'); location.href='play.html';">
             <div class="gameinfo">
               <b>
-                <p class="gamename">${game.name}</p>
+                <p class="gamename">${aF.name}</p>
               </b>
-              <p class="gamedesc">${pinnedDesc}</p>
+              <p class="gamedesc">${_e}</p>
             </div>
           </a>
         </div>
-      `;
-				document.querySelector(".pinned").appendChild(pinnedEl);
-			}
-		});
-	})
-	.catch((error) => {
-		console.error(error);
-	});
-
-function showCategory() {
-	var selectedCategories = Array.from(
-		document.querySelectorAll("#category option:checked"),
-	).map((option) => option.value);
-	var games = document.getElementsByClassName("gamecard");
-
-	for (var i = 0; i < games.length; i++) {
-		var game = games[i];
-		var categories = game.getAttribute("data-category").split(" ");
-		if (
-			selectedCategories.length === 0 ||
-			selectedCategories.some((category) => categories.includes(category))
-		) {
-			game.style.display = "block";
-		} else {
-			game.style.display = "none";
-		}
-	}
-}
-
-function pin(name) {
-	const isPinned = localStorage.getItem(name) === "pinned";
-	function attemptPin() {
-		try {
-			localStorage.setItem(name, isPinned ? "" : "pinned");
-			if (localStorage.getItem("gamenotice") != "true") {
-				Swal.fire({
-					title: isPinned ? "Unpinned!" : "Pinned!",
-					text: `This game has been ${isPinned ? "unpinned" : "pinned"}!`,
-					icon: "success",
-					confirmButtonColor: "#3085d6",
-					confirmButtonText: "Don't show me again.",
-				}).then((result) => {
-					if (result.isConfirmed) {
-						localStorage.setItem("gamenotice", "true");
-						Swal.fire({
-							title: "Success!",
-							text: "When you pin a game this won't be shown again.",
-							icon: "success",
-							confirmButtonColor: "#3085d6",
-							confirmButtonText: "Ok",
-						}).then((result) => {
-							location.reload();
-						});
-					}
-				});
-			} else {
-				location.reload();
-			}
-		} catch {
-			Swal.fire({
-				title: "Error!",
-				text: `There was an issue with ${isPinned ? "unpinning" : "pinning"} this game.`,
-				icon: "error",
-				confirmButtonText: "Try Again",
-			}).then((result) => result.isConfirmed && attemptPin());
-		}
-	}
-
-	attemptPin(); // Start the process
-}
+      `;document.querySelector('.pinned').appendChild(_d)}}}).catch(aG=>console.error(aG));function f(){var aH=document.querySelectorAll('#category option:checked').map(aJ=>aJ.value),aI=document.getElementsByClassName('gamecard');for(var i=0;i<aI.length;i++){var _D=aI[i],_E=_D.getAttribute('data-category').split(' ');aH.length===0||aH.some(aK=>_E.includes(aK))?_D.style.display='block':_D.style.display='none'}}function g(aL){var aM=localStorage.getItem(aL)==='pinned';function _C(){try{localStorage.setItem(aL,aM?'':'pinned');localStorage.getItem('gamenotice')!='true'?Swal.fire({title:aM?'Unpinned!':'Pinned!',text:`This game has been ${aM?'unpinned':'pinned'}!`,icon:'success',confirmButtonColor:'#3085d6',confirmButtonText:'Don\'t show me again.'}).then(aN=>{aN.isConfirmed&&(localStorage.setItem('gamenotice','true'),Swal.fire({title:'Success!',text:'When you pin a game this won\'t be shown again.',icon:'success',confirmButtonColor:'#3085d6',confirmButtonText:'Ok'}).then(aO=>location.reload()))}):location.reload()}catch{Swal.fire({title:'Error!',text:`There was an issue with ${aM?'unpinning':'pinning'} this game.`,icon:'error',confirmButtonText:'Try Again'}).then(aP=>aP.isConfirmed&&_C())}}_C()}

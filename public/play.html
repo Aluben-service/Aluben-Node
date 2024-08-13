@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="description" content="A good proxy with custom unblockers (that are completely different proxies) and a built-in proxy list. Games are amazing." />
+        <link rel="manifest" href="manifest.json">
         <link rel="canonical" href="https://example.com/current-page" />
         <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/favicon.ico" />
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
@@ -102,12 +103,12 @@
     </head>
     <body>
         <div class="navbar" id="navbar">
-            <button class="button" type="button" onclick="home()">Home</button>
+            <button class="button" type="button" onclick="location.href='/'">Home</button>
             <button class="button" type="button" onclick="calculator()">Calculator</button>
-            <button class="button" type="button" onclick="Byblk()">Byeblocker</button>
-            <button class="button" type="button" onclick="games()">Iceland games</button>
-            <button class="button" type="button" onclick="proxylist()">Proxy list</button>
-            <button class="button" type="button" onclick="showSettings()">
+            <button class="button" type="button" onclick="location.href='/byeblock.html'">Byeblocker</button>
+            <button class="button" type="button" onclick="location.href='/games.html'">Iceland games</button>
+            <button class="button" type="button" onclick="location.href='/list.html'">Proxy list</button>
+            <button class="button" onclick="settings()" type="button">
                 Settings
             </button>
         </div>
@@ -124,7 +125,7 @@
             </div>
         </div>
 
-        <script>
+        <script async defer>
             document.addEventListener("DOMContentLoaded", () => {
                 const iframe = document.getElementById("game-frame");
                 const currentGameUrl = localStorage.getItem("currentgame") || "";
