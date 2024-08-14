@@ -15,7 +15,7 @@
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
         <script src="assets/js/proxies.js" async defer></script>
         <script src="assets/js/settings.js" async defer></script>
-        <script src="assets/js/scripts.js" async defer></script>
+        <script src="assets/js/scripts.js"></script>
         <script src="baremux/index.js" defer></script>
         <script src="epoxy/index.js" defer></script>
         <script src="ultraviolet/uv.bundle.js" async defer onload='self.__uv$config={prefix:"/service/",encodeUrl:Ultraviolet.codec.plain.encode,decodeUrl:Ultraviolet.codec.plain.decode,handler:"/ultraviolet/uv.handler.js",client:"/ultraviolet/uv.client.js",bundle:"/ultraviolet/uv.bundle.js",config:"/ultraviolet/uv.config.js",sw:"/ultraviolet/uv.sw.js"};'></script>
@@ -39,17 +39,16 @@
     </head>
 
     <body style="background-color: black;">
-        <div class="navbar" id="navbar">
-            <button class="button" type="button" onclick="location.href='/'">Home</button>
-            <button class="button" type="button" onclick="calculator()">Calculator</button>
-            <button class="button" type="button" onclick="location.href='/byeblock.html'">Byeblocker</button>
-            <button class="button" type="button" onclick="location.href='/games.html'">Iceland games</button>
-            <button class="button" type="button" onclick="location.href='/list.html'">Proxy list</button>
+                <div class="navbar" id="navbar">
+            <button class="button" type="button" onclick="A()">Home</button>
+            <button class="button" type="button" onclick="j()">Calculator</button>
+            <button class="button" type="button" onclick="c()">Byeblocker</button>
+            <button class="button" type="button" onclick="e()">Iceland games</button>
+            <button class="button" type="button" onclick="list()">Proxy list</button>
             <button class="button" onclick="settings()" type="button">
                 Settings
             </button>
-        </div>
-        <div style="display: none;" id="settings">
+        </div>        <div style="display: none;" id="settings">
             <script src="assets/js/settings.js" async defer></script>
             <h1>Settings</h1>
             <div id="closeset">

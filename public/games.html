@@ -64,7 +64,7 @@
             top: 0px;
         }
     </style>
-       <script src="assets/js/scripts.js" defer></script>
+       <script src="assets/js/scripts.js" ></script>
      <script async defer>
         function gcloak() {
             var link = document.querySelector("link[rel*='icon']") || document.createElement("link");
@@ -102,15 +102,16 @@
     </script>
 </head>
 <body>
-    <div class="navbar" id="navbar">
-        <button class="button" type="button" onclick="home()">Home</button>
-        <button class="button" type="button" onclick="calculator()">Calculator</button>
-        <button class="button" type="button" onclick="Byblk()">Byeblocker</button>
-        <button class="button" type="button" onclick="games()">Iceland games</button>
-        <button class="button" type="button" onclick="proxylist()">Proxy list</button>
-        <button class="button" onclick="settings()" type="button">Settings</button>
-    </div>
-    <br />
+            <div class="navbar" id="navbar">
+            <button class="button" type="button" onclick="A()">Home</button>
+            <button class="button" type="button" onclick="j()">Calculator</button>
+            <button class="button" type="button" onclick="c()">Byeblocker</button>
+            <button class="button" type="button" onclick="e()">Iceland games</button>
+            <button class="button" type="button" onclick="list()">Proxy list</button>
+            <button class="button" onclick="settings()" type="button">
+                Settings
+            </button>
+        </div>    <br />
     <a href="#"><img id="logo" src="https://cdn.jsdelivr.net/gh/Aluben-service/Aluben_icons/iceland%20logo.png" alt="iceland logo" /></a><br />
     <input type="text" id="myInput" onkeyup="search()" placeholder="Search For A Game..." title="Type in a game" />
     <select id="category" name="category" onchange="showCategory()">

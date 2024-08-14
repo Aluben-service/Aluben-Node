@@ -1,10 +1,10 @@
 var A=a=>typeof a==='string';const{isArray:_}=Array;function d(B){function C(_a,_b){if(_b&&c(_b))return _b(_a);if(_b&&_(_b)){for(let i=0;i<_b.length;i++)if(_b[i]&&c(_b[i]))_a=_b[i](_a);else break;return _a}return _a}if(B&&B!==''){if(!A(B))try{B=JSON.stringify(B)}catch(e){return!1}if(A(B)){B=C(B,!1,[str=>str.replace(/[\n\t]/gm,''),str=>str.replace(/,\}/gm,'}'),str=>str.replace(/,\]/gm,']'),D=>(D=D.split(/(?=[,\}\]])/g),D=D.map(s=>{if(s.includes(':')&&s){let _A=s.split(/:(.+)/,2);_A[0]=_A[0].trim();if(_A[0]){let E=_A[0].split(/([,\{\[])/g);E[E.length-1]=C(E[E.length-1],!1,p=>p.replace(/[^\w\-]/,''));_A[0]=E.join('')}let _B=_A[1].trim();((_B.startsWith('"')&&_B.endsWith('"'))||(_B.startsWith('\'')&&_B.endsWith('\''))||(_B.startsWith('`')&&_B.endsWith('`')))&&(_B=_B.substr(1,_B.length-2));_B=C(_B,!1,[p=>p.replace(/(")/gm,'\\$1'),p=>p.replace(/\\'/gm,'\''),p=>p.replace(/\\`/gm,'`')]);_A[1]=`"${_B}"`.trim();s=_A.join(':')}return s}),D.join('')),str=>str.replace(/(["'])?([\w\-]+)(["'])?:/g,'"$2":'),aA=>(aA=aA.split(/(?=[,\}\]])/g),aA=aA.map(s=>{if(s.includes(':')&&s){let aB=s.split(/:(.+)/,2);aB[0]=aB[0].trim();if(aB[1].includes('"')&&aB[1].includes(':')){let aC=aB[1].trim();(aC.startsWith('"')&&aC.endsWith('"'))&&(aC=aC.substr(1,aC.length-2),aC=C(aC,!1,p=>p.replace(/(?<!\\)"/gm,'')));aB[1]=`"${aC}"`.trim()}s=aB.join(':')}return s}),aA.join(''))]);try{B=JSON.parse(B)}catch(e){return!1}}return B}return!1}var e=document.querySelector('.gamecontainer'),c=a=>typeof a==='function';fetch('assets/json/games.json').then(res=>res.json()).then(aD=>{aD=d(aD);aD.sort((a,b)=>a.name.localeCompare(b.name));for(const aF of aD){var aE=document.createElement('li'),_c=aF.desc||' ';aE.innerHTML=`
         <div class="gamecard" data-category="${aF.categories}">
-          <a href="#" onclick="localStorage.setItem('currentgame', '${aF.url}'); localStorage.setItem('currentgamename', '${aF.name}'); localStorage.setItem('currentgamecheat', '${aF.cheat}'); location.href='play.html';">
-            <img title='${aF.name}' src="${aF.img}" class="gameimage" width="100%" height="100%"/>
+          <a href="#" onclick="localStorage.currentgame = '${aF.url}'; localStorage.currentgamename = '${aF.name}'; localStorage.currentgamecheat = '${aF.cheat}'; location.href='play.html';">
+            <img title='${aF.name}' src="${aF.img}" class="gameimage"/>
           </a>
           <i onclick="pin('${aF.name}');" style="color:white;" class="fa fa-map-pin" aria-hidden="true"></i>
-          <a href="#" onclick="localStorage.setItem('currentgame', '${aF.url}'); localStorage.setItem('currentgamename', '${aF.name}'); localStorage.setItem('currentgamecheat', '${aF.cheat}'); location.href='play.html';">
+          <a href="#" onclick="localStorage.currentgame = '${aF.url}'; localStorage.currentgamename = '${aF.name}'; localStorage.currentgamecheat = '${aF.cheat}'; location.href='play.html';">
             <div class="gameinfo">
               <b>
                 <p class="gamename">${aF.name}</p>
@@ -15,11 +15,11 @@ var A=a=>typeof a==='string';const{isArray:_}=Array;function d(B){function C(_a,
         </div>
       `;document.querySelector('.gamecontainer').appendChild(aE);if(localStorage.getItem(aF.name)=='pinned'){var _d=document.createElement('li'),_e=aF.desc||' ';_d.innerHTML=`
         <div class="gamecard" data-category="${aF.categories}">
-          <a href="#" onclick="localStorage.setItem('currentgame', '${aF.url}'); localStorage.setItem('currentgamename', '${aF.name}'); localStorage.setItem('currentgamecheat', '${aF.cheat}'); location.href='play.html';">
-            <img title='${aF.name}' src="${aF.img}" class="gameimage" width="100%" height="100%"/>
+          <a href="#" onclick="localStorage.currentgame = '${aF.url}'; localStorage.currentgamename = '${aF.name}'; localStorage.currentgamecheat '${aF.cheat}'; location.href='play.html';">
+            <img title='${aF.name}' src="${aF.img}" class="gameimage"/>
           </a>
           <i onclick="pin('${aF.name}');" style="color:white;" class="fa fa-map-pin" aria-hidden="true"></i>
-          <a href="#" onclick="localStorage.setItem('currentgame', '${aF.url}'); localStorage.setItem('currentgamename', '${aF.name}'); localStorage.setItem('currentgamecheat', '${aF.cheat}'); location.href='play.html';">
+          <a href="#" onclick="localStorage.currentgame = ${aF.url}'; localStorage.currentgamename = ${aF.name}'; localStorage.currentgamecheat = ${aF.cheat}'; location.href='play.html';">
             <div class="gameinfo">
               <b>
                 <p class="gamename">${aF.name}</p>
