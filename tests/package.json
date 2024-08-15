@@ -15,6 +15,6 @@
 		"fs": "^0.0.1-security",
 		"http-proxy-middleware": "^3.0.0",
 		"node-fetch": "^3.3.2",
-		"path": "^0.12.7"
+		"path": "^0.12.
 	}
-}
+
