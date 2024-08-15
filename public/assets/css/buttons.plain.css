@@ -1,0 +1,57 @@
+.bounce {
+	background-color: #0b0724;
+	color: floralwhite;
+	border: 1px dotted rgb(43, 207, 21);
+	border-radius: 5px;
+	padding: 2px 4px;
+	margin: 5px;
+	cursor: pointer;
+	z-index: 1;
+	font-size: inherit;
+	font-family: inherit;
+	outline: none;
+}
+
+.bounce:hover {
+	cursor: pointer;
+	animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+	0%,
+	100% {
+		transform: scale(1, 1);
+	}
+	25% {
+		transform: scale(0.9, 1.1);
+	}
+	50% {
+		transform: scale(1.1, 0.9);
+	}
+	75% {
+		transform: scale(0.95, 1.05);
+	}
+}
+
+.icon-button {
+	background-color: #ff4d4d;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 15px;
+	font-size: 24px;
+	cursor: pointer;
+	transition:
+		background-color 0.3s,
+		transform 0.2s;
+}
+
+.icon-button:hover {
+	background-color: #cc0000;
+	transform: scale(1.05);
+}
+
+.icon-button:active {
+	background-color: #990000;
+	transform: scale(0.98);
+}

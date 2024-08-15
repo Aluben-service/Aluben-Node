@@ -1,0 +1,47 @@
+@import "input.css";
+@import "text.css";
+@import "other.css";
+@import "gamecard.css";
+@import "ultraviolet.css";
+@import "buttons.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+html,
+body,
+head,
+#settings {
+	width: 100%;
+	font-family: "Montserrat", sans-serif;
+	font-size: 90%;
+	height: 100%;
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	text-align: center;
+}
+
+html,
+body {
+	color: floralwhite;
+}
+
+iframe {
+	border: 2px solid aqua;
+	border-radius: 10px;
+}
+
+select {
+	background-color: #001141;
+	border: 2px solid orange;
+	color: floralwhite;
+}
+
+.navbar {
+	color: rgb(255, 255, 255);
+	background-color: rgb(36, 36, 36);
+	text-align: center;
+	left: 0%;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index: 1000;
+}

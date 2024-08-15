@@ -1,0 +1,19 @@
+input {
+	height: 14px;
+	width: 480px;
+	padding: 5px;
+	border: 1px dotted rgba(235, 214, 109, 0.894);
+	border-radius: 5px;
+	background-color: #141414;
+	color: rgb(255, 245, 225);
+	font-size: 13px;
+}
+
+input:hover {
+	transition: 1000ms;
+	padding: 4px 10px;
+	transform: translateY(-0px);
+	background-color: #0b0724;
+	color: floralwhite;
+	border: solid 2px rgb(47, 255, 0);
+}
