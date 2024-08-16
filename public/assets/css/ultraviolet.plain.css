@@ -1,0 +1,61 @@
+#ultraviolet-frame {
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #111;
+}
+
+#ultraviolet-error {
+	color: #ff6666 !important;
+	white-space: pre-wrap;
+}
+
+#ultraviolet-error-code {
+	font-size: 12px;
+	color: #fff;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#ultraviolet-register-sw {
+	color: white;
+	background: #555555;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	border-radius: 6px;
+	padding: 16px 20px;
+	line-height: 16px;
+	display: none;
+}
+
+#ultraviolet-register-sw:active {
+	background: #333333;
+}
+
+#ultraviolet-register-sw.show {
+	display: block;
+}
+
+#ultraviolet-address {
+	background: none;
+	font-family: inherit;
+	padding: 0px 17px;
+	height: 48px;
+	border: 1px solid rgb(255, 255, 255, 0.2);
+	color: var(--text-color);
+	border-radius: 3px;
+	outline: none;
+	width: 350px;
+	margin-top: 5px;
+	border-radius: 50px;
+	color: #fff;
+	transition: border-radius 0.1s;
+}
+
+#ultraviolet-address:focus {
+	border: 1px solid rgba(253, 253, 253, 0.514);
+	border-radius: 6px;
+}
