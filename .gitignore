@@ -11,3 +11,4 @@ tests/output
 tests/images
 .unlighthouse
 test/node_modules
+key.gpg
