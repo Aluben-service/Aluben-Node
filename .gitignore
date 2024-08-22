@@ -13,3 +13,4 @@ tests/images
 test/node_modules
 *.gpg
 *.asc
+bun.lockb
