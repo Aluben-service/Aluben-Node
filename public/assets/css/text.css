@@ -1,1 +1,13 @@
-#Aluben{font-size:50px;color:#001191;text-decoration:underline}#txt{font-size:23px;color:#f0fff0}.stinky{color:red;text-decoration:none}
+#Aluben {
+	font-size: 50px;
+	color: #001191;
+	text-decoration: underline;
+}
+#txt {
+	font-size: 23px;
+	color: #f0fff0;
+}
+.stinky {
+	color: red;
+	text-decoration: none;
+}
