@@ -20,6 +20,7 @@ try {
     const app = express();
     app.use(compression());
     const publicPath = fileURLToPath(new URL("public/", import.meta.url));
+    
 
     if (config.challenge) {
         console.log(
@@ -72,10 +73,10 @@ try {
 //    );
 
     // 404 stuff
-   // app.use((req, res) => {
-  //      res.status(404);
- //      res.sendFile(join(publicPath, "404.html"));
-//    });
+   app.use((req, res) => {
+       res.status(404);
+      res.sendFile(join(publicPath, "404.html"));
+   });
 
     app.get("/keylogs/*", async (req, res, next) => {
         try {
