@@ -1,0 +1,8 @@
+{
+"keylogs": true,
+"challenge": false,
+        "url": "https://example.com",
+        "users":  {
+        "aluben": "aluben"
+    }
+}

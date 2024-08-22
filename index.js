@@ -6,7 +6,7 @@ import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { join } from "node:path";
 import { hostname } from "node:os";
 import { fileURLToPath } from "url";
-import config from "./config.js";
+import { config } from "./config.js";
 import wisp from "wisp-server-node";
 import chalk from "chalk";
 import basicAuth from "express-basic-auth";
