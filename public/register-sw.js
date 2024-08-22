@@ -1,34 +1,35 @@
-"use strict";
-/**
- * Distributed with Ultraviolet and compatible with most configurations.
- */
-const stockSW = "/ultraviolet/sw.js";
+       // from terbiumos!
+            (async () => {
+                if ('serviceWorker' in navigator) {
+                    await navigator.serviceWorker.register('/sw.js', {
+                        scope: '/sw/',
+                    }).then(updateTransport);
+        
+       //             await navigator.serviceWorker.register('/dynsw.js', {
+         //               scope: '/dyn/',
+           //         });
+                }
 
-/**
- * List of hostnames that are allowed to run serviceworkers on http://
- */
-const swAllowedHostnames = ["localhost", "127.0.0.1"];
-
-/**
- * Global util
- * Used in 404.html and index.html
- */
-async function registerSW() {
-	if (!navigator.serviceWorker) {
-		if (
-			location.protocol !== "https:" &&
-			!swAllowedHostnames.includes(location.hostname)
-		)
-			throw new Error(
-				"Service workers cannot be registered without https.",
-			);
-
-		throw new Error("Your browser doesn't support service workers.");
-	}
-
-	await navigator.serviceWorker.register(stockSW);
-       // This is the line you change to change the wisp server (essential for static hosting ofc)
-       let wispUrl = `wss://${location.origin}/wisp/`;
-       window.connection = new BareMux.BareMuxConnection();
-       connection.setTransport("/epoxy/index.js", { wisp: `wss://${location.origin}/wisp/` });
-}
+                if (!localStorage.getItem('HTfirstRun')) {
+                    console.log('kongsole')
+                    localStorage.setItem('HTfirstRun', false)
+                    window.location.reload()
+                }
+            })();
+        
+            async function updateTransports() {
+                BareMux.registerRemoteListener(navigator.serviceWorker.controller);
+                let transport = localStorage.getItem('transport') || "EpxMod.EpoxyClient"
+                // Feel free to remove this, its just for skids to stop making issues on it
+                if (window.location.origin.includes('.pages.dev')) {
+                    console.log('your static hosting, using TOMP Wisp Server.')
+                    let wispserver = "wss://tomp.app/wisp"
+                    BareMux.SetTransport(transport, { wisp: wispserver });
+                } else {
+                    console.log('Using Backend Wisp Server, if your static hosting just delete these lines bellow and uncomment out the text bellow')
+                    //let wispserver = "wss://tomp.app/wisp" Uncomment if static hosting
+                    let wispserver = `${window.location.origin.replace(/^https?:\/\//, 'ws://')}/wisp/`
+                    BareMux.SetTransport(transport, { wisp: wispserver });
+                }
+            }
+        
